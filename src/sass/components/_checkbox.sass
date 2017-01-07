@@ -1,0 +1,46 @@
+.es-body__section__label__icon
+  position: relative
+  width: 16px
+  height: 16px
+  margin-top: -1px
+  margin-right: 4px
+  float: left
+
+  &::before
+    +material-icons(16px)
+    position: absolute
+    top: 0
+    left: 0
+    color: $not-checked-color
+
+  &::after
+    +material-icons(16px)
+    position: absolute
+    top: 0
+    left: 0
+    transition: opacity .1s ease-in-out
+    color: $checked-color
+    opacity: 0
+
+input[type="checkbox"], input[type="radio"]
+  display: none
+
+  &:checked + .es-body__section__label__icon
+    &::after
+      opacity: 1
+
+input[type="checkbox"] + .es-body__section__label__icon
+  &::before
+    content: "check_box_outline_blank"
+
+  &::after
+    content: "check_box"
+
+input[type="radio"] + .es-body__section__label__icon
+  margin-bottom: 4px
+
+  &::before
+    content: "radio_button_unchecked"
+
+  &::after
+    content: "radio_button_checked"

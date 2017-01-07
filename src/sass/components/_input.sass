@@ -1,0 +1,28 @@
+.es-body__section__input-group
+  position: relative
+
+  .es-body__section__input
+    width: 100%
+    padding: 4px 0
+    border: 0
+    border-bottom: $input-border
+    border-radius: 0
+    outline: 0
+    font-family: "Roboto", sans-serif
+    font-size: 12px
+    -webkit-appearance: none
+
+    &:focus + .es-body__section__input-underline
+      transform: scale(1)
+      transition: transform .2s ease-in-out, visibility 0s ease-in-out 0s
+      visibility: visible
+
+  .es-body__section__input-underline
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    transform: scale(0)
+    transition: transform .2s ease-in-out, visibility 0s ease-in-out .2s
+    border-bottom: $input-border-focus
+    visibility: hidden
