@@ -51,7 +51,7 @@
   min-width: 54px;
   height: 32px;
   padding: 0 8px;
-  transition: background .2s ease-in-out;
+  transition: box-shadow .15s ease-in-out;
   border: 0;
   border-radius: 2px;
   outline: 0;
@@ -65,10 +65,10 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
-  .es-body__section__button:active {
-    background: #0c7cd5; }
   .es-body__section__button:focus {
-    background: #0c7cd5; }
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.16); }
+  .es-body__section__button:active {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
 
 .es-body__section__label__icon {
   position: relative;
@@ -76,7 +76,20 @@
   height: 16px;
   margin-top: -1px;
   margin-right: 4px;
-  float: left; }
+  float: left;
+  outline: 0; }
+  .es-body__section__label__icon .es-body__section__label__icon--focused {
+    position: absolute;
+    top: -25%;
+    left: -24%;
+    width: 150%;
+    height: 150%;
+    transition: opacity .2s ease-in-out, background .2s ease-in-out;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.54);
+    opacity: 0; }
+  .es-body__section__label__icon:focus .es-body__section__label__icon--focused {
+    opacity: .2; }
   .es-body__section__label__icon::before {
     display: inline-block;
     width: 16px;
@@ -118,6 +131,8 @@
 
 input[type="checkbox"], input[type="radio"] {
   display: none; }
+  input[type="checkbox"]:checked + .es-body__section__label__icon .es-body__section__label__icon--focused, input[type="radio"]:checked + .es-body__section__label__icon .es-body__section__label__icon--focused {
+    background: #2196f3; }
   input[type="checkbox"]:checked + .es-body__section__label__icon::after, input[type="radio"]:checked + .es-body__section__label__icon::after {
     opacity: 1; }
 
@@ -173,5 +188,55 @@ input[type="radio"] + .es-body__section__label__icon {
     clear: both;
     content: "";
     visibility: hidden; }
+
+.es-body__section__slider-group {
+  margin: 8px 0; }
+  .es-body__section__slider-group .es-body__section__slider {
+    display: none; }
+  .es-body__section__slider-group .es-body__section__slider-track {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: #bebebe; }
+    .es-body__section__slider-group .es-body__section__slider-track .es-body__section__slider-track__slider-value {
+      width: 0;
+      height: 100%;
+      background: #2196f3; }
+    .es-body__section__slider-group .es-body__section__slider-track .es-body__section__slider-track__slider-handle {
+      position: absolute;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      transform: scale(1) translateY(-50%);
+      transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, background .2s ease-in-out, border .2s ease-in-out;
+      border: 2px solid #2196f3;
+      border-radius: 50%;
+      outline: 0;
+      background: #2196f3;
+      box-shadow: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none; }
+      .es-body__section__slider-group .es-body__section__slider-track .es-body__section__slider-track__slider-handle:focus {
+        transform: scale(1) translateY(-50%);
+        box-shadow: 0 0 0 6px rgba(33, 150, 243, 0.25); }
+      .es-body__section__slider-group .es-body__section__slider-track .es-body__section__slider-track__slider-handle:active {
+        transform: scale(1.25) translateY(-40%);
+        box-shadow: none; }
+      .es-body__section__slider-group .es-body__section__slider-track .es-body__section__slider-track__slider-handle.es-body__section__slider-track__slider-handle--min-value {
+        border: 2px solid #bebebe;
+        background: #fff; }
+        .es-body__section__slider-group .es-body__section__slider-track .es-body__section__slider-track__slider-handle.es-body__section__slider-track__slider-handle--min-value:focus {
+          box-shadow: 0 0 0 6px rgba(190, 190, 190, 0.34); }
+        .es-body__section__slider-group .es-body__section__slider-track .es-body__section__slider-track__slider-handle.es-body__section__slider-track__slider-handle--min-value:active {
+          box-shadow: none; }
+
+.es-body__section__input.es-body__section__input--textarea {
+  min-width: 100%;
+  max-width: 100%; }
+  .es-body__section__input.es-body__section__input--textarea + .es-body__section__input-underline {
+    bottom: 2px; }
 
 /*# sourceMappingURL=EasySettings.css.map */

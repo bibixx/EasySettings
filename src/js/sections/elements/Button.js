@@ -1,3 +1,5 @@
+import DOMUtils from "../../utils/DOMUtils";
+
 export default class Button {
   constructor(section, text, callback) {
     this.element = null;
@@ -8,12 +10,9 @@ export default class Button {
   }
 
   create() {
-    const $button = document.createElement("button");
-    $button.className = "es-body__section__button";
-    $button.innerHTML = this.text;
+    const $button = DOMUtils.createElement("button", this.section, { className: "es-body__section__button", innerHTML: this.text });
 
     this.element = $button;
-    this.section.appendChild($button);
 
     this.bindCallback();
   }
@@ -26,5 +25,9 @@ export default class Button {
 
   getValue() {
     return this.element.innerHTML;
+  }
+
+  setValue(val) {
+    this.element.innerHTML = val;
   }
 }

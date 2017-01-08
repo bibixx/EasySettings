@@ -5,6 +5,21 @@
   margin-top: -1px
   margin-right: 4px
   float: left
+  outline: 0
+
+  .es-body__section__label__icon--focused
+    position: absolute
+    top: -25%
+    left: -24%
+    width: 150%
+    height: 150%
+    transition: opacity .2s ease-in-out, background .2s ease-in-out
+    border-radius: 50%
+    background: $not-checked-color
+    opacity: 0
+
+  &:focus .es-body__section__label__icon--focused
+    opacity: .2
 
   &::before
     +material-icons(16px)
@@ -26,6 +41,9 @@ input[type="checkbox"], input[type="radio"]
   display: none
 
   &:checked + .es-body__section__label__icon
+    .es-body__section__label__icon--focused
+      background: $checked-color
+
     &::after
       opacity: 1
 

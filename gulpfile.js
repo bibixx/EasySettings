@@ -128,8 +128,8 @@ function buildScript(toWatch, path) {
   }
 
   bundler.transform("babelify", {
-    presets: ["es2015"],
-    plugins: ["transform-es2015-parameters"]
+    presets: ["latest"],
+    plugins: ["transform-es2015-parameters", "transform-runtime"]
   });
 
   const rebundle = function() {

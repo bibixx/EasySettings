@@ -1,17 +1,13 @@
+import DOMUtils from "./utils/DOMUtils";
+
 import EasySettingsMovementManager from "./actions/EasySettingsMovementManager";
 import Section from "./sections/Section";
 
-let zIndex = 0;
-
 export default class EasySettings {
-  static getCurrentZIndex() {
-    return zIndex++;
-  }
-
   constructor(x, y, title) {
-    this.container = document.createElement("div");
-    this.header = document.createElement("header");
-    this.body = document.createElement("main");
+    this.container = null;
+    this.header = null;
+    this.body = null;
     this.sections = [];
     this.elements = {};
     this.title = title;
@@ -20,33 +16,25 @@ export default class EasySettings {
       y: y || 8,
     };
 
-    this.movementManager = new EasySettingsMovementManager(this.container, this.header);
 
     this.createSettingsContainer();
+
+    this.movementManager = new EasySettingsMovementManager(this.container, this.header);
   }
 
   createSettingsHeader() {
-    const $header = this.header;
-    const $title = document.createElement("span");
+    this.header = DOMUtils.createElement("header", this.container, { className: "es-header" });
 
-    $title.innerHTML = this.title || "EasySettings Panel";
-    $header.className = "es-header";
-    $header.appendChild($title);
-
-    this.container.appendChild($header);
+    DOMUtils.createElement("span", this.header, { innerHTML: this.title || "EasySettings Panel" });
   }
 
   createSettingsBody() {
-    const $body = this.body;
-
-    $body.className = "es-body";
-
-    this.container.appendChild($body);
+    this.body = DOMUtils.createElement("main", this.container, { className: "es-body" });
   }
 
   createSettingsContainer() {
+    this.container = DOMUtils.createElement("div", null, { className: "es-container" });
     const $container = this.container;
-    $container.className = "es-container";
 
     this.createSettingsHeader();
     this.createSettingsBody();
@@ -66,6 +54,10 @@ export default class EasySettings {
 
   getValue(id) {
     return this.elements[id].getValue();
+  }
+
+  setValue(id, value) {
+    this.elements[id].setValue(value);
   }
 }
 

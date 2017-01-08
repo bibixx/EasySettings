@@ -1,3 +1,5 @@
+import DOMUtils from "../../utils/DOMUtils";
+
 export default class Header {
   constructor(section, text) {
     this.element = null;
@@ -7,15 +9,16 @@ export default class Header {
   }
 
   create() {
-    const $header = document.createElement("p");
-    $header.className = "es-body__section__header";
-    $header.innerHTML = this.text;
+    const $header = DOMUtils.createElement("p", this.section, { className: "body__section__header", innerHTML: this.text });
 
     this.element = $header;
-    this.section.appendChild($header);
   }
 
   getValue() {
     return this.element.innerHTML;
+  }
+
+  setValue(val) {
+    this.element.innerHTML = val;
   }
 }

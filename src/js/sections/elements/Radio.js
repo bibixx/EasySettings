@@ -1,3 +1,5 @@
+import DOMUtils from "../../utils/DOMUtils";
+
 export default class Radio {
   constructor(section, index, options, checkedIndex, callback) {
     this.element = null;
@@ -11,35 +13,30 @@ export default class Radio {
   }
 
   create() {
-    const $group = document.createElement("div");
-    $group.className = "es-body__section__radio-group";
+    const $group = DOMUtils.createElement("div", this.section, { className: "es-body__section__radio-group" });
+
     this.options.forEach((v, i) => {
-      const $label = document.createElement("label");
-      $label.className = "es-body__section__label";
+      const $label = DOMUtils.createElement("label", $group, { className: "es-body__section__label" });
 
-      const $labelIcon = document.createElement("span");
-      $labelIcon.className = "es-body__section__label__icon";
+      const $radio = DOMUtils.createElement("input", $label, { className: "es-body__section__checkbox", checked: (i === this.checkedIndex) }, { type: "radio", name: `EasySettingsPanel-${this.index}` });
 
-      const $labelText = document.createElement("span");
-      $labelText.innerHTML = v;
+      const $icon = DOMUtils.createElement("span", $label, { className: "es-body__section__label__icon" }, { tabindex: 0 }); // Label icon
 
-      const $radio = document.createElement("input");
-      $radio.className = "es-body__section__checkbox";
-      $radio.setAttribute("type", "radio");
-      $radio.setAttribute("name", `EasySettingsPanel-${this.index}`);
+      DOMUtils.createElement("span", $icon, { className: "es-body__section__label__icon--focused" }); // labelIconFocused
 
-      if (i === this.checkedIndex) {
-        $radio.checked = true;
-      }
+      $icon.addEventListener("keydown", (e) => {
+        if (e.keyCode === 32 || e.keyCode === 13) {
+          this.setValue(i);
+          DOMUtils.dispatchEvent($group, "change");
+        }
+      });
+
+      DOMUtils.createElement("span", $label, { innerHTML: v }); // Label text
 
       this.radios.push($radio);
-      $label.appendChild($radio);
-      $label.appendChild($labelIcon);
-      $label.appendChild($labelText);
-      $group.appendChild($label);
     });
+
     this.element = $group;
-    this.section.appendChild($group);
 
     this.bindCallback();
   }
@@ -59,5 +56,11 @@ export default class Radio {
     });
 
     return index;
+  }
+
+  setValue(val) {
+    this.radios.forEach((v, i) => {
+      v.checked = (i === val); // eslint-disable-line no-param-reassign
+    });
   }
 }

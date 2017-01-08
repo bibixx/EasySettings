@@ -1,3 +1,5 @@
+import DOMUtils from "../../utils/DOMUtils";
+
 export default class Checkbox {
   constructor(section, label, checked, callback) {
     this.element = null;
@@ -9,27 +11,24 @@ export default class Checkbox {
   }
 
   create() {
-    const $label = document.createElement("label");
-    $label.className = "es-body__section__label";
+    const $label = DOMUtils.createElement("label", this.section, { className: "es-body__section__label" });
 
-    const $labelIcon = document.createElement("span");
-    $labelIcon.className = "es-body__section__label__icon";
+    const $checkbox = DOMUtils.createElement("input", $label, { className: "body__section__checkbox", innerHTML: this.label, checked: this.checked }, { "type": "checkbox" });
 
-    const $labelText = document.createElement("span");
-    $labelText.className = "es-body__section__label__text";
-    $labelText.innerHTML = this.label;
+    const $icon = DOMUtils.createElement("span", $label, { className: "es-body__section__label__icon" }, { tabindex: 0 }); // labelIcon
 
-    const $checkbox = document.createElement("input");
-    $checkbox.className = "es-body__section__checkbox";
-    $checkbox.setAttribute("type", "checkbox");
+    DOMUtils.createElement("span", $icon, { className: "es-body__section__label__icon--focused" }); // labelIconFocused
 
-    $checkbox.checked = this.checked;
+    DOMUtils.createElement("span", $label, { className: "es-body__section__label__text", innerHTML: this.label }); // labelText
+
+    $icon.addEventListener("keydown", (e) => {
+      if (e.keyCode === 32 || e.keyCode === 13) {
+        $checkbox.checked = !$checkbox.checked;
+        DOMUtils.dispatchEvent($checkbox, "change");
+      }
+    });
 
     this.element = $checkbox;
-    $label.appendChild($checkbox);
-    $label.appendChild($labelIcon);
-    $label.appendChild($labelText);
-    this.section.appendChild($label);
 
     this.bindCallback();
   }
@@ -42,5 +41,9 @@ export default class Checkbox {
 
   getValue() {
     return this.element.checked;
+  }
+
+  setValue(val) {
+    this.element.checked = val;
   }
 }

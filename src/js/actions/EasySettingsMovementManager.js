@@ -1,6 +1,10 @@
-import EasySettings from "../EasySettings";
+let zIndex = 0;
 
 export default class EasySettingsMovementManager {
+  static getCurrentZIndex() {
+    return zIndex++;
+  }
+
   constructor(panel, header) {
     this.panel = panel;
     this.header = header;
@@ -31,7 +35,7 @@ export default class EasySettingsMovementManager {
         y: panelOffset.top,
       };
 
-      this.panel.style.zIndex = EasySettings.getCurrentZIndex();
+      this.panel.style.zIndex = EasySettingsMovementManager.getCurrentZIndex();
 
       document.addEventListener("mousemove", this.handleMovement);
       document.addEventListener("mouseup", () => {
