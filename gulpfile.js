@@ -1,5 +1,5 @@
 /* eslint comma-dangle: 0 */
-/* eslint-disable */
+/* eslint-disable no-unused-vars, import/no-extraneous-dependencies, strict */
 
 "use strict";
 
@@ -16,6 +16,7 @@ const watch = require("gulp-watch");
 
 // SASS
 const autoprefixer = require("gulp-autoprefixer");
+const cssmin = require("gulp-cssmin");
 const filter = require("gulp-filter");
 const sass = require("gulp-sass");
 
@@ -31,10 +32,6 @@ const source = require("vinyl-source-stream");
 const stripDebug = require("gulp-strip-debug");
 const uglify = require("gulp-uglify");
 const watchify = require("watchify");
-
-/* eslint-enable */
-
-/* eslint-disable no-unused-vars */
 
 // Constants
 const SOURCE_PATH = "./src";
@@ -178,6 +175,7 @@ function buildSass() {
     .pipe(sass(options))
     .pipe(autoprefixer("last 1 version", "> 1%", "ie 8", "ie 7"))
     .pipe(gulpif(!isProduction(), sourcemaps.write("./")))
+    .pipe(gulpif(isProduction(), cssmin()))
     .pipe(gulp.dest(`${BUILD_PATH}/css`))
     .pipe(filter(["**/*.css"]))
     .pipe(browserSync.stream());
