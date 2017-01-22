@@ -1,2 +1,2243 @@
-!function e(t,s,r){function o(a,i){if(!s[a]){if(!t[a]){var l="function"==typeof require&&require;if(!i&&l)return l(a,!0);if(n)return n(a,!0);var u=new Error("Cannot find module '"+a+"'");throw u.code="MODULE_NOT_FOUND",u}var d=s[a]={exports:{}};t[a][0].call(d.exports,function(e){var s=t[a][1][e];return o(s?s:e)},d,d.exports,e,t,s,r)}return s[a].exports}for(var n="function"==typeof require&&require,a=0;a<r.length;a++)o(r[a]);return o}({"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\get-iterator.js":[function(e,t,s){t.exports={default:e("core-js/library/fn/get-iterator"),__esModule:!0}},{"core-js/library/fn/get-iterator":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\fn\\get-iterator.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\is-iterable.js":[function(e,t,s){t.exports={default:e("core-js/library/fn/is-iterable"),__esModule:!0}},{"core-js/library/fn/is-iterable":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\fn\\is-iterable.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\object\\define-property.js":[function(e,t,s){t.exports={default:e("core-js/library/fn/object/define-property"),__esModule:!0}},{"core-js/library/fn/object/define-property":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\fn\\object\\define-property.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\object\\entries.js":[function(e,t,s){t.exports={default:e("core-js/library/fn/object/entries"),__esModule:!0}},{"core-js/library/fn/object/entries":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\fn\\object\\entries.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js":[function(e,t,s){"use strict";s.__esModule=!0,s.default=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}s.__esModule=!0;var o=e("../core-js/object/define-property"),n=r(o);s.default=function(){function e(e,t){for(var s=0;s<t.length;s++){var r=t[s];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),(0,n.default)(e,r.key,r)}}return function(t,s,r){return s&&e(t.prototype,s),r&&e(t,r),t}}()},{"../core-js/object/define-property":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\object\\define-property.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\slicedToArray.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}s.__esModule=!0;var o=e("../core-js/is-iterable"),n=r(o),a=e("../core-js/get-iterator"),i=r(a);s.default=function(){function e(e,t){var s=[],r=!0,o=!1,n=void 0;try{for(var a,l=(0,i.default)(e);!(r=(a=l.next()).done)&&(s.push(a.value),!t||s.length!==t);r=!0);}catch(e){o=!0,n=e}finally{try{!r&&l.return&&l.return()}finally{if(o)throw n}}return s}return function(t,s){if(Array.isArray(t))return t;if((0,n.default)(Object(t)))return e(t,s);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}()},{"../core-js/get-iterator":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\get-iterator.js","../core-js/is-iterable":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\is-iterable.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\fn\\get-iterator.js":[function(e,t,s){e("../modules/web.dom.iterable"),e("../modules/es6.string.iterator"),t.exports=e("../modules/core.get-iterator")},{"../modules/core.get-iterator":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\core.get-iterator.js","../modules/es6.string.iterator":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es6.string.iterator.js","../modules/web.dom.iterable":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\web.dom.iterable.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\fn\\is-iterable.js":[function(e,t,s){e("../modules/web.dom.iterable"),e("../modules/es6.string.iterator"),t.exports=e("../modules/core.is-iterable")},{"../modules/core.is-iterable":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\core.is-iterable.js","../modules/es6.string.iterator":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es6.string.iterator.js","../modules/web.dom.iterable":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\web.dom.iterable.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\fn\\object\\define-property.js":[function(e,t,s){e("../../modules/es6.object.define-property");var r=e("../../modules/_core").Object;t.exports=function(e,t,s){return r.defineProperty(e,t,s)}},{"../../modules/_core":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_core.js","../../modules/es6.object.define-property":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es6.object.define-property.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\fn\\object\\entries.js":[function(e,t,s){e("../../modules/es7.object.entries"),t.exports=e("../../modules/_core").Object.entries},{"../../modules/_core":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_core.js","../../modules/es7.object.entries":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es7.object.entries.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_a-function.js":[function(e,t,s){t.exports=function(e){if("function"!=typeof e)throw TypeError(e+" is not a function!");return e}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_add-to-unscopables.js":[function(e,t,s){t.exports=function(){}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_an-object.js":[function(e,t,s){var r=e("./_is-object");t.exports=function(e){if(!r(e))throw TypeError(e+" is not an object!");return e}},{"./_is-object":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_is-object.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_array-includes.js":[function(e,t,s){var r=e("./_to-iobject"),o=e("./_to-length"),n=e("./_to-index");t.exports=function(e){return function(t,s,a){var i,l=r(t),u=o(l.length),d=n(a,u);if(e&&s!=s){for(;u>d;)if(i=l[d++],i!=i)return!0}else for(;u>d;d++)if((e||d in l)&&l[d]===s)return e||d||0;return!e&&-1}}},{"./_to-index":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-index.js","./_to-iobject":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-iobject.js","./_to-length":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-length.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_classof.js":[function(e,t,s){var r=e("./_cof"),o=e("./_wks")("toStringTag"),n="Arguments"==r(function(){return arguments}()),a=function(e,t){try{return e[t]}catch(e){}};t.exports=function(e){var t,s,i;return void 0===e?"Undefined":null===e?"Null":"string"==typeof(s=a(t=Object(e),o))?s:n?r(t):"Object"==(i=r(t))&&"function"==typeof t.callee?"Arguments":i}},{"./_cof":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_cof.js","./_wks":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_wks.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_cof.js":[function(e,t,s){var r={}.toString;t.exports=function(e){return r.call(e).slice(8,-1)}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_core.js":[function(e,t,s){var r=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=r)},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_ctx.js":[function(e,t,s){var r=e("./_a-function");t.exports=function(e,t,s){if(r(e),void 0===t)return e;switch(s){case 1:return function(s){return e.call(t,s)};case 2:return function(s,r){return e.call(t,s,r)};case 3:return function(s,r,o){return e.call(t,s,r,o)}}return function(){return e.apply(t,arguments)}}},{"./_a-function":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_a-function.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_defined.js":[function(e,t,s){t.exports=function(e){if(void 0==e)throw TypeError("Can't call method on  "+e);return e}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_descriptors.js":[function(e,t,s){t.exports=!e("./_fails")(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},{"./_fails":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_fails.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_dom-create.js":[function(e,t,s){var r=e("./_is-object"),o=e("./_global").document,n=r(o)&&r(o.createElement);t.exports=function(e){return n?o.createElement(e):{}}},{"./_global":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_global.js","./_is-object":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_is-object.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_enum-bug-keys.js":[function(e,t,s){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_export.js":[function(e,t,s){var r=e("./_global"),o=e("./_core"),n=e("./_ctx"),a=e("./_hide"),i="prototype",l=function(e,t,s){var u,d,c,y=e&l.F,j=e&l.G,_=e&l.S,m=e&l.P,k=e&l.B,b=e&l.W,f=j?o:o[t]||(o[t]={}),h=f[i],p=j?r:_?r[t]:(r[t]||{})[i];j&&(s=t);for(u in s)d=!y&&p&&void 0!==p[u],d&&u in f||(c=d?p[u]:s[u],f[u]=j&&"function"!=typeof p[u]?s[u]:k&&d?n(c,r):b&&p[u]==c?function(e){var t=function(t,s,r){if(this instanceof e){switch(arguments.length){case 0:return new e;case 1:return new e(t);case 2:return new e(t,s)}return new e(t,s,r)}return e.apply(this,arguments)};return t[i]=e[i],t}(c):m&&"function"==typeof c?n(Function.call,c):c,m&&((f.virtual||(f.virtual={}))[u]=c,e&l.R&&h&&!h[u]&&a(h,u,c)))};l.F=1,l.G=2,l.S=4,l.P=8,l.B=16,l.W=32,l.U=64,l.R=128,t.exports=l},{"./_core":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_core.js","./_ctx":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_ctx.js","./_global":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_global.js","./_hide":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_hide.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_fails.js":[function(e,t,s){t.exports=function(e){try{return!!e()}catch(e){return!0}}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_global.js":[function(e,t,s){var r=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=r)},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_has.js":[function(e,t,s){var r={}.hasOwnProperty;t.exports=function(e,t){return r.call(e,t)}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_hide.js":[function(e,t,s){var r=e("./_object-dp"),o=e("./_property-desc");t.exports=e("./_descriptors")?function(e,t,s){return r.f(e,t,o(1,s))}:function(e,t,s){return e[t]=s,e}},{"./_descriptors":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_descriptors.js","./_object-dp":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-dp.js","./_property-desc":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_property-desc.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_html.js":[function(e,t,s){t.exports=e("./_global").document&&document.documentElement},{"./_global":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_global.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_ie8-dom-define.js":[function(e,t,s){t.exports=!e("./_descriptors")&&!e("./_fails")(function(){return 7!=Object.defineProperty(e("./_dom-create")("div"),"a",{get:function(){return 7}}).a})},{"./_descriptors":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_descriptors.js","./_dom-create":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_dom-create.js","./_fails":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_fails.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iobject.js":[function(e,t,s){var r=e("./_cof");t.exports=Object("z").propertyIsEnumerable(0)?Object:function(e){return"String"==r(e)?e.split(""):Object(e)}},{"./_cof":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_cof.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_is-object.js":[function(e,t,s){t.exports=function(e){return"object"==typeof e?null!==e:"function"==typeof e}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iter-create.js":[function(e,t,s){"use strict";var r=e("./_object-create"),o=e("./_property-desc"),n=e("./_set-to-string-tag"),a={};e("./_hide")(a,e("./_wks")("iterator"),function(){return this}),t.exports=function(e,t,s){e.prototype=r(a,{next:o(1,s)}),n(e,t+" Iterator")}},{"./_hide":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_hide.js","./_object-create":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-create.js","./_property-desc":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_property-desc.js","./_set-to-string-tag":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_set-to-string-tag.js","./_wks":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_wks.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iter-define.js":[function(e,t,s){"use strict";var r=e("./_library"),o=e("./_export"),n=e("./_redefine"),a=e("./_hide"),i=e("./_has"),l=e("./_iterators"),u=e("./_iter-create"),d=e("./_set-to-string-tag"),c=e("./_object-gpo"),y=e("./_wks")("iterator"),j=!([].keys&&"next"in[].keys()),_="@@iterator",m="keys",k="values",b=function(){return this};t.exports=function(e,t,s,f,h,p,g){u(s,t,f);var C,E,v,S=function(e){if(!j&&e in x)return x[e];switch(e){case m:return function(){return new s(this,e)};case k:return function(){return new s(this,e)}}return function(){return new s(this,e)}},P=t+" Iterator",U=h==k,B=!1,x=e.prototype,M=x[y]||x[_]||h&&x[h],O=M||S(h),w=h?U?S("entries"):O:void 0,T="Array"==t?x.entries||M:M;if(T&&(v=c(T.call(new e)),v!==Object.prototype&&(d(v,P,!0),r||i(v,y)||a(v,y,b))),U&&M&&M.name!==k&&(B=!0,O=function(){return M.call(this)}),r&&!g||!j&&!B&&x[y]||a(x,y,O),l[t]=O,l[P]=b,h)if(C={values:U?O:S(k),keys:p?O:S(m),entries:w},g)for(E in C)E in x||n(x,E,C[E]);else o(o.P+o.F*(j||B),t,C);return C}},{"./_export":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_export.js","./_has":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_has.js","./_hide":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_hide.js","./_iter-create":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iter-create.js","./_iterators":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iterators.js","./_library":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_library.js","./_object-gpo":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-gpo.js","./_redefine":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_redefine.js","./_set-to-string-tag":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_set-to-string-tag.js","./_wks":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_wks.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iter-step.js":[function(e,t,s){t.exports=function(e,t){return{value:t,done:!!e}}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iterators.js":[function(e,t,s){t.exports={}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_library.js":[function(e,t,s){t.exports=!0},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-create.js":[function(e,t,s){var r=e("./_an-object"),o=e("./_object-dps"),n=e("./_enum-bug-keys"),a=e("./_shared-key")("IE_PROTO"),i=function(){},l="prototype",u=function(){var t,s=e("./_dom-create")("iframe"),r=n.length,o="<",a=">";for(s.style.display="none",e("./_html").appendChild(s),s.src="javascript:",t=s.contentWindow.document,t.open(),t.write(o+"script"+a+"document.F=Object"+o+"/script"+a),t.close(),u=t.F;r--;)delete u[l][n[r]];return u()};t.exports=Object.create||function(e,t){var s;return null!==e?(i[l]=r(e),s=new i,i[l]=null,s[a]=e):s=u(),void 0===t?s:o(s,t)}},{"./_an-object":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_an-object.js","./_dom-create":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_dom-create.js","./_enum-bug-keys":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_enum-bug-keys.js","./_html":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_html.js","./_object-dps":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-dps.js","./_shared-key":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_shared-key.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-dp.js":[function(e,t,s){var r=e("./_an-object"),o=e("./_ie8-dom-define"),n=e("./_to-primitive"),a=Object.defineProperty;s.f=e("./_descriptors")?Object.defineProperty:function(e,t,s){if(r(e),t=n(t,!0),r(s),o)try{return a(e,t,s)}catch(e){}if("get"in s||"set"in s)throw TypeError("Accessors not supported!");return"value"in s&&(e[t]=s.value),e}},{"./_an-object":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_an-object.js","./_descriptors":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_descriptors.js","./_ie8-dom-define":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_ie8-dom-define.js","./_to-primitive":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-primitive.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-dps.js":[function(e,t,s){var r=e("./_object-dp"),o=e("./_an-object"),n=e("./_object-keys");t.exports=e("./_descriptors")?Object.defineProperties:function(e,t){o(e);for(var s,a=n(t),i=a.length,l=0;i>l;)r.f(e,s=a[l++],t[s]);return e}},{"./_an-object":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_an-object.js","./_descriptors":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_descriptors.js","./_object-dp":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-dp.js","./_object-keys":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-keys.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-gpo.js":[function(e,t,s){var r=e("./_has"),o=e("./_to-object"),n=e("./_shared-key")("IE_PROTO"),a=Object.prototype;t.exports=Object.getPrototypeOf||function(e){return e=o(e),r(e,n)?e[n]:"function"==typeof e.constructor&&e instanceof e.constructor?e.constructor.prototype:e instanceof Object?a:null}},{"./_has":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_has.js","./_shared-key":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_shared-key.js","./_to-object":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-object.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-keys-internal.js":[function(e,t,s){var r=e("./_has"),o=e("./_to-iobject"),n=e("./_array-includes")(!1),a=e("./_shared-key")("IE_PROTO");t.exports=function(e,t){var s,i=o(e),l=0,u=[];for(s in i)s!=a&&r(i,s)&&u.push(s);for(;t.length>l;)r(i,s=t[l++])&&(~n(u,s)||u.push(s));return u}},{"./_array-includes":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_array-includes.js","./_has":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_has.js","./_shared-key":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_shared-key.js","./_to-iobject":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-iobject.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-keys.js":[function(e,t,s){var r=e("./_object-keys-internal"),o=e("./_enum-bug-keys");t.exports=Object.keys||function(e){return r(e,o)}},{"./_enum-bug-keys":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_enum-bug-keys.js","./_object-keys-internal":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-keys-internal.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-pie.js":[function(e,t,s){s.f={}.propertyIsEnumerable},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-to-array.js":[function(e,t,s){var r=e("./_object-keys"),o=e("./_to-iobject"),n=e("./_object-pie").f;t.exports=function(e){return function(t){for(var s,a=o(t),i=r(a),l=i.length,u=0,d=[];l>u;)n.call(a,s=i[u++])&&d.push(e?[s,a[s]]:a[s]);return d}}},{"./_object-keys":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-keys.js","./_object-pie":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-pie.js","./_to-iobject":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-iobject.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_property-desc.js":[function(e,t,s){t.exports=function(e,t){return{enumerable:!(1&e),configurable:!(2&e),writable:!(4&e),value:t}}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_redefine.js":[function(e,t,s){t.exports=e("./_hide")},{"./_hide":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_hide.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_set-to-string-tag.js":[function(e,t,s){var r=e("./_object-dp").f,o=e("./_has"),n=e("./_wks")("toStringTag");t.exports=function(e,t,s){e&&!o(e=s?e:e.prototype,n)&&r(e,n,{configurable:!0,value:t})}},{"./_has":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_has.js","./_object-dp":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-dp.js","./_wks":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_wks.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_shared-key.js":[function(e,t,s){var r=e("./_shared")("keys"),o=e("./_uid");t.exports=function(e){return r[e]||(r[e]=o(e))}},{"./_shared":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_shared.js","./_uid":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_uid.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_shared.js":[function(e,t,s){var r=e("./_global"),o="__core-js_shared__",n=r[o]||(r[o]={});t.exports=function(e){return n[e]||(n[e]={})}},{"./_global":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_global.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_string-at.js":[function(e,t,s){var r=e("./_to-integer"),o=e("./_defined");t.exports=function(e){return function(t,s){var n,a,i=String(o(t)),l=r(s),u=i.length;return l<0||l>=u?e?"":void 0:(n=i.charCodeAt(l),n<55296||n>56319||l+1===u||(a=i.charCodeAt(l+1))<56320||a>57343?e?i.charAt(l):n:e?i.slice(l,l+2):(n-55296<<10)+(a-56320)+65536)}}},{"./_defined":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_defined.js","./_to-integer":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-integer.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-index.js":[function(e,t,s){var r=e("./_to-integer"),o=Math.max,n=Math.min;t.exports=function(e,t){return e=r(e),e<0?o(e+t,0):n(e,t)}},{"./_to-integer":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-integer.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-integer.js":[function(e,t,s){var r=Math.ceil,o=Math.floor;t.exports=function(e){return isNaN(e=+e)?0:(e>0?o:r)(e)}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-iobject.js":[function(e,t,s){var r=e("./_iobject"),o=e("./_defined");t.exports=function(e){return r(o(e))}},{"./_defined":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_defined.js","./_iobject":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iobject.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-length.js":[function(e,t,s){var r=e("./_to-integer"),o=Math.min;t.exports=function(e){return e>0?o(r(e),9007199254740991):0}},{"./_to-integer":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-integer.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-object.js":[function(e,t,s){var r=e("./_defined");t.exports=function(e){return Object(r(e))}},{"./_defined":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_defined.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-primitive.js":[function(e,t,s){var r=e("./_is-object");t.exports=function(e,t){if(!r(e))return e;var s,o;if(t&&"function"==typeof(s=e.toString)&&!r(o=s.call(e)))return o;if("function"==typeof(s=e.valueOf)&&!r(o=s.call(e)))return o;if(!t&&"function"==typeof(s=e.toString)&&!r(o=s.call(e)))return o;throw TypeError("Can't convert object to primitive value")}},{"./_is-object":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_is-object.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_uid.js":[function(e,t,s){var r=0,o=Math.random();t.exports=function(e){return"Symbol(".concat(void 0===e?"":e,")_",(++r+o).toString(36))}},{}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_wks.js":[function(e,t,s){var r=e("./_shared")("wks"),o=e("./_uid"),n=e("./_global").Symbol,a="function"==typeof n,i=t.exports=function(e){return r[e]||(r[e]=a&&n[e]||(a?n:o)("Symbol."+e))};i.store=r},{"./_global":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_global.js","./_shared":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_shared.js","./_uid":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_uid.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\core.get-iterator-method.js":[function(e,t,s){var r=e("./_classof"),o=e("./_wks")("iterator"),n=e("./_iterators");t.exports=e("./_core").getIteratorMethod=function(e){if(void 0!=e)return e[o]||e["@@iterator"]||n[r(e)]}},{"./_classof":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_classof.js","./_core":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_core.js","./_iterators":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iterators.js","./_wks":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_wks.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\core.get-iterator.js":[function(e,t,s){var r=e("./_an-object"),o=e("./core.get-iterator-method");t.exports=e("./_core").getIterator=function(e){var t=o(e);if("function"!=typeof t)throw TypeError(e+" is not iterable!");return r(t.call(e))}},{"./_an-object":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_an-object.js","./_core":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_core.js","./core.get-iterator-method":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\core.get-iterator-method.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\core.is-iterable.js":[function(e,t,s){var r=e("./_classof"),o=e("./_wks")("iterator"),n=e("./_iterators");t.exports=e("./_core").isIterable=function(e){var t=Object(e);return void 0!==t[o]||"@@iterator"in t||n.hasOwnProperty(r(t))}},{"./_classof":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_classof.js","./_core":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_core.js","./_iterators":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iterators.js","./_wks":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_wks.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es6.array.iterator.js":[function(e,t,s){"use strict";var r=e("./_add-to-unscopables"),o=e("./_iter-step"),n=e("./_iterators"),a=e("./_to-iobject");t.exports=e("./_iter-define")(Array,"Array",function(e,t){this._t=a(e),this._i=0,this._k=t},function(){var e=this._t,t=this._k,s=this._i++;return!e||s>=e.length?(this._t=void 0,o(1)):"keys"==t?o(0,s):"values"==t?o(0,e[s]):o(0,[s,e[s]])},"values"),n.Arguments=n.Array,r("keys"),r("values"),
-r("entries")},{"./_add-to-unscopables":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_add-to-unscopables.js","./_iter-define":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iter-define.js","./_iter-step":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iter-step.js","./_iterators":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iterators.js","./_to-iobject":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_to-iobject.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es6.object.define-property.js":[function(e,t,s){var r=e("./_export");r(r.S+r.F*!e("./_descriptors"),"Object",{defineProperty:e("./_object-dp").f})},{"./_descriptors":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_descriptors.js","./_export":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_export.js","./_object-dp":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-dp.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es6.string.iterator.js":[function(e,t,s){"use strict";var r=e("./_string-at")(!0);e("./_iter-define")(String,"String",function(e){this._t=String(e),this._i=0},function(){var e,t=this._t,s=this._i;return s>=t.length?{value:void 0,done:!0}:(e=r(t,s),this._i+=e.length,{value:e,done:!1})})},{"./_iter-define":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iter-define.js","./_string-at":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_string-at.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es7.object.entries.js":[function(e,t,s){var r=e("./_export"),o=e("./_object-to-array")(!0);r(r.S,"Object",{entries:function(e){return o(e)}})},{"./_export":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_export.js","./_object-to-array":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_object-to-array.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\web.dom.iterable.js":[function(e,t,s){e("./es6.array.iterator");for(var r=e("./_global"),o=e("./_hide"),n=e("./_iterators"),a=e("./_wks")("toStringTag"),i=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],l=0;l<5;l++){var u=i[l],d=r[u],c=d&&d.prototype;c&&!c[a]&&o(c,a,u),n[u]=n.Array}},{"./_global":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_global.js","./_hide":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_hide.js","./_iterators":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_iterators.js","./_wks":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\_wks.js","./es6.array.iterator":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\core-js\\library\\modules\\es6.array.iterator.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\EasySettings.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("./utils/DOMUtils"),u=r(l),d=e("./actions/EasySettingsMovementManager"),c=r(d),y=e("./sections/Section"),j=r(y),_=function(){function e(t,s,r){(0,n.default)(this,e),this.container=null,this.header=null,this.body=null,this.sections=[],this.elements={},this.title=r,this.pos={x:t||8,y:s||8},this.createSettingsContainer(),this.movementManager=new c.default(this.container,this.header)}return(0,i.default)(e,[{key:"createSettingsHeader",value:function(){this.header=u.default.createElement("header",this.container,{className:"es-header"}),u.default.createElement("span",this.header,{innerHTML:this.title||"EasySettings Panel"})}},{key:"createSettingsBody",value:function(){this.body=u.default.createElement("main",this.container,{className:"es-body"})}},{key:"createSettingsContainer",value:function(){this.container=u.default.createElement("div",null,{className:"es-container"});var e=this.container;this.createSettingsHeader(),this.createSettingsBody(),document.body.insertBefore(e,document.body.firstChild),e.style.left=this.pos.x+"px",e.style.top=this.pos.y+"px"}},{key:"createSection",value:function(){var e=new j.default(this.body,this.elements,this.sections.length);return this.sections.push(e),e}},{key:"getValue",value:function(e){return this.elements[e].getValue()}},{key:"setValue",value:function(e,t){this.elements[e].setValue(t)}}]),e}();s.default=_,window.EasySettings=_},{"./actions/EasySettingsMovementManager":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\actions\\EasySettingsMovementManager.js","./sections/Section":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\Section.js","./utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\actions\\EasySettingsMovementManager.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=0,u=function(){function e(t,s){(0,n.default)(this,e),this.panel=t,this.header=s,this.startPos={x:0,y:0},this.startPosOfPanel={x:8,y:0},this.handleMovement=this.handleMovement.bind(this),this.bindEvents()}return(0,i.default)(e,null,[{key:"getCurrentZIndex",value:function(){return l++}}]),(0,i.default)(e,[{key:"bindEvents",value:function(){var t=this;this.header.addEventListener("mousedown",function(s){t.startPos={x:s.pageX,y:s.pageY};var r=t.panel.getBoundingClientRect();t.startPosOfPanel={x:r.left,y:r.top},t.panel.style.zIndex=e.getCurrentZIndex(),document.addEventListener("mousemove",t.handleMovement),document.addEventListener("mouseup",function(){document.removeEventListener("mousemove",t.handleMovement)})})}},{key:"handleMovement",value:function(e){this.panel.style.left=this.startPosOfPanel.x+(e.pageX-this.startPos.x)+"px",this.panel.style.top=this.startPosOfPanel.y+(e.pageY-this.startPos.y)+"px"}}]),e}();s.default=u},{"babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\Section.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../utils/DOMUtils"),u=r(l),d=e("./elements/Header"),c=r(d),y=e("./elements/Button"),j=r(y),_=e("./elements/Dropdown"),m=r(_),k=e("./elements/Checkbox"),b=r(k),f=e("./elements/Radio"),h=r(f),p=e("./elements/Input"),g=r(p),C=e("./elements/Textarea"),E=r(C),v=e("./elements/Slider"),S=r(v),P=function(){function e(t,s,r){return(0,n.default)(this,e),this.esBody=t,this.body=null,this.elements=s,this.index=r,this.create(),this}return(0,i.default)(e,[{key:"create",value:function(){this.body=u.default.createElement("div",this.esBody,{className:"es-body__section"})}},{key:"addToContent",value:function(e,t){null!==e&&(this.elements[e]=t)}},{key:"addHeader",value:function(e,t){var s=new c.default(this.body,t);return this.addToContent(e,s),this}},{key:"addButton",value:function(e,t,s){var r=new j.default(this.body,t,s);return this.addToContent(e,r),this}},{key:"addDropdown",value:function(e,t,s){var r=new m.default(this.body,t,s);return this.addToContent(e,r),this}},{key:"addCheckbox",value:function(e,t,s,r){var o=new b.default(this.body,t,s,r);return this.addToContent(e,o),this}},{key:"addRadio",value:function(e,t,s,r){var o=new h.default(this.body,this.index,t,s,r);return this.addToContent(e,o),this}},{key:"addTextInput",value:function(e,t,s,r){var o=new g.default(this.body,"text",t,s,r);return this.addToContent(e,o),this}},{key:"addPasswordInput",value:function(e,t,s,r){var o=new g.default(this.body,"password",t,s,r);return this.addToContent(e,o),this}},{key:"addNumberInput",value:function(e,t,s,r){var o=new g.default(this.body,"number",t,s,r);return this.addToContent(e,o),this}},{key:"addDateInput",value:function(e,t,s,r){var o=new g.default(this.body,"date",t,s,r);return this.addToContent(e,o),this}},{key:"addTimeInput",value:function(e,t,s,r){var o=new g.default(this.body,"time",t,s,r);return this.addToContent(e,o),this}},{key:"addDateTimeInput",value:function(e,t,s,r){var o=new g.default(this.body,"datetime-local",t,s,r);return this.addToContent(e,o),this}},{key:"addTextarea",value:function(e,t,s,r){var o=new E.default(this.body,t,s,r);return this.addToContent(e,o),this}},{key:"addSlider",value:function(e,t,s,r,o,n){var a=new S.default(this.body,t,s,r,o,n);return this.addToContent(e,a),this}}]),e}();s.default=P},{"../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","./elements/Button":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Button.js","./elements/Checkbox":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Checkbox.js","./elements/Dropdown":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Dropdown.js","./elements/Header":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Header.js","./elements/Input":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Input.js","./elements/Radio":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Radio.js","./elements/Slider":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Slider.js","./elements/Textarea":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Textarea.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Button.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=function(){function e(t,s,r){(0,n.default)(this,e),this.element=null,this.section=t,this.text=s,this.callback=r||null,this.create()}return(0,i.default)(e,[{key:"create",value:function(){var e=u.default.createElement("button",this.section,{className:"es-body__section__button",innerHTML:this.text});this.element=e,this.bindCallback()}},{key:"bindCallback",value:function(){var e=this;this.element.addEventListener("click",function(){e.callback(e.getValue())})}},{key:"getValue",value:function(){return this.element.innerHTML}},{key:"setValue",value:function(e){this.element.innerHTML=e}}]),e}();s.default=d},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Checkbox.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=function(){function e(t,s,r,o){(0,n.default)(this,e),this.element=null,this.section=t,this.label=s,this.callback=o||null,this.checked=r,this.create()}return(0,i.default)(e,[{key:"create",value:function(){var e=u.default.createElement("label",this.section,{className:"es-body__section__label"}),t=u.default.createElement("input",e,{className:"body__section__checkbox",innerHTML:this.label,checked:this.checked},{type:"checkbox"}),s=u.default.createElement("span",e,{className:"es-body__section__label__icon"},{tabindex:0});u.default.createElement("span",s,{className:"es-body__section__label__icon--focused"}),u.default.createElement("span",e,{className:"es-body__section__label__text",innerHTML:this.label}),s.addEventListener("keydown",function(e){32!==e.keyCode&&13!==e.keyCode||(t.checked=!t.checked,u.default.dispatchEvent(t,"change"))}),this.element=t,this.bindCallback()}},{key:"bindCallback",value:function(){var e=this;this.element.addEventListener("change",function(){e.callback(e.getValue())})}},{key:"getValue",value:function(){return this.element.checked}},{key:"setValue",value:function(e){this.element.checked=e}}]),e}();s.default=d},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Dropdown.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=function(){function e(t,s,r){(0,n.default)(this,e),this.element=null,this.section=t,this.options=s||[],this.callback=r||null,this.create()}return(0,i.default)(e,[{key:"create",value:function(){var e=u.default.createElement("select",this.section,{className:"body__section__dropdown"});this.options.forEach(function(t){var s=document.createElement("option");s.innerHTML=t,e.appendChild(s)}),this.element=e,this.bindCallback()}},{key:"bindCallback",value:function(){var e=this;this.element.addEventListener("change",function(){e.callback(e.getValue())})}},{key:"getValue",value:function(){return this.element.value}},{key:"setValue",value:function(e){this.element.value=e}}]),e}();s.default=d},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Header.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=function(){function e(t,s){(0,n.default)(this,e),this.element=null,this.section=t,this.text=s,this.create()}return(0,i.default)(e,[{key:"create",value:function(){var e=u.default.createElement("p",this.section,{className:"body__section__header",innerHTML:this.text});this.element=e}},{key:"getValue",value:function(){return this.element.innerHTML}},{key:"setValue",value:function(e){this.element.innerHTML=e}}]),e}();s.default=d},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Input.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=function(){function e(t,s,r,o,a){(0,n.default)(this,e),this.element=null,this.section=t,this.value=r,this.type=s,this.callback=o||null,this.addOptions=a,this.create()}return(0,i.default)(e,[{key:"create",value:function(){var e=u.default.createElement("span",this.section,{className:"es-body__section__input-group"}),t=u.default.createElement("input",e,{className:"es-body__section__input es-body__section__input--"+this.type,value:this.value},{type:this.type});this.addOptions&&(null!==this.addOptions.min&&t.setAttribute("min",this.addOptions.min),null!==this.addOptions.min&&t.setAttribute("max",this.addOptions.max),null!==this.addOptions.placeholder&&(t.placeholder=this.addOptions.placeholder)),u.default.createElement("span",e,{className:"es-body__section__input-underline"}),this.element=t,this.bindCallback()}},{key:"bindCallback",value:function(){var e=this;this.element.addEventListener("input",function(){e.callback(e.getValue())})}},{key:"getValue",value:function(){if(this.addOptions){if(null!==this.addOptions.min&&this.addOptions.min>this.element.value)return this.addOptions.min;if(null!==this.addOptions.max&&this.addOptions.max<this.element.value)return this.addOptions.max}return this.element.value}},{key:"setValue",value:function(e){this.element.value=e}}]),e}();s.default=d},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Radio.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=function(){function e(t,s,r,o,a){(0,n.default)(this,e),this.element=null,this.radios=[],this.section=t,this.index=s,this.options=r||[],this.checkedIndex=o,this.callback=a||null,this.create()}return(0,i.default)(e,[{key:"create",value:function(){var e=this,t=u.default.createElement("div",this.section,{className:"es-body__section__radio-group"});this.options.forEach(function(s,r){var o=u.default.createElement("label",t,{className:"es-body__section__label"}),n=u.default.createElement("input",o,{className:"es-body__section__checkbox",checked:r===e.checkedIndex},{type:"radio",name:"EasySettingsPanel-"+e.index}),a=u.default.createElement("span",o,{className:"es-body__section__label__icon"},{tabindex:0});u.default.createElement("span",a,{className:"es-body__section__label__icon--focused"}),a.addEventListener("keydown",function(s){32!==s.keyCode&&13!==s.keyCode||(e.setValue(r),u.default.dispatchEvent(t,"change"))}),u.default.createElement("span",o,{innerHTML:s}),e.radios.push(n)}),this.element=t,this.bindCallback()}},{key:"bindCallback",value:function(){var e=this;this.element.addEventListener("change",function(){e.callback(e.getValue())})}},{key:"getValue",value:function(){var e=-1;return this.radios.forEach(function(t,s){t.checked&&(e=s)}),e}},{key:"setValue",value:function(e){this.radios.forEach(function(t,s){t.checked=s===e})}}]),e}();s.default=d},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Slider.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=e("./SliderMovementManager"),c=r(d),y=function(){function e(t,s,r,o,a){(0,n.default)(this,e),this.element=null,this.section=t,this.value=s,this.min=r,this.max=o,this.callback=a||null,this.SliderMovementManager=null,this.create()}return(0,i.default)(e,[{key:"create",value:function(){var e=this,t=u.default.createElement("span",this.section,{className:"es-body__section__slider-group"});null===this.min&&(this.min=0),null===this.max&&(this.max=100);var s=u.default.createElement("input",t,{className:"es-body__section__slider"},{type:"range",min:this.min,max:this.max,value:this.value}),r=u.default.createElement("div",t,{className:"es-body__section__slider-track"}),o=u.default.createElement("div",r,{className:"es-body__section__slider-track__slider-value"}),n=u.default.createElement("button",r,{className:"es-body__section__slider-track__slider-handle"});this.SliderMovementManager=new c.default(n,r,s,o),this.SliderMovementManager.setHandleValue(this.value),n.addEventListener("keydown",function(t){39===t.keyCode&&(e.element.value++,u.default.dispatchEvent(e.element,"input")),37===t.keyCode&&(e.element.value--,u.default.dispatchEvent(e.element,"input"))}),this.element=s,this.bindCallback()}},{key:"bindCallback",value:function(){var e=this;this.element.addEventListener("input",function(){e.callback(e.getValue()),e.SliderMovementManager.setHandleValue()})}},{key:"getValue",value:function(){return this.element.value}},{key:"setValue",value:function(e){this.element.value=e,this.SliderMovementManager.setHandleValue()}}]),e}();s.default=y},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","./SliderMovementManager":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\SliderMovementManager.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\SliderMovementManager.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=function(){function e(t,s,r,o){(0,n.default)(this,e),this.handle=t,this.track=s,this.input=r,this.trackValue=o,this.offset=0,this.startPos={x:0,y:0},this.startPosOfPanel={x:8,y:0},this.handleMovement=this.handleMovement.bind(this),this.bindEvents()}return(0,i.default)(e,[{key:"bindEvents",value:function(){var e=this;this.handle.addEventListener("mousedown",function(t){e.startPos={x:t.pageX,y:t.pageY};var s=e.handle.getBoundingClientRect(),r=e.track.getBoundingClientRect();e.startPosOfPanel={x:s.left-r.left},document.addEventListener("mousemove",e.handleMovement),document.addEventListener("mouseup",function(){document.removeEventListener("mousemove",e.handleMovement)})})}},{key:"handleMovement",value:function(e){this.offset=this.startPosOfPanel.x+(e.pageX-this.startPos.x),this.offset<0&&(this.offset=0),this.offset>this.track.offsetWidth-this.handle.offsetWidth&&(this.offset=this.track.offsetWidth-this.handle.offsetWidth),this.minValueStyle(),this.handle.style.left=this.offset+"px",this.setInputValue()}},{key:"setInputValue",value:function(){var e=this.track.offsetWidth-this.handle.offsetWidth,t=1*this.input.getAttribute("min"),s=this.input.getAttribute("max")-t;this.input.value=s*(this.offset/e)+t,u.default.dispatchEvent(this.input,"input")}},{key:"setHandleValue",value:function(){var e=this.track.offsetWidth-this.handle.offsetWidth,t=1*this.input.getAttribute("min"),s=this.input.getAttribute("max")-t;this.trackValue.style.width=100*((this.input.value-t)/s)+"%",this.offset=e*((this.input.value-t)/s),this.minValueStyle(),this.handle.style.left=this.offset+"px"}},{key:"minValueStyle",value:function(){var e=this.handle.className.split(" "),t="es-body__section__slider-track__slider-handle--min-value",s=e.indexOf(t);this.offset<=0?s<0&&(e.push(t),this.handle.className=e.join(" ")):s>=0&&(e.splice(s,1),this.handle.className=e.join(" "))}}]),e}();s.default=d},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\sections\\elements\\Textarea.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/classCallCheck"),n=r(o),a=e("babel-runtime/helpers/createClass"),i=r(a),l=e("../../utils/DOMUtils"),u=r(l),d=function(){function e(t,s,r,o){(0,n.default)(this,e),this.element=null,this.section=t,this.value=s,this.callback=r||null,this.addOptions=o,this.create()}return(0,i.default)(e,[{key:"create",value:function(){var e=u.default.createElement("span",this.section,{className:"es-body__section__input-group"}),t=u.default.createElement("textarea",e,{className:"es-body__section__input es-body__section__input--textarea",innerHTML:this.value});null!==this.addOptions.placeholder&&(t.placeholder=this.addOptions.placeholder),u.default.createElement("span",e,{className:"es-body__section__input-underline"}),this.element=t,this.bindCallback()}},{key:"bindCallback",value:function(){var e=this;this.element.addEventListener("input",function(){e.callback(e.getValue())})}},{key:"getValue",value:function(){return this.element.innerHTML}},{key:"setValue",value:function(e){this.element.innerHTML=e}}]),e}();s.default=d},{"../../utils/DOMUtils":"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js"}],"C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\utils\\DOMUtils.js":[function(e,t,s){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(s,"__esModule",{value:!0});var o=e("babel-runtime/helpers/slicedToArray"),n=r(o),a=e("babel-runtime/core-js/object/entries"),i=r(a),l=e("babel-runtime/core-js/get-iterator"),u=r(l),d=e("babel-runtime/helpers/classCallCheck"),c=r(d),y=e("babel-runtime/helpers/createClass"),j=r(y),_=function(){function e(){(0,c.default)(this,e)}return(0,j.default)(e,null,[{key:"createElement",value:function(e,t,s,r){var o=document.createElement(e);if(s){var a=!0,l=!1,d=void 0;try{for(var c,y=(0,u.default)((0,i.default)(s));!(a=(c=y.next()).done);a=!0){var j=(0,n.default)(c.value,2),_=j[0],m=j[1];o[_]=m}}catch(e){l=!0,d=e}finally{try{!a&&y.return&&y.return()}finally{if(l)throw d}}}if(r){var k=!0,b=!1,f=void 0;try{for(var h,p=(0,u.default)((0,i.default)(r));!(k=(h=p.next()).done);k=!0){var g=(0,n.default)(h.value,2),_=g[0],m=g[1];o.setAttribute(_,m)}}catch(e){b=!0,f=e}finally{try{!k&&p.return&&p.return()}finally{if(b)throw f}}}return t&&t.appendChild(o),o}},{key:"dispatchEvent",value:function(e,t){if("createEvent"in document){var s=document.createEvent("HTMLEvents");s.initEvent(t,!1,!0),e.dispatchEvent(s)}else e.fireEvent("onchange")}}]),e}();s.default=_},{"babel-runtime/core-js/get-iterator":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\get-iterator.js","babel-runtime/core-js/object/entries":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\core-js\\object\\entries.js","babel-runtime/helpers/classCallCheck":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\classCallCheck.js","babel-runtime/helpers/createClass":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\createClass.js","babel-runtime/helpers/slicedToArray":"C:\\Users\\Bartek\\Projekty\\EasySettings\\node_modules\\babel-runtime\\helpers\\slicedToArray.js"}]},{},["C:\\Users\\Bartek\\Projekty\\EasySettings\\src\\js\\EasySettings.js"]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/get-iterator.js":[function(require,module,exports){
+module.exports = { "default": require("core-js/library/fn/get-iterator"), __esModule: true };
+},{"core-js/library/fn/get-iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/get-iterator.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/is-iterable.js":[function(require,module,exports){
+module.exports = { "default": require("core-js/library/fn/is-iterable"), __esModule: true };
+},{"core-js/library/fn/is-iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/is-iterable.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/define-property.js":[function(require,module,exports){
+module.exports = { "default": require("core-js/library/fn/object/define-property"), __esModule: true };
+},{"core-js/library/fn/object/define-property":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/define-property.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/entries.js":[function(require,module,exports){
+module.exports = { "default": require("core-js/library/fn/object/entries"), __esModule: true };
+},{"core-js/library/fn/object/entries":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/entries.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js":[function(require,module,exports){
+"use strict";
+
+exports.__esModule = true;
+
+exports.default = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js":[function(require,module,exports){
+"use strict";
+
+exports.__esModule = true;
+
+var _defineProperty = require("../core-js/object/define-property");
+
+var _defineProperty2 = _interopRequireDefault(_defineProperty);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+},{"../core-js/object/define-property":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/define-property.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/slicedToArray.js":[function(require,module,exports){
+"use strict";
+
+exports.__esModule = true;
+
+var _isIterable2 = require("../core-js/is-iterable");
+
+var _isIterable3 = _interopRequireDefault(_isIterable2);
+
+var _getIterator2 = require("../core-js/get-iterator");
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  function sliceIterator(arr, i) {
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = undefined;
+
+    try {
+      for (var _i = (0, _getIterator3.default)(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);
+
+        if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"]) _i["return"]();
+      } finally {
+        if (_d) throw _e;
+      }
+    }
+
+    return _arr;
+  }
+
+  return function (arr, i) {
+    if (Array.isArray(arr)) {
+      return arr;
+    } else if ((0, _isIterable3.default)(Object(arr))) {
+      return sliceIterator(arr, i);
+    } else {
+      throw new TypeError("Invalid attempt to destructure non-iterable instance");
+    }
+  };
+}();
+},{"../core-js/get-iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/get-iterator.js","../core-js/is-iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/is-iterable.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/get-iterator.js":[function(require,module,exports){
+require('../modules/web.dom.iterable');
+require('../modules/es6.string.iterator');
+module.exports = require('../modules/core.get-iterator');
+},{"../modules/core.get-iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/core.get-iterator.js","../modules/es6.string.iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.string.iterator.js","../modules/web.dom.iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/web.dom.iterable.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/is-iterable.js":[function(require,module,exports){
+require('../modules/web.dom.iterable');
+require('../modules/es6.string.iterator');
+module.exports = require('../modules/core.is-iterable');
+},{"../modules/core.is-iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/core.is-iterable.js","../modules/es6.string.iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.string.iterator.js","../modules/web.dom.iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/web.dom.iterable.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/define-property.js":[function(require,module,exports){
+require('../../modules/es6.object.define-property');
+var $Object = require('../../modules/_core').Object;
+module.exports = function defineProperty(it, key, desc){
+  return $Object.defineProperty(it, key, desc);
+};
+},{"../../modules/_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","../../modules/es6.object.define-property":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.object.define-property.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/entries.js":[function(require,module,exports){
+require('../../modules/es7.object.entries');
+module.exports = require('../../modules/_core').Object.entries;
+},{"../../modules/_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","../../modules/es7.object.entries":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es7.object.entries.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_a-function.js":[function(require,module,exports){
+module.exports = function(it){
+  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
+  return it;
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_add-to-unscopables.js":[function(require,module,exports){
+module.exports = function(){ /* empty */ };
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_an-object.js":[function(require,module,exports){
+var isObject = require('./_is-object');
+module.exports = function(it){
+  if(!isObject(it))throw TypeError(it + ' is not an object!');
+  return it;
+};
+},{"./_is-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_is-object.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_array-includes.js":[function(require,module,exports){
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = require('./_to-iobject')
+  , toLength  = require('./_to-length')
+  , toIndex   = require('./_to-index');
+module.exports = function(IS_INCLUDES){
+  return function($this, el, fromIndex){
+    var O      = toIObject($this)
+      , length = toLength(O.length)
+      , index  = toIndex(fromIndex, length)
+      , value;
+    // Array#includes uses SameValueZero equality algorithm
+    if(IS_INCLUDES && el != el)while(length > index){
+      value = O[index++];
+      if(value != value)return true;
+    // Array#toIndex ignores holes, Array#includes - not
+    } else for(;length > index; index++)if(IS_INCLUDES || index in O){
+      if(O[index] === el)return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+},{"./_to-index":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-index.js","./_to-iobject":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-iobject.js","./_to-length":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-length.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_classof.js":[function(require,module,exports){
+// getting tag from 19.1.3.6 Object.prototype.toString()
+var cof = require('./_cof')
+  , TAG = require('./_wks')('toStringTag')
+  // ES3 wrong here
+  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
+
+// fallback for IE11 Script Access Denied error
+var tryGet = function(it, key){
+  try {
+    return it[key];
+  } catch(e){ /* empty */ }
+};
+
+module.exports = function(it){
+  var O, T, B;
+  return it === undefined ? 'Undefined' : it === null ? 'Null'
+    // @@toStringTag case
+    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
+    // builtinTag case
+    : ARG ? cof(O)
+    // ES3 arguments fallback
+    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+};
+},{"./_cof":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_cof.js","./_wks":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_wks.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_cof.js":[function(require,module,exports){
+var toString = {}.toString;
+
+module.exports = function(it){
+  return toString.call(it).slice(8, -1);
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js":[function(require,module,exports){
+var core = module.exports = {version: '2.4.0'};
+if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_ctx.js":[function(require,module,exports){
+// optional / simple context binding
+var aFunction = require('./_a-function');
+module.exports = function(fn, that, length){
+  aFunction(fn);
+  if(that === undefined)return fn;
+  switch(length){
+    case 1: return function(a){
+      return fn.call(that, a);
+    };
+    case 2: return function(a, b){
+      return fn.call(that, a, b);
+    };
+    case 3: return function(a, b, c){
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function(/* ...args */){
+    return fn.apply(that, arguments);
+  };
+};
+},{"./_a-function":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_a-function.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_defined.js":[function(require,module,exports){
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function(it){
+  if(it == undefined)throw TypeError("Can't call method on  " + it);
+  return it;
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_descriptors.js":[function(require,module,exports){
+// Thank's IE8 for his funny defineProperty
+module.exports = !require('./_fails')(function(){
+  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
+});
+},{"./_fails":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_fails.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_dom-create.js":[function(require,module,exports){
+var isObject = require('./_is-object')
+  , document = require('./_global').document
+  // in old IE typeof document.createElement is 'object'
+  , is = isObject(document) && isObject(document.createElement);
+module.exports = function(it){
+  return is ? document.createElement(it) : {};
+};
+},{"./_global":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_global.js","./_is-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_is-object.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_enum-bug-keys.js":[function(require,module,exports){
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_export.js":[function(require,module,exports){
+var global    = require('./_global')
+  , core      = require('./_core')
+  , ctx       = require('./_ctx')
+  , hide      = require('./_hide')
+  , PROTOTYPE = 'prototype';
+
+var $export = function(type, name, source){
+  var IS_FORCED = type & $export.F
+    , IS_GLOBAL = type & $export.G
+    , IS_STATIC = type & $export.S
+    , IS_PROTO  = type & $export.P
+    , IS_BIND   = type & $export.B
+    , IS_WRAP   = type & $export.W
+    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
+    , expProto  = exports[PROTOTYPE]
+    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
+    , key, own, out;
+  if(IS_GLOBAL)source = name;
+  for(key in source){
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    if(own && key in exports)continue;
+    // export native or passed
+    out = own ? target[key] : source[key];
+    // prevent global pollution for namespaces
+    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
+    // bind timers to global for call from export context
+    : IS_BIND && own ? ctx(out, global)
+    // wrap global constructors for prevent change them in library
+    : IS_WRAP && target[key] == out ? (function(C){
+      var F = function(a, b, c){
+        if(this instanceof C){
+          switch(arguments.length){
+            case 0: return new C;
+            case 1: return new C(a);
+            case 2: return new C(a, b);
+          } return new C(a, b, c);
+        } return C.apply(this, arguments);
+      };
+      F[PROTOTYPE] = C[PROTOTYPE];
+      return F;
+    // make static versions for prototype methods
+    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
+    if(IS_PROTO){
+      (exports.virtual || (exports.virtual = {}))[key] = out;
+      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
+      if(type & $export.R && expProto && !expProto[key])hide(expProto, key, out);
+    }
+  }
+};
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library` 
+module.exports = $export;
+},{"./_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","./_ctx":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_ctx.js","./_global":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_global.js","./_hide":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_hide.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_fails.js":[function(require,module,exports){
+module.exports = function(exec){
+  try {
+    return !!exec();
+  } catch(e){
+    return true;
+  }
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_global.js":[function(require,module,exports){
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_has.js":[function(require,module,exports){
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function(it, key){
+  return hasOwnProperty.call(it, key);
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_hide.js":[function(require,module,exports){
+var dP         = require('./_object-dp')
+  , createDesc = require('./_property-desc');
+module.exports = require('./_descriptors') ? function(object, key, value){
+  return dP.f(object, key, createDesc(1, value));
+} : function(object, key, value){
+  object[key] = value;
+  return object;
+};
+},{"./_descriptors":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_descriptors.js","./_object-dp":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dp.js","./_property-desc":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_property-desc.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_html.js":[function(require,module,exports){
+module.exports = require('./_global').document && document.documentElement;
+},{"./_global":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_global.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_ie8-dom-define.js":[function(require,module,exports){
+module.exports = !require('./_descriptors') && !require('./_fails')(function(){
+  return Object.defineProperty(require('./_dom-create')('div'), 'a', {get: function(){ return 7; }}).a != 7;
+});
+},{"./_descriptors":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_descriptors.js","./_dom-create":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_dom-create.js","./_fails":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_fails.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iobject.js":[function(require,module,exports){
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = require('./_cof');
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+},{"./_cof":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_cof.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_is-object.js":[function(require,module,exports){
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iter-create.js":[function(require,module,exports){
+'use strict';
+var create         = require('./_object-create')
+  , descriptor     = require('./_property-desc')
+  , setToStringTag = require('./_set-to-string-tag')
+  , IteratorPrototype = {};
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+require('./_hide')(IteratorPrototype, require('./_wks')('iterator'), function(){ return this; });
+
+module.exports = function(Constructor, NAME, next){
+  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
+  setToStringTag(Constructor, NAME + ' Iterator');
+};
+},{"./_hide":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_hide.js","./_object-create":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-create.js","./_property-desc":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_property-desc.js","./_set-to-string-tag":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_set-to-string-tag.js","./_wks":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_wks.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iter-define.js":[function(require,module,exports){
+'use strict';
+var LIBRARY        = require('./_library')
+  , $export        = require('./_export')
+  , redefine       = require('./_redefine')
+  , hide           = require('./_hide')
+  , has            = require('./_has')
+  , Iterators      = require('./_iterators')
+  , $iterCreate    = require('./_iter-create')
+  , setToStringTag = require('./_set-to-string-tag')
+  , getPrototypeOf = require('./_object-gpo')
+  , ITERATOR       = require('./_wks')('iterator')
+  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
+  , FF_ITERATOR    = '@@iterator'
+  , KEYS           = 'keys'
+  , VALUES         = 'values';
+
+var returnThis = function(){ return this; };
+
+module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED){
+  $iterCreate(Constructor, NAME, next);
+  var getMethod = function(kind){
+    if(!BUGGY && kind in proto)return proto[kind];
+    switch(kind){
+      case KEYS: return function keys(){ return new Constructor(this, kind); };
+      case VALUES: return function values(){ return new Constructor(this, kind); };
+    } return function entries(){ return new Constructor(this, kind); };
+  };
+  var TAG        = NAME + ' Iterator'
+    , DEF_VALUES = DEFAULT == VALUES
+    , VALUES_BUG = false
+    , proto      = Base.prototype
+    , $native    = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
+    , $default   = $native || getMethod(DEFAULT)
+    , $entries   = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined
+    , $anyNative = NAME == 'Array' ? proto.entries || $native : $native
+    , methods, key, IteratorPrototype;
+  // Fix native
+  if($anyNative){
+    IteratorPrototype = getPrototypeOf($anyNative.call(new Base));
+    if(IteratorPrototype !== Object.prototype){
+      // Set @@toStringTag to native iterators
+      setToStringTag(IteratorPrototype, TAG, true);
+      // fix for some old engines
+      if(!LIBRARY && !has(IteratorPrototype, ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
+    }
+  }
+  // fix Array#{values, @@iterator}.name in V8 / FF
+  if(DEF_VALUES && $native && $native.name !== VALUES){
+    VALUES_BUG = true;
+    $default = function values(){ return $native.call(this); };
+  }
+  // Define iterator
+  if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
+    hide(proto, ITERATOR, $default);
+  }
+  // Plug for library
+  Iterators[NAME] = $default;
+  Iterators[TAG]  = returnThis;
+  if(DEFAULT){
+    methods = {
+      values:  DEF_VALUES ? $default : getMethod(VALUES),
+      keys:    IS_SET     ? $default : getMethod(KEYS),
+      entries: $entries
+    };
+    if(FORCED)for(key in methods){
+      if(!(key in proto))redefine(proto, key, methods[key]);
+    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
+  }
+  return methods;
+};
+},{"./_export":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_export.js","./_has":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_has.js","./_hide":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_hide.js","./_iter-create":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iter-create.js","./_iterators":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iterators.js","./_library":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_library.js","./_object-gpo":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-gpo.js","./_redefine":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_redefine.js","./_set-to-string-tag":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_set-to-string-tag.js","./_wks":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_wks.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iter-step.js":[function(require,module,exports){
+module.exports = function(done, value){
+  return {value: value, done: !!done};
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iterators.js":[function(require,module,exports){
+module.exports = {};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_library.js":[function(require,module,exports){
+module.exports = true;
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-create.js":[function(require,module,exports){
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject    = require('./_an-object')
+  , dPs         = require('./_object-dps')
+  , enumBugKeys = require('./_enum-bug-keys')
+  , IE_PROTO    = require('./_shared-key')('IE_PROTO')
+  , Empty       = function(){ /* empty */ }
+  , PROTOTYPE   = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function(){
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = require('./_dom-create')('iframe')
+    , i      = enumBugKeys.length
+    , lt     = '<'
+    , gt     = '>'
+    , iframeDocument;
+  iframe.style.display = 'none';
+  require('./_html').appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties){
+  var result;
+  if(O !== null){
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty;
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+},{"./_an-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_an-object.js","./_dom-create":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_dom-create.js","./_enum-bug-keys":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_enum-bug-keys.js","./_html":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_html.js","./_object-dps":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dps.js","./_shared-key":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_shared-key.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dp.js":[function(require,module,exports){
+var anObject       = require('./_an-object')
+  , IE8_DOM_DEFINE = require('./_ie8-dom-define')
+  , toPrimitive    = require('./_to-primitive')
+  , dP             = Object.defineProperty;
+
+exports.f = require('./_descriptors') ? Object.defineProperty : function defineProperty(O, P, Attributes){
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if(IE8_DOM_DEFINE)try {
+    return dP(O, P, Attributes);
+  } catch(e){ /* empty */ }
+  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
+  if('value' in Attributes)O[P] = Attributes.value;
+  return O;
+};
+},{"./_an-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_an-object.js","./_descriptors":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_descriptors.js","./_ie8-dom-define":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_ie8-dom-define.js","./_to-primitive":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-primitive.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dps.js":[function(require,module,exports){
+var dP       = require('./_object-dp')
+  , anObject = require('./_an-object')
+  , getKeys  = require('./_object-keys');
+
+module.exports = require('./_descriptors') ? Object.defineProperties : function defineProperties(O, Properties){
+  anObject(O);
+  var keys   = getKeys(Properties)
+    , length = keys.length
+    , i = 0
+    , P;
+  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+},{"./_an-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_an-object.js","./_descriptors":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_descriptors.js","./_object-dp":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dp.js","./_object-keys":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-keys.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-gpo.js":[function(require,module,exports){
+// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+var has         = require('./_has')
+  , toObject    = require('./_to-object')
+  , IE_PROTO    = require('./_shared-key')('IE_PROTO')
+  , ObjectProto = Object.prototype;
+
+module.exports = Object.getPrototypeOf || function(O){
+  O = toObject(O);
+  if(has(O, IE_PROTO))return O[IE_PROTO];
+  if(typeof O.constructor == 'function' && O instanceof O.constructor){
+    return O.constructor.prototype;
+  } return O instanceof Object ? ObjectProto : null;
+};
+},{"./_has":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_has.js","./_shared-key":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_shared-key.js","./_to-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-object.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-keys-internal.js":[function(require,module,exports){
+var has          = require('./_has')
+  , toIObject    = require('./_to-iobject')
+  , arrayIndexOf = require('./_array-includes')(false)
+  , IE_PROTO     = require('./_shared-key')('IE_PROTO');
+
+module.exports = function(object, names){
+  var O      = toIObject(object)
+    , i      = 0
+    , result = []
+    , key;
+  for(key in O)if(key != IE_PROTO)has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while(names.length > i)if(has(O, key = names[i++])){
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+},{"./_array-includes":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_array-includes.js","./_has":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_has.js","./_shared-key":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_shared-key.js","./_to-iobject":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-iobject.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-keys.js":[function(require,module,exports){
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys       = require('./_object-keys-internal')
+  , enumBugKeys = require('./_enum-bug-keys');
+
+module.exports = Object.keys || function keys(O){
+  return $keys(O, enumBugKeys);
+};
+},{"./_enum-bug-keys":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_enum-bug-keys.js","./_object-keys-internal":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-keys-internal.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-pie.js":[function(require,module,exports){
+exports.f = {}.propertyIsEnumerable;
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-to-array.js":[function(require,module,exports){
+var getKeys   = require('./_object-keys')
+  , toIObject = require('./_to-iobject')
+  , isEnum    = require('./_object-pie').f;
+module.exports = function(isEntries){
+  return function(it){
+    var O      = toIObject(it)
+      , keys   = getKeys(O)
+      , length = keys.length
+      , i      = 0
+      , result = []
+      , key;
+    while(length > i)if(isEnum.call(O, key = keys[i++])){
+      result.push(isEntries ? [key, O[key]] : O[key]);
+    } return result;
+  };
+};
+},{"./_object-keys":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-keys.js","./_object-pie":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-pie.js","./_to-iobject":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-iobject.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_property-desc.js":[function(require,module,exports){
+module.exports = function(bitmap, value){
+  return {
+    enumerable  : !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable    : !(bitmap & 4),
+    value       : value
+  };
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_redefine.js":[function(require,module,exports){
+module.exports = require('./_hide');
+},{"./_hide":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_hide.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_set-to-string-tag.js":[function(require,module,exports){
+var def = require('./_object-dp').f
+  , has = require('./_has')
+  , TAG = require('./_wks')('toStringTag');
+
+module.exports = function(it, tag, stat){
+  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
+};
+},{"./_has":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_has.js","./_object-dp":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dp.js","./_wks":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_wks.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_shared-key.js":[function(require,module,exports){
+var shared = require('./_shared')('keys')
+  , uid    = require('./_uid');
+module.exports = function(key){
+  return shared[key] || (shared[key] = uid(key));
+};
+},{"./_shared":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_shared.js","./_uid":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_uid.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_shared.js":[function(require,module,exports){
+var global = require('./_global')
+  , SHARED = '__core-js_shared__'
+  , store  = global[SHARED] || (global[SHARED] = {});
+module.exports = function(key){
+  return store[key] || (store[key] = {});
+};
+},{"./_global":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_global.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_string-at.js":[function(require,module,exports){
+var toInteger = require('./_to-integer')
+  , defined   = require('./_defined');
+// true  -> String#at
+// false -> String#codePointAt
+module.exports = function(TO_STRING){
+  return function(that, pos){
+    var s = String(defined(that))
+      , i = toInteger(pos)
+      , l = s.length
+      , a, b;
+    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
+    a = s.charCodeAt(i);
+    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+      ? TO_STRING ? s.charAt(i) : a
+      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+  };
+};
+},{"./_defined":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_defined.js","./_to-integer":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-integer.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-index.js":[function(require,module,exports){
+var toInteger = require('./_to-integer')
+  , max       = Math.max
+  , min       = Math.min;
+module.exports = function(index, length){
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+},{"./_to-integer":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-integer.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-integer.js":[function(require,module,exports){
+// 7.1.4 ToInteger
+var ceil  = Math.ceil
+  , floor = Math.floor;
+module.exports = function(it){
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-iobject.js":[function(require,module,exports){
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = require('./_iobject')
+  , defined = require('./_defined');
+module.exports = function(it){
+  return IObject(defined(it));
+};
+},{"./_defined":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_defined.js","./_iobject":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iobject.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-length.js":[function(require,module,exports){
+// 7.1.15 ToLength
+var toInteger = require('./_to-integer')
+  , min       = Math.min;
+module.exports = function(it){
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+},{"./_to-integer":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-integer.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-object.js":[function(require,module,exports){
+// 7.1.13 ToObject(argument)
+var defined = require('./_defined');
+module.exports = function(it){
+  return Object(defined(it));
+};
+},{"./_defined":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_defined.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-primitive.js":[function(require,module,exports){
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = require('./_is-object');
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function(it, S){
+  if(!isObject(it))return it;
+  var fn, val;
+  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
+  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
+  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+},{"./_is-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_is-object.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_uid.js":[function(require,module,exports){
+var id = 0
+  , px = Math.random();
+module.exports = function(key){
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_wks.js":[function(require,module,exports){
+var store      = require('./_shared')('wks')
+  , uid        = require('./_uid')
+  , Symbol     = require('./_global').Symbol
+  , USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function(name){
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+},{"./_global":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_global.js","./_shared":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_shared.js","./_uid":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_uid.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/core.get-iterator-method.js":[function(require,module,exports){
+var classof   = require('./_classof')
+  , ITERATOR  = require('./_wks')('iterator')
+  , Iterators = require('./_iterators');
+module.exports = require('./_core').getIteratorMethod = function(it){
+  if(it != undefined)return it[ITERATOR]
+    || it['@@iterator']
+    || Iterators[classof(it)];
+};
+},{"./_classof":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_classof.js","./_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","./_iterators":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iterators.js","./_wks":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_wks.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/core.get-iterator.js":[function(require,module,exports){
+var anObject = require('./_an-object')
+  , get      = require('./core.get-iterator-method');
+module.exports = require('./_core').getIterator = function(it){
+  var iterFn = get(it);
+  if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
+  return anObject(iterFn.call(it));
+};
+},{"./_an-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_an-object.js","./_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","./core.get-iterator-method":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/core.get-iterator-method.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/core.is-iterable.js":[function(require,module,exports){
+var classof   = require('./_classof')
+  , ITERATOR  = require('./_wks')('iterator')
+  , Iterators = require('./_iterators');
+module.exports = require('./_core').isIterable = function(it){
+  var O = Object(it);
+  return O[ITERATOR] !== undefined
+    || '@@iterator' in O
+    || Iterators.hasOwnProperty(classof(O));
+};
+},{"./_classof":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_classof.js","./_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","./_iterators":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iterators.js","./_wks":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_wks.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.array.iterator.js":[function(require,module,exports){
+'use strict';
+var addToUnscopables = require('./_add-to-unscopables')
+  , step             = require('./_iter-step')
+  , Iterators        = require('./_iterators')
+  , toIObject        = require('./_to-iobject');
+
+// 22.1.3.4 Array.prototype.entries()
+// 22.1.3.13 Array.prototype.keys()
+// 22.1.3.29 Array.prototype.values()
+// 22.1.3.30 Array.prototype[@@iterator]()
+module.exports = require('./_iter-define')(Array, 'Array', function(iterated, kind){
+  this._t = toIObject(iterated); // target
+  this._i = 0;                   // next index
+  this._k = kind;                // kind
+// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+}, function(){
+  var O     = this._t
+    , kind  = this._k
+    , index = this._i++;
+  if(!O || index >= O.length){
+    this._t = undefined;
+    return step(1);
+  }
+  if(kind == 'keys'  )return step(0, index);
+  if(kind == 'values')return step(0, O[index]);
+  return step(0, [index, O[index]]);
+}, 'values');
+
+// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+Iterators.Arguments = Iterators.Array;
+
+addToUnscopables('keys');
+addToUnscopables('values');
+addToUnscopables('entries');
+},{"./_add-to-unscopables":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_add-to-unscopables.js","./_iter-define":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iter-define.js","./_iter-step":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iter-step.js","./_iterators":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iterators.js","./_to-iobject":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-iobject.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.object.define-property.js":[function(require,module,exports){
+var $export = require('./_export');
+// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+$export($export.S + $export.F * !require('./_descriptors'), 'Object', {defineProperty: require('./_object-dp').f});
+},{"./_descriptors":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_descriptors.js","./_export":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_export.js","./_object-dp":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dp.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.string.iterator.js":[function(require,module,exports){
+'use strict';
+var $at  = require('./_string-at')(true);
+
+// 21.1.3.27 String.prototype[@@iterator]()
+require('./_iter-define')(String, 'String', function(iterated){
+  this._t = String(iterated); // target
+  this._i = 0;                // next index
+// 21.1.5.2.1 %StringIteratorPrototype%.next()
+}, function(){
+  var O     = this._t
+    , index = this._i
+    , point;
+  if(index >= O.length)return {value: undefined, done: true};
+  point = $at(O, index);
+  this._i += point.length;
+  return {value: point, done: false};
+});
+},{"./_iter-define":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iter-define.js","./_string-at":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_string-at.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es7.object.entries.js":[function(require,module,exports){
+// https://github.com/tc39/proposal-object-values-entries
+var $export  = require('./_export')
+  , $entries = require('./_object-to-array')(true);
+
+$export($export.S, 'Object', {
+  entries: function entries(it){
+    return $entries(it);
+  }
+});
+},{"./_export":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_export.js","./_object-to-array":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-to-array.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/web.dom.iterable.js":[function(require,module,exports){
+require('./es6.array.iterator');
+var global        = require('./_global')
+  , hide          = require('./_hide')
+  , Iterators     = require('./_iterators')
+  , TO_STRING_TAG = require('./_wks')('toStringTag');
+
+for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
+  var NAME       = collections[i]
+    , Collection = global[NAME]
+    , proto      = Collection && Collection.prototype;
+  if(proto && !proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
+  Iterators[NAME] = Iterators.Array;
+}
+},{"./_global":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_global.js","./_hide":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_hide.js","./_iterators":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_iterators.js","./_wks":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_wks.js","./es6.array.iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.array.iterator.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/EasySettings.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("./utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+var _EasySettingsMovementManager = require("./actions/EasySettingsMovementManager");
+
+var _EasySettingsMovementManager2 = _interopRequireDefault(_EasySettingsMovementManager);
+
+var _Section = require("./sections/Section");
+
+var _Section2 = _interopRequireDefault(_Section);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var EasySettings = function () {
+  function EasySettings(x, y, title) {
+    (0, _classCallCheck3.default)(this, EasySettings);
+
+    this.container = null;
+    this.header = null;
+    this.body = null;
+    this.sections = [];
+    this.elements = {};
+    this.title = title;
+    this.pos = {
+      x: x || 8,
+      y: y || 8
+    };
+
+    this.createSettingsContainer();
+
+    this.movementManager = new _EasySettingsMovementManager2.default(this.container, this.header);
+  }
+
+  (0, _createClass3.default)(EasySettings, [{
+    key: "createSettingsHeader",
+    value: function createSettingsHeader() {
+      this.header = _DOMUtils2.default.createElement("header", this.container, { className: "es-header" });
+
+      _DOMUtils2.default.createElement("span", this.header, { innerHTML: this.title || "EasySettings Panel" });
+    }
+  }, {
+    key: "createSettingsBody",
+    value: function createSettingsBody() {
+      this.body = _DOMUtils2.default.createElement("main", this.container, { className: "es-body" });
+    }
+  }, {
+    key: "createSettingsContainer",
+    value: function createSettingsContainer() {
+      this.container = _DOMUtils2.default.createElement("div", null, { className: "es-container" });
+      var $container = this.container;
+
+      this.createSettingsHeader();
+      this.createSettingsBody();
+
+      document.body.insertBefore($container, document.body.firstChild);
+
+      $container.style.left = this.pos.x + "px";
+      $container.style.top = this.pos.y + "px";
+    }
+
+    /* Section Creation */
+
+  }, {
+    key: "createSection",
+    value: function createSection() {
+      var newSection = new _Section2.default(this.body, this.elements, this.sections.length);
+      this.sections.push(newSection);
+      return newSection;
+    }
+  }, {
+    key: "getValue",
+    value: function getValue(id) {
+      return this.elements[id].getValue();
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(id, value) {
+      this.elements[id].setValue(value);
+    }
+  }]);
+  return EasySettings;
+}();
+
+exports.default = EasySettings;
+
+
+window.EasySettings = EasySettings;
+
+},{"./actions/EasySettingsMovementManager":"/Users/bartekosx/Projects/EasySettings/src/js/actions/EasySettingsMovementManager.js","./sections/Section":"/Users/bartekosx/Projects/EasySettings/src/js/sections/Section.js","./utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/actions/EasySettingsMovementManager.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var zIndex = 0;
+
+var EasySettingsMovementManager = function () {
+  (0, _createClass3.default)(EasySettingsMovementManager, null, [{
+    key: "getCurrentZIndex",
+    value: function getCurrentZIndex() {
+      return zIndex++;
+    }
+  }]);
+
+  function EasySettingsMovementManager(panel, header) {
+    (0, _classCallCheck3.default)(this, EasySettingsMovementManager);
+
+    this.panel = panel;
+    this.header = header;
+    this.startPos = {
+      x: 0,
+      y: 0
+    };
+
+    this.startPosOfPanel = {
+      x: 8,
+      y: 0
+    };
+
+    this.handleMovement = this.handleMovement.bind(this);
+    this.bindEvents();
+  }
+
+  (0, _createClass3.default)(EasySettingsMovementManager, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      this.header.addEventListener("mousedown", function (e) {
+        _this.startPos = {
+          x: e.pageX,
+          y: e.pageY
+        };
+
+        var panelOffset = _this.panel.getBoundingClientRect();
+        _this.startPosOfPanel = {
+          x: panelOffset.left,
+          y: panelOffset.top
+        };
+
+        _this.panel.style.zIndex = EasySettingsMovementManager.getCurrentZIndex();
+
+        document.addEventListener("mousemove", _this.handleMovement);
+        document.addEventListener("mouseup", function () {
+          document.removeEventListener("mousemove", _this.handleMovement);
+        });
+      });
+    }
+  }, {
+    key: "handleMovement",
+    value: function handleMovement(e) {
+      this.panel.style.left = this.startPosOfPanel.x + (e.pageX - this.startPos.x) + "px";
+      this.panel.style.top = this.startPosOfPanel.y + (e.pageY - this.startPos.y) + "px";
+    }
+  }]);
+  return EasySettingsMovementManager;
+}();
+
+exports.default = EasySettingsMovementManager;
+
+},{"babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/Section.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+var _Button = require("./elements/Button");
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _Checkbox = require("./elements/Checkbox");
+
+var _Checkbox2 = _interopRequireDefault(_Checkbox);
+
+var _Dropdown = require("./elements/Dropdown");
+
+var _Dropdown2 = _interopRequireDefault(_Dropdown);
+
+var _Header = require("./elements/Header");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _HTML = require("./elements/HTML");
+
+var _HTML2 = _interopRequireDefault(_HTML);
+
+var _Input = require("./elements/Input");
+
+var _Input2 = _interopRequireDefault(_Input);
+
+var _Progress = require("./elements/Progress");
+
+var _Progress2 = _interopRequireDefault(_Progress);
+
+var _Radio = require("./elements/Radio");
+
+var _Radio2 = _interopRequireDefault(_Radio);
+
+var _Slider = require("./elements/Slider");
+
+var _Slider2 = _interopRequireDefault(_Slider);
+
+var _Textarea = require("./elements/Textarea");
+
+var _Textarea2 = _interopRequireDefault(_Textarea);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Section = function () {
+  function Section(esBody, elements, index) {
+    (0, _classCallCheck3.default)(this, Section);
+
+    this.esBody = esBody;
+    this.body = null;
+    this.elements = elements;
+    this.index = index;
+    this.create();
+    return this;
+  }
+
+  (0, _createClass3.default)(Section, [{
+    key: "create",
+    value: function create() {
+      this.body = _DOMUtils2.default.createElement("div", this.esBody, { className: "es-body__section" });
+    }
+  }, {
+    key: "addToContent",
+    value: function addToContent(id, el) {
+      if (id !== null) {
+        this.elements[id] = el;
+      }
+    }
+
+    /* Adding certain elements */
+
+  }, {
+    key: "addHeader",
+    value: function addHeader(id, text) {
+      var element = new _Header2.default(this.body, text);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addButton",
+    value: function addButton(id, text, callback) {
+      var element = new _Button2.default(this.body, text, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addDropdown",
+    value: function addDropdown(id, options, callback) {
+      var element = new _Dropdown2.default(this.body, options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addCheckbox",
+    value: function addCheckbox(id, label, checked, callback) {
+      var element = new _Checkbox2.default(this.body, label, checked, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addRadio",
+    value: function addRadio(id, label, checkedIndex, callback) {
+      var element = new _Radio2.default(this.body, this.index, label, checkedIndex, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addColorInput",
+    value: function addColorInput(id, value, callback, addOptions) {
+      var element = new _Input2.default(this.body, "color", value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addTextInput",
+    value: function addTextInput(id, value, callback, addOptions) {
+      var element = new _Input2.default(this.body, "text", value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addPasswordInput",
+    value: function addPasswordInput(id, value, callback, addOptions) {
+      var element = new _Input2.default(this.body, "password", value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addNumberInput",
+    value: function addNumberInput(id, value, callback, addOptions) {
+      var element = new _Input2.default(this.body, "number", value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addDateInput",
+    value: function addDateInput(id, value, callback, addOptions) {
+      var element = new _Input2.default(this.body, "date", value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addTimeInput",
+    value: function addTimeInput(id, value, callback, addOptions) {
+      var element = new _Input2.default(this.body, "time", value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addDateTimeInput",
+    value: function addDateTimeInput(id, value, callback, addOptions) {
+      var element = new _Input2.default(this.body, "datetime-local", value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addTextarea",
+    value: function addTextarea(id, value, callback, addOptions) {
+      var element = new _Textarea2.default(this.body, value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addSlider",
+    value: function addSlider(id, value, min, max, callback, addOptions) {
+      var element = new _Slider2.default(this.body, value, min, max, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addProgress",
+    value: function addProgress(id, value, callback, addOptions) {
+      var element = new _Progress2.default(this.body, value, callback, addOptions);
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addHTML",
+    value: function addHTML(id, value) {
+      var element = new _HTML2.default(this.body, value);
+      this.addToContent(id, element);
+      return this;
+    }
+  }]);
+  return Section;
+}();
+
+exports.default = Section;
+
+},{"../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","./elements/Button":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Button.js","./elements/Checkbox":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Checkbox.js","./elements/Dropdown":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Dropdown.js","./elements/HTML":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/HTML.js","./elements/Header":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Header.js","./elements/Input":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Input.js","./elements/Progress":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Progress.js","./elements/Radio":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Radio.js","./elements/Slider":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Slider.js","./elements/Textarea":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Textarea.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Button.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Button = function () {
+  function Button(section, text, callback) {
+    (0, _classCallCheck3.default)(this, Button);
+
+    this.element = null;
+    this.section = section;
+    this.text = text;
+    this.callback = callback || null;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Button, [{
+    key: "create",
+    value: function create() {
+      var $button = _DOMUtils2.default.createElement("button", this.section, { className: "es-body__section__button", innerHTML: this.text });
+
+      this.element = $button;
+
+      this.bindCallback();
+    }
+  }, {
+    key: "bindCallback",
+    value: function bindCallback() {
+      var _this = this;
+
+      this.element.addEventListener("click", function () {
+        _this.callback(_this.getValue());
+      });
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.element.innerHTML;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.element.innerHTML = val;
+    }
+  }]);
+  return Button;
+}();
+
+exports.default = Button;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Checkbox.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Checkbox = function () {
+  function Checkbox(section, label, checked, callback) {
+    (0, _classCallCheck3.default)(this, Checkbox);
+
+    this.element = null;
+    this.section = section;
+    this.label = label;
+    this.callback = callback || null;
+    this.checked = checked;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Checkbox, [{
+    key: "create",
+    value: function create() {
+      var $label = _DOMUtils2.default.createElement("label", this.section, { className: "es-body__section__label" });
+
+      var $checkbox = _DOMUtils2.default.createElement("input", $label, { className: "body__section__checkbox", innerHTML: this.label, checked: this.checked }, { "type": "checkbox" });
+
+      var $icon = _DOMUtils2.default.createElement("span", $label, { className: "es-body__section__label__icon" }, { tabindex: 0 }); // labelIcon
+
+      _DOMUtils2.default.createElement("span", $icon, { className: "es-body__section__label__icon--focused" }); // labelIconFocused
+
+      _DOMUtils2.default.createElement("span", $label, { className: "es-body__section__label__text", innerHTML: this.label }); // labelText
+
+      $icon.addEventListener("keydown", function (e) {
+        if (e.keyCode === 32 || e.keyCode === 13) {
+          $checkbox.checked = !$checkbox.checked;
+          _DOMUtils2.default.dispatchEvent($checkbox, "change");
+        }
+      });
+
+      this.element = $checkbox;
+
+      this.bindCallback();
+    }
+  }, {
+    key: "bindCallback",
+    value: function bindCallback() {
+      var _this = this;
+
+      this.element.addEventListener("change", function () {
+        _this.callback(_this.getValue());
+      });
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.element.checked;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.element.checked = val;
+    }
+  }]);
+  return Checkbox;
+}();
+
+exports.default = Checkbox;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Dropdown.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Dropdown = function () {
+  function Dropdown(section, options, callback) {
+    (0, _classCallCheck3.default)(this, Dropdown);
+
+    this.element = null;
+    this.section = section;
+    this.options = options || [];
+    this.callback = callback || null;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Dropdown, [{
+    key: "create",
+    value: function create() {
+      var $dropdown = _DOMUtils2.default.createElement("select", this.section, { className: "body__section__dropdown" });
+
+      this.options.forEach(function (v) {
+        var $option = document.createElement("option");
+        $option.innerHTML = v;
+        $dropdown.appendChild($option);
+      });
+      this.element = $dropdown;
+
+      this.bindCallback();
+    }
+  }, {
+    key: "bindCallback",
+    value: function bindCallback() {
+      var _this = this;
+
+      this.element.addEventListener("change", function () {
+        _this.callback(_this.getValue());
+      });
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.element.value;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.element.value = val;
+    }
+  }]);
+  return Dropdown;
+}();
+
+exports.default = Dropdown;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/HTML.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HTML = function () {
+  function HTML(section, value) {
+    (0, _classCallCheck3.default)(this, HTML);
+
+    this.element = null;
+    this.section = section;
+    this.value = value;
+    this.create();
+  }
+
+  (0, _createClass3.default)(HTML, [{
+    key: "create",
+    value: function create() {
+      var $cont = _DOMUtils2.default.createElement("div", this.section, { className: "es-body__section__html", innerHTML: this.value });
+
+      this.element = $cont;
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.element.innerHTML;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.element.innerHTML = val;
+    }
+  }]);
+  return HTML;
+}();
+
+exports.default = HTML;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Header.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function () {
+  function Header(section, text) {
+    (0, _classCallCheck3.default)(this, Header);
+
+    this.element = null;
+    this.section = section;
+    this.text = text;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Header, [{
+    key: "create",
+    value: function create() {
+      var $header = _DOMUtils2.default.createElement("p", this.section, { className: "body__section__header", innerHTML: this.text });
+
+      this.element = $header;
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.element.innerHTML;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.element.innerHTML = val;
+    }
+  }]);
+  return Header;
+}();
+
+exports.default = Header;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Input.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Input = function () {
+  function Input(section, type, value, callback, addOptions) {
+    (0, _classCallCheck3.default)(this, Input);
+
+    this.element = null;
+    this.section = section;
+    this.value = value;
+    this.type = type;
+    this.callback = callback || null;
+    this.addOptions = addOptions;
+    this.additionalElement = null;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Input, [{
+    key: "create",
+    value: function create() {
+      var $inputGroup = _DOMUtils2.default.createElement("span", this.section, { className: "es-body__section__input-group" });
+      var $input = null;
+
+      if (this.type === "color") {
+        this.additionalElement = _DOMUtils2.default.createElement("label", $inputGroup, { className: "es-body__section__label-color" }); // Color label
+        this.additionalElement.style.background = this.value;
+
+        if (this.value.match(/^#[abcdef0123456789]{3}$/i)) {
+          this.value = "#" + this.value[1] + this.value[1] + this.value[2] + this.value[2] + this.value[3] + this.value[3];
+        }
+
+        $input = _DOMUtils2.default.createElement("input", this.additionalElement, { className: "es-body__section__input es-body__section__input--" + this.type, value: this.value }, { type: this.type });
+      } else {
+        $input = _DOMUtils2.default.createElement("input", $inputGroup, { className: "es-body__section__input es-body__section__input--" + this.type, value: this.value }, { type: this.type });
+      }
+
+      if (this.addOptions) {
+        if (this.addOptions.min !== null) {
+          $input.setAttribute("min", this.addOptions.min);
+        }
+
+        if (this.addOptions.min !== null) {
+          $input.setAttribute("max", this.addOptions.max);
+        }
+
+        if (this.addOptions.placeholder !== null) {
+          $input.placeholder = this.addOptions.placeholder;
+        }
+      }
+
+      if (this.type !== "color") {
+        this.additionalElement = _DOMUtils2.default.createElement("span", $inputGroup, { className: "es-body__section__input-underline" }); // Underline
+      }
+
+      this.element = $input;
+
+      this.bindCallback();
+    }
+  }, {
+    key: "bindCallback",
+    value: function bindCallback() {
+      var _this = this;
+
+      this.element.addEventListener("input", function () {
+        if (_this.type === "color") {
+          _this.additionalElement.style.background = _this.getValue();
+        }
+
+        _this.callback(_this.getValue());
+      });
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      if (this.addOptions) {
+        if (this.addOptions.min !== null) {
+          if (this.addOptions.min > this.element.value) {
+            return this.addOptions.min;
+          }
+        }
+
+        if (this.addOptions.max !== null) {
+          if (this.addOptions.max < this.element.value) {
+            return this.addOptions.max;
+          }
+        }
+      }
+
+      return this.element.value;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.element.value = val;
+    }
+  }]);
+  return Input;
+}();
+
+exports.default = Input;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Progress.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Progress = function () {
+  function Progress(section, value, callback) {
+    (0, _classCallCheck3.default)(this, Progress);
+
+    this.element = null;
+    this.trackValue = null;
+    this.section = section;
+    this.value = Math.max(0, Math.min(value, 1));
+    this.callback = callback || null;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Progress, [{
+    key: "create",
+    value: function create() {
+      var $inputGroup = _DOMUtils2.default.createElement("span", this.section, { className: "es-body__section__progress-group" });
+
+      var $input = _DOMUtils2.default.createElement("input", $inputGroup, { className: "es-body__section__progress" }, { type: "hidden", value: this.value });
+
+      var $track = _DOMUtils2.default.createElement("div", $inputGroup, { className: "es-body__section__progress-track" }); // Track
+
+      this.trackValue = _DOMUtils2.default.createElement("div", $track, { className: "es-body__section__slider-track__progress-value" }); // Track value
+
+      this.trackValue.style.width = this.value * 100 + "%";
+
+      this.element = $input;
+      this.track = $track;
+
+      this.bindCallback();
+    }
+  }, {
+    key: "bindCallback",
+    value: function bindCallback() {
+      var _this = this;
+
+      this.element.addEventListener("input", function () {
+        _this.callback(_this.getValue());
+        _this.SliderMovementManager.setHandleValue();
+      });
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.element.value;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      var value = Math.max(0, Math.min(val, 1));
+      this.element.value = value;
+      this.trackValue.style.width = value * 100 + "%";
+    }
+  }]);
+  return Progress;
+}();
+
+exports.default = Progress;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Radio.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Radio = function () {
+  function Radio(section, index, options, checkedIndex, callback) {
+    (0, _classCallCheck3.default)(this, Radio);
+
+    this.element = null;
+    this.radios = [];
+    this.section = section;
+    this.index = index;
+    this.options = options || [];
+    this.checkedIndex = checkedIndex;
+    this.callback = callback || null;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Radio, [{
+    key: "create",
+    value: function create() {
+      var _this = this;
+
+      var $group = _DOMUtils2.default.createElement("div", this.section, { className: "es-body__section__radio-group" });
+
+      this.options.forEach(function (v, i) {
+        var $label = _DOMUtils2.default.createElement("label", $group, { className: "es-body__section__label" });
+
+        var $radio = _DOMUtils2.default.createElement("input", $label, { className: "es-body__section__checkbox", checked: i === _this.checkedIndex }, { type: "radio", name: "EasySettingsPanel-" + _this.index });
+
+        var $icon = _DOMUtils2.default.createElement("span", $label, { className: "es-body__section__label__icon" }, { tabindex: 0 }); // Label icon
+
+        _DOMUtils2.default.createElement("span", $icon, { className: "es-body__section__label__icon--focused" }); // labelIconFocused
+
+        $icon.addEventListener("keydown", function (e) {
+          if (e.keyCode === 32 || e.keyCode === 13) {
+            _this.setValue(i);
+            _DOMUtils2.default.dispatchEvent($group, "change");
+          }
+        });
+
+        _DOMUtils2.default.createElement("span", $label, { innerHTML: v }); // Label text
+
+        _this.radios.push($radio);
+      });
+
+      this.element = $group;
+
+      this.bindCallback();
+    }
+  }, {
+    key: "bindCallback",
+    value: function bindCallback() {
+      var _this2 = this;
+
+      this.element.addEventListener("change", function () {
+        _this2.callback(_this2.getValue());
+      });
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      var index = -1;
+      this.radios.forEach(function (v, i) {
+        if (v.checked) {
+          index = i;
+        }
+      });
+
+      return index;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.radios.forEach(function (v, i) {
+        v.checked = i === val; // eslint-disable-line no-param-reassign
+      });
+    }
+  }]);
+  return Radio;
+}();
+
+exports.default = Radio;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Slider.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+var _SliderMovementManager = require("./SliderMovementManager");
+
+var _SliderMovementManager2 = _interopRequireDefault(_SliderMovementManager);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Slider = function () {
+  function Slider(section, value, min, max, callback) {
+    (0, _classCallCheck3.default)(this, Slider);
+
+    this.element = null;
+    this.section = section;
+    this.value = value;
+    this.min = min;
+    this.max = max;
+    this.callback = callback || null;
+    this.SliderMovementManager = null;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Slider, [{
+    key: "create",
+    value: function create() {
+      var _this = this;
+
+      var $inputGroup = _DOMUtils2.default.createElement("span", this.section, { className: "es-body__section__slider-group" });
+
+      if (this.min === null) {
+        this.min = 0;
+      }
+
+      if (this.max === null) {
+        this.max = 100;
+      }
+
+      var $input = _DOMUtils2.default.createElement("input", $inputGroup, { className: "es-body__section__slider" }, { type: "range", min: this.min, max: this.max, value: this.value });
+
+      var $track = _DOMUtils2.default.createElement("div", $inputGroup, { className: "es-body__section__slider-track" }); // Track
+      var $trackValue = _DOMUtils2.default.createElement("div", $track, { className: "es-body__section__slider-track__slider-value" }); // Track
+      var $handle = _DOMUtils2.default.createElement("button", $track, { className: "es-body__section__slider-track__slider-handle" }); // Track
+
+      this.SliderMovementManager = new _SliderMovementManager2.default($handle, $track, $input, $trackValue);
+
+      this.SliderMovementManager.setHandleValue(this.value);
+
+      $handle.addEventListener("keydown", function (e) {
+        if (e.keyCode === 39) {
+          _this.element.value++;
+          _DOMUtils2.default.dispatchEvent(_this.element, "input");
+        }
+
+        if (e.keyCode === 37) {
+          _this.element.value--;
+          _DOMUtils2.default.dispatchEvent(_this.element, "input");
+        }
+      });
+
+      this.element = $input;
+
+      this.bindCallback();
+    }
+  }, {
+    key: "bindCallback",
+    value: function bindCallback() {
+      var _this2 = this;
+
+      this.element.addEventListener("input", function () {
+        _this2.callback(_this2.getValue());
+        _this2.SliderMovementManager.setHandleValue();
+      });
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.element.value;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.element.value = val;
+      this.SliderMovementManager.setHandleValue();
+    }
+  }]);
+  return Slider;
+}();
+
+exports.default = Slider;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","./SliderMovementManager":"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/SliderMovementManager.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/SliderMovementManager.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var trackMovementManager = function () {
+  function trackMovementManager(handle, track, input, trackValue) {
+    (0, _classCallCheck3.default)(this, trackMovementManager);
+
+    // this.panel = panel;
+    this.handle = handle;
+    this.track = track;
+    this.input = input;
+    this.trackValue = trackValue;
+
+    this.offset = 0;
+    this.startPos = {
+      x: 0,
+      y: 0
+    };
+
+    this.startPosOfPanel = {
+      x: 8,
+      y: 0
+    };
+
+    this.handleMovement = this.handleMovement.bind(this);
+    this.bindEvents();
+  }
+
+  (0, _createClass3.default)(trackMovementManager, [{
+    key: "bindEvents",
+    value: function bindEvents() {
+      var _this = this;
+
+      this.handle.addEventListener("mousedown", function (e) {
+        _this.startPos = {
+          x: e.pageX,
+          y: e.pageY
+        };
+
+        var handleOffset = _this.handle.getBoundingClientRect();
+        var trackOffset = _this.track.getBoundingClientRect();
+
+        _this.startPosOfPanel = {
+          x: handleOffset.left - trackOffset.left
+        };
+
+        document.addEventListener("mousemove", _this.handleMovement);
+        document.addEventListener("mouseup", function () {
+          document.removeEventListener("mousemove", _this.handleMovement);
+        });
+      });
+    }
+  }, {
+    key: "handleMovement",
+    value: function handleMovement(e) {
+      this.offset = this.startPosOfPanel.x + (e.pageX - this.startPos.x);
+      if (this.offset < 0) {
+        this.offset = 0;
+      }
+
+      if (this.offset > this.track.offsetWidth - this.handle.offsetWidth) {
+        this.offset = this.track.offsetWidth - this.handle.offsetWidth;
+      }
+
+      this.minValueStyle();
+      this.handle.style.left = this.offset + "px";
+
+      this.setInputValue();
+    }
+  }, {
+    key: "setInputValue",
+    value: function setInputValue() {
+      var max = this.track.offsetWidth - this.handle.offsetWidth;
+
+      var $inputMin = this.input.getAttribute("min") * 1;
+      var $inputMax = this.input.getAttribute("max") - $inputMin;
+
+      this.input.value = $inputMax * (this.offset / max) + $inputMin;
+
+      _DOMUtils2.default.dispatchEvent(this.input, "input");
+    }
+  }, {
+    key: "setHandleValue",
+    value: function setHandleValue() {
+      var max = this.track.offsetWidth - this.handle.offsetWidth;
+
+      var $inputMin = this.input.getAttribute("min") * 1;
+      var $inputMax = this.input.getAttribute("max") - $inputMin;
+
+      this.trackValue.style.width = 100 * ((this.input.value - $inputMin) / $inputMax) + "%";
+
+      this.offset = max * ((this.input.value - $inputMin) / $inputMax);
+
+      this.minValueStyle();
+      this.handle.style.left = this.offset + "px";
+    }
+  }, {
+    key: "minValueStyle",
+    value: function minValueStyle() {
+      var classes = this.handle.className.split(" ");
+      var minValClass = "es-body__section__slider-track__slider-handle--min-value";
+      var index = classes.indexOf(minValClass);
+      if (this.offset <= 0) {
+        if (index < 0) {
+          classes.push(minValClass);
+          this.handle.className = classes.join(" ");
+        }
+      } else if (index >= 0) {
+        classes.splice(index, 1);
+        this.handle.className = classes.join(" ");
+      }
+    }
+  }]);
+  return trackMovementManager;
+}();
+
+exports.default = trackMovementManager;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/sections/elements/Textarea.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _DOMUtils = require("../../utils/DOMUtils");
+
+var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Textarea = function () {
+  function Textarea(section, value, callback, addOptions) {
+    (0, _classCallCheck3.default)(this, Textarea);
+
+    this.element = null;
+    this.section = section;
+    this.value = value;
+    this.callback = callback || null;
+    this.addOptions = addOptions;
+    this.create();
+  }
+
+  (0, _createClass3.default)(Textarea, [{
+    key: "create",
+    value: function create() {
+      var $inputGroup = _DOMUtils2.default.createElement("span", this.section, { className: "es-body__section__input-group" });
+
+      var $input = _DOMUtils2.default.createElement("textarea", $inputGroup, { className: "es-body__section__input es-body__section__input--textarea", innerHTML: this.value });
+
+      if (this.addOptions.placeholder !== null) {
+        $input.placeholder = this.addOptions.placeholder;
+      }
+
+      _DOMUtils2.default.createElement("span", $inputGroup, { className: "es-body__section__input-underline" }); // Underline
+
+      this.element = $input;
+
+      this.bindCallback();
+    }
+  }, {
+    key: "bindCallback",
+    value: function bindCallback() {
+      var _this = this;
+
+      this.element.addEventListener("input", function () {
+        _this.callback(_this.getValue());
+      });
+    }
+  }, {
+    key: "getValue",
+    value: function getValue() {
+      return this.element.innerHTML;
+    }
+  }, {
+    key: "setValue",
+    value: function setValue(val) {
+      this.element.innerHTML = val;
+    }
+  }]);
+  return Textarea;
+}();
+
+exports.default = Textarea;
+
+},{"../../utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _slicedToArray2 = require("babel-runtime/helpers/slicedToArray");
+
+var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+
+var _entries = require("babel-runtime/core-js/object/entries");
+
+var _entries2 = _interopRequireDefault(_entries);
+
+var _getIterator2 = require("babel-runtime/core-js/get-iterator");
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DOMUtils = function () {
+  function DOMUtils() {
+    (0, _classCallCheck3.default)(this, DOMUtils);
+  }
+
+  (0, _createClass3.default)(DOMUtils, null, [{
+    key: "createElement",
+    value: function createElement(type, parent, options, attributes) {
+      var $el = document.createElement(type);
+
+      if (options) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = (0, _getIterator3.default)((0, _entries2.default)(options)), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var _step$value = (0, _slicedToArray3.default)(_step.value, 2),
+                key = _step$value[0],
+                value = _step$value[1];
+
+            $el[key] = value;
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+      }
+
+      if (attributes) {
+        var _iteratorNormalCompletion2 = true;
+        var _didIteratorError2 = false;
+        var _iteratorError2 = undefined;
+
+        try {
+          for (var _iterator2 = (0, _getIterator3.default)((0, _entries2.default)(attributes)), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+            var _step2$value = (0, _slicedToArray3.default)(_step2.value, 2),
+                key = _step2$value[0],
+                value = _step2$value[1];
+
+            $el.setAttribute(key, value);
+          }
+        } catch (err) {
+          _didIteratorError2 = true;
+          _iteratorError2 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion2 && _iterator2.return) {
+              _iterator2.return();
+            }
+          } finally {
+            if (_didIteratorError2) {
+              throw _iteratorError2;
+            }
+          }
+        }
+      }
+
+      if (parent) {
+        parent.appendChild($el);
+      }
+
+      return $el;
+    }
+  }, {
+    key: "dispatchEvent",
+    value: function dispatchEvent(element, event) {
+      if ("createEvent" in document) {
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent(event, false, true);
+        element.dispatchEvent(evt);
+      } else {
+        element.fireEvent("onchange");
+      }
+    }
+  }]);
+  return DOMUtils;
+}();
+
+exports.default = DOMUtils;
+
+},{"babel-runtime/core-js/get-iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/get-iterator.js","babel-runtime/core-js/object/entries":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/entries.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/slicedToArray":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/slicedToArray.js"}]},{},["/Users/bartekosx/Projects/EasySettings/src/js/EasySettings.js"])
+
+//# sourceMappingURL=EasySettings.js.map

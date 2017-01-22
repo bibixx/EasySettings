@@ -1,13 +1,15 @@
 import DOMUtils from "../utils/DOMUtils";
 
-import Header from "./elements/Header";
 import Button from "./elements/Button";
-import Dropdown from "./elements/Dropdown";
 import Checkbox from "./elements/Checkbox";
-import Radio from "./elements/Radio";
+import Dropdown from "./elements/Dropdown";
+import Header from "./elements/Header";
+import HTML from "./elements/HTML";
 import Input from "./elements/Input";
-import Textarea from "./elements/Textarea";
+import Progress from "./elements/Progress";
+import Radio from "./elements/Radio";
 import Slider from "./elements/Slider";
+import Textarea from "./elements/Textarea";
 
 export default class Section {
   constructor(esBody, elements, index) {
@@ -60,6 +62,12 @@ export default class Section {
     return this;
   }
 
+  addColorInput(id, value, callback, addOptions) {
+    const element = new Input(this.body, "color", value, callback, addOptions);
+    this.addToContent(id, element);
+    return this;
+  }
+
   addTextInput(id, value, callback, addOptions) {
     const element = new Input(this.body, "text", value, callback, addOptions);
     this.addToContent(id, element);
@@ -104,6 +112,18 @@ export default class Section {
 
   addSlider(id, value, min, max, callback, addOptions) {
     const element = new Slider(this.body, value, min, max, callback, addOptions);
+    this.addToContent(id, element);
+    return this;
+  }
+
+  addProgress(id, value, callback, addOptions) {
+    const element = new Progress(this.body, value, callback, addOptions);
+    this.addToContent(id, element);
+    return this;
+  }
+
+  addHTML(id, value) {
+    const element = new HTML(this.body, value);
     this.addToContent(id, element);
     return this;
   }

@@ -16,7 +16,6 @@ export default class EasySettings {
       y: y || 8,
     };
 
-
     this.createSettingsContainer();
 
     this.movementManager = new EasySettingsMovementManager(this.container, this.header);

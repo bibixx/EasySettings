@@ -8,13 +8,27 @@ export default class Input {
     this.type = type;
     this.callback = callback || null;
     this.addOptions = addOptions;
+    this.additionalElement = null;
     this.create();
   }
 
   create() {
     const $inputGroup = DOMUtils.createElement("span", this.section, { className: "es-body__section__input-group" });
+    let $input = null;
 
-    const $input = DOMUtils.createElement("input", $inputGroup, { className: `es-body__section__input es-body__section__input--${this.type}`, value: this.value }, { type: this.type });
+    if (this.type === "color") {
+      this.additionalElement = DOMUtils.createElement("label", $inputGroup, { className: "es-body__section__label-color" }); // Color label
+      this.additionalElement.style.background = this.value;
+
+      if (this.value.match(/^#[abcdef0123456789]{3}$/i)) {
+        this.value = `#${this.value[1]}${this.value[1]}${this.value[2]}${this.value[2]}${this.value[3]}${this.value[3]}`;
+      }
+
+      $input = DOMUtils.createElement("input", this.additionalElement, { className: `es-body__section__input es-body__section__input--${this.type}`, value: this.value }, { type: this.type });
+    } else {
+      $input = DOMUtils.createElement("input", $inputGroup, { className: `es-body__section__input es-body__section__input--${this.type}`, value: this.value }, { type: this.type });
+    }
+
 
     if (this.addOptions) {
       if (this.addOptions.min !== null) {
@@ -30,7 +44,9 @@ export default class Input {
       }
     }
 
-    DOMUtils.createElement("span", $inputGroup, { className: "es-body__section__input-underline" }); // Underline
+    if (this.type !== "color") {
+      this.additionalElement = DOMUtils.createElement("span", $inputGroup, { className: "es-body__section__input-underline" }); // Underline
+    }
 
     this.element = $input;
 
@@ -39,6 +55,10 @@ export default class Input {
 
   bindCallback() {
     this.element.addEventListener("input", () => {
+      if (this.type === "color") {
+        this.additionalElement.style.background = this.getValue();
+      }
+
       this.callback(this.getValue());
     });
   }

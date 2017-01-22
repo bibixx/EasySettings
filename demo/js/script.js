@@ -50,12 +50,30 @@ panel1.createSection()
     showVal("Textarea", null, v);
   }, { placeholder: "Textarea" })
 
+panel1.createSection()
+  .addHeader(null, "Progress")
+  .addProgress("progress", 0.5, (v) => {
+    showVal("Progress", null, v);
+  });
+
+panel1.createSection()
+  .addHeader(null, "HTML")
+  .addHTML("html", `
+    <strong>small test</strong>
+  `);
+
 var panel2 = new EasySettings(216, 8, "Inputs");
 panel2.createSection()
   .addHeader(null, "Input text")
   .addTextInput("input-text", "", (v) => {
     showVal("Input text", null, v);
-  }, { placeholder: "Test text" })
+  }, { placeholder: "Test text" });
+
+panel2.createSection()
+  .addHeader(null, "Input color")
+  .addColorInput("input-color", "#39FF21", (v) => {
+    showVal("Input color", null, v);
+  });
 
 panel2.createSection()
   .addHeader(null, "Input password")
@@ -98,6 +116,7 @@ showVal("Checkbox #1", panel1, "checkbox1");
 showVal("Checkbox #2", panel1, "checkbox2");
 showVal("Radio", panel1, "radio");
 showVal("Textarea", panel1, "textarea");
+showVal("Progress", panel1, "progress");
 
 showVal("Input text", panel2, "input-text");
 showVal("Input password", panel2, "input-password");
