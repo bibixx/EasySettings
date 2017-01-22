@@ -1,7 +1,7 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class trackMovementManager {
-  constructor(handle, track, input, trackValue) {
+  constructor( handle, track, input, trackValue ) {
     // this.panel = panel;
     this.handle = handle;
     this.track = track;
@@ -19,12 +19,12 @@ export default class trackMovementManager {
       y: 0,
     };
 
-    this.handleMovement = this.handleMovement.bind(this);
+    this.handleMovement = this.handleMovement.bind( this );
     this.bindEvents();
   }
 
   bindEvents() {
-    this.handle.addEventListener("mousedown", (e) => {
+    this.handle.addEventListener( "mousedown", ( e ) => {
       this.startPos = {
         x: e.pageX,
         y: e.pageY,
@@ -37,20 +37,20 @@ export default class trackMovementManager {
         x: handleOffset.left - trackOffset.left,
       };
 
-      document.addEventListener("mousemove", this.handleMovement);
-      document.addEventListener("mouseup", () => {
-        document.removeEventListener("mousemove", this.handleMovement);
-      });
-    });
+      document.addEventListener( "mousemove", this.handleMovement );
+      document.addEventListener( "mouseup", () => {
+        document.removeEventListener( "mousemove", this.handleMovement );
+      } );
+    } );
   }
 
-  handleMovement(e) {
-    this.offset = this.startPosOfPanel.x + (e.pageX - this.startPos.x);
-    if (this.offset < 0) {
+  handleMovement( e ) {
+    this.offset = this.startPosOfPanel.x + ( e.pageX - this.startPos.x );
+    if ( this.offset < 0 ) {
       this.offset = 0;
     }
 
-    if (this.offset > (this.track.offsetWidth - this.handle.offsetWidth)) {
+    if ( this.offset > ( this.track.offsetWidth - this.handle.offsetWidth ) ) {
       this.offset = this.track.offsetWidth - this.handle.offsetWidth;
     }
 
@@ -63,40 +63,40 @@ export default class trackMovementManager {
   setInputValue() {
     const max = this.track.offsetWidth - this.handle.offsetWidth;
 
-    const $inputMin = this.input.getAttribute("min") * 1;
-    const $inputMax = this.input.getAttribute("max") - $inputMin;
+    const $inputMin = this.input.getAttribute( "min" ) * 1;
+    const $inputMax = this.input.getAttribute( "max" ) - $inputMin;
 
-    this.input.value = ($inputMax * (this.offset / max)) + $inputMin;
+    this.input.value = ( $inputMax * ( this.offset / max ) ) + $inputMin;
 
-    DOMUtils.dispatchEvent(this.input, "input");
+    DOMUtils.dispatchEvent( this.input, "input" );
   }
 
   setHandleValue() {
     const max = this.track.offsetWidth - this.handle.offsetWidth;
 
-    const $inputMin = this.input.getAttribute("min") * 1;
-    const $inputMax = this.input.getAttribute("max") - $inputMin;
+    const $inputMin = this.input.getAttribute( "min" ) * 1;
+    const $inputMax = this.input.getAttribute( "max" ) - $inputMin;
 
-    this.trackValue.style.width = `${100 * ((this.input.value - $inputMin) / $inputMax)}%`;
+    this.trackValue.style.width = `${100 * ( ( this.input.value - $inputMin ) / $inputMax )}%`;
 
-    this.offset = max * ((this.input.value - $inputMin) / $inputMax);
+    this.offset = max * ( ( this.input.value - $inputMin ) / $inputMax );
 
     this.minValueStyle();
     this.handle.style.left = `${this.offset}px`;
   }
 
   minValueStyle() {
-    const classes = this.handle.className.split(" ");
+    const classes = this.handle.className.split( " " );
     const minValClass = "es-body__section__slider-track__slider-handle--min-value";
-    const index = classes.indexOf(minValClass);
-    if (this.offset <= 0) {
-      if (index < 0) {
-        classes.push(minValClass);
-        this.handle.className = classes.join(" ");
+    const index = classes.indexOf( minValClass );
+    if ( this.offset <= 0 ) {
+      if ( index < 0 ) {
+        classes.push( minValClass );
+        this.handle.className = classes.join( " " );
       }
-    } else if (index >= 0) {
-      classes.splice(index, 1);
-      this.handle.className = classes.join(" ");
+    } else if ( index >= 0 ) {
+      classes.splice( index, 1 );
+      this.handle.className = classes.join( " " );
     }
   }
 }

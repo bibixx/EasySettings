@@ -27,7 +27,8 @@
 
 .es-body {
   padding: 8px;
-  overflow: auto; }
+  overflow: auto;
+  box-sizing: border-box; }
 
 .es-body__section {
   width: 100%;
@@ -215,15 +216,63 @@ input[type="radio"] + .es-body__section__label__icon {
   .es-body__section__progress-group .es-body__section__progress {
     display: none; }
   .es-body__section__progress-group .es-body__section__progress-track {
+    display: block;
     position: relative;
     width: 100%;
     height: 4px;
-    background: #bebebe; }
-    .es-body__section__progress-group .es-body__section__progress-track .es-body__section__slider-track__progress-value {
-      width: 0;
-      height: 100%;
-      transition: width .2s ease-in-out;
-      background: #2196f3; }
+    margin: 0.5rem 0 1rem;
+    background-clip: padding-box;
+    background-color: #bebebe;
+    overflow: hidden; }
+    .es-body__section__progress-group .es-body__section__progress-track .es-body__section__slider-track__progress-value:not(.es-body__section__slider-track__progress-value--indeterminate) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      transition: width .3s linear;
+      background-color: #2196f3; }
+    .es-body__section__progress-group .es-body__section__progress-track .es-body__section__slider-track__progress-value--indeterminate {
+      background-color: #2196f3; }
+      .es-body__section__progress-group .es-body__section__progress-track .es-body__section__slider-track__progress-value--indeterminate::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: inherit;
+        content: "";
+        will-change: left, right;
+        animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+      .es-body__section__progress-group .es-body__section__progress-track .es-body__section__slider-track__progress-value--indeterminate::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: inherit;
+        content: "";
+        will-change: left, right;
+        animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+        animation-delay: 1.15s; }
+
+@keyframes indeterminate {
+  0% {
+    right: 100%;
+    left: -35%; }
+  60% {
+    right: -90%;
+    left: 100%; }
+  100% {
+    right: -90%;
+    left: 100%; } }
+
+@keyframes indeterminate-short {
+  0% {
+    right: 100%;
+    left: -200%; }
+  60% {
+    right: -8%;
+    left: 107%; }
+  100% {
+    right: -8%;
+    left: 107%; } }
 
 .es-body__section__slider-group {
   margin: 8px 0; }

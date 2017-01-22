@@ -1,7 +1,7 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Dropdown {
-  constructor(section, options, callback) {
+  constructor( section, options, callback ) {
     this.element = null;
     this.section = section;
     this.options = options || [];
@@ -10,29 +10,29 @@ export default class Dropdown {
   }
 
   create() {
-    const $dropdown = DOMUtils.createElement("select", this.section, { className: "body__section__dropdown" });
+    const $dropdown = DOMUtils.createElement( "select", this.section, { className: "body__section__dropdown" } );
 
-    this.options.forEach((v) => {
-      const $option = document.createElement("option");
+    this.options.forEach( ( v ) => {
+      const $option = document.createElement( "option" );
       $option.innerHTML = v;
-      $dropdown.appendChild($option);
-    });
+      $dropdown.appendChild( $option );
+    } );
     this.element = $dropdown;
 
     this.bindCallback();
   }
 
   bindCallback() {
-    this.element.addEventListener("change", () => {
-      this.callback(this.getValue());
-    });
+    this.element.addEventListener( "change", () => {
+      this.callback( this.getValue() );
+    } );
   }
 
   getValue() {
     return this.element.value;
   }
 
-  setValue(val) {
+  setValue( val ) {
     this.element.value = val;
   }
 }

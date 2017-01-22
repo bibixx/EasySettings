@@ -1,24 +1,32 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Header {
-  constructor(section, text) {
+  constructor( section, text, type ) {
     this.element = null;
     this.section = section;
     this.text = text;
+    this.type = type;
     this.create();
   }
 
   create() {
-    const $header = DOMUtils.createElement("p", this.section, { className: "body__section__header", innerHTML: this.text });
-
-    this.element = $header;
+    if ( this.type === "p" ) {
+      this.element = DOMUtils.createElement( "p", this.section, { className: "body__section__header", innerHTML: `${this.text}` } );
+    } else {
+      this.element = DOMUtils.createElement( "p", this.section, { className: "body__section__header", innerHTML: `<strong>${this.text}</strong>` } );
+    }
   }
 
   getValue() {
-    return this.element.innerHTML;
+    return this.text;
   }
 
-  setValue(val) {
-    this.element.innerHTML = val;
+  setValue( val ) {
+    this.text = val;
+    if ( this.type === "p" ) {
+      this.element.innerHTML = `<strong>${val}</strong>`;
+    } else {
+      this.element.innerHTML = val;
+    }
   }
 }

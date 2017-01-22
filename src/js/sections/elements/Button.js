@@ -1,7 +1,7 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Button {
-  constructor(section, text, callback) {
+  constructor( section, text, callback ) {
     this.element = null;
     this.section = section;
     this.text = text;
@@ -10,7 +10,7 @@ export default class Button {
   }
 
   create() {
-    const $button = DOMUtils.createElement("button", this.section, { className: "es-body__section__button", innerHTML: this.text });
+    const $button = DOMUtils.createElement( "button", this.section, { className: "es-body__section__button", innerHTML: this.text } );
 
     this.element = $button;
 
@@ -18,16 +18,16 @@ export default class Button {
   }
 
   bindCallback() {
-    this.element.addEventListener("click", () => {
-      this.callback(this.getValue());
-    });
+    this.element.addEventListener( "click", () => {
+      this.callback( this.getValue() );
+    } );
   }
 
   getValue() {
     return this.element.innerHTML;
   }
 
-  setValue(val) {
+  setValue( val ) {
     this.element.innerHTML = val;
   }
 }

@@ -876,6 +876,11 @@ var EasySettings = function () {
     value: function setValue(id, value) {
       this.elements[id].setValue(value);
     }
+  }, {
+    key: "toggleIndeterminate",
+    value: function toggleIndeterminate(id) {
+      this.elements[id].toggleIndeterminate();
+    }
   }]);
   return EasySettings;
 }();
@@ -917,6 +922,7 @@ var EasySettingsMovementManager = function () {
 
     this.panel = panel;
     this.header = header;
+    this.visible = false;
     this.startPos = {
       x: 0,
       y: 0
@@ -954,6 +960,17 @@ var EasySettingsMovementManager = function () {
         document.addEventListener("mouseup", function () {
           document.removeEventListener("mousemove", _this.handleMovement);
         });
+      });
+
+      this.header.addEventListener("mouseup", function (e) {
+        if (_this.startPos.x - e.pageX === 0 && _this.startPos.y - e.pageY === 0) {
+          _this.visible = !_this.visible;
+
+          var $main = _this.panel.childNodes[1];
+
+          $main.style.height = !_this.visible ? "auto" : 0;
+          $main.style.padding = !_this.visible ? null : "0 8px";
+        }
       });
     }
   }, {
@@ -1059,7 +1076,14 @@ var Section = function () {
   }, {
     key: "addHeader",
     value: function addHeader(id, text) {
-      var element = new _Header2.default(this.body, text);
+      var element = new _Header2.default(this.body, text, "h");
+      this.addToContent(id, element);
+      return this;
+    }
+  }, {
+    key: "addParagraph",
+    value: function addParagraph(id, text) {
+      var element = new _Header2.default(this.body, text, "p");
       this.addToContent(id, element);
       return this;
     }
@@ -1149,15 +1173,15 @@ var Section = function () {
     }
   }, {
     key: "addSlider",
-    value: function addSlider(id, value, min, max, callback, addOptions) {
-      var element = new _Slider2.default(this.body, value, min, max, callback, addOptions);
+    value: function addSlider(id, value, callback, addOptions) {
+      var element = new _Slider2.default(this.body, value, callback, addOptions);
       this.addToContent(id, element);
       return this;
     }
   }, {
     key: "addProgress",
-    value: function addProgress(id, value, callback, addOptions) {
-      var element = new _Progress2.default(this.body, value, callback, addOptions);
+    value: function addProgress(id, value, addOptions) {
+      var element = new _Progress2.default(this.body, value, addOptions);
       this.addToContent(id, element);
       return this;
     }
@@ -1469,31 +1493,39 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = function () {
-  function Header(section, text) {
+  function Header(section, text, type) {
     (0, _classCallCheck3.default)(this, Header);
 
     this.element = null;
     this.section = section;
     this.text = text;
+    this.type = type;
     this.create();
   }
 
   (0, _createClass3.default)(Header, [{
     key: "create",
     value: function create() {
-      var $header = _DOMUtils2.default.createElement("p", this.section, { className: "body__section__header", innerHTML: this.text });
-
-      this.element = $header;
+      if (this.type === "p") {
+        this.element = _DOMUtils2.default.createElement("p", this.section, { className: "body__section__header", innerHTML: "" + this.text });
+      } else {
+        this.element = _DOMUtils2.default.createElement("p", this.section, { className: "body__section__header", innerHTML: "<strong>" + this.text + "</strong>" });
+      }
     }
   }, {
     key: "getValue",
     value: function getValue() {
-      return this.element.innerHTML;
+      return this.text;
     }
   }, {
     key: "setValue",
     value: function setValue(val) {
-      this.element.innerHTML = val;
+      this.text = val;
+      if (this.type === "p") {
+        this.element.innerHTML = "<strong>" + val + "</strong>";
+      } else {
+        this.element.innerHTML = val;
+      }
     }
   }]);
   return Header;
@@ -1555,18 +1587,20 @@ var Input = function () {
         $input = _DOMUtils2.default.createElement("input", $inputGroup, { className: "es-body__section__input es-body__section__input--" + this.type, value: this.value }, { type: this.type });
       }
 
-      if (this.addOptions) {
-        if (this.addOptions.min !== null) {
+      if (typeof this.addOptions !== "undefined") {
+        if (typeof this.addOptions.min !== "undefined") {
           $input.setAttribute("min", this.addOptions.min);
         }
 
-        if (this.addOptions.min !== null) {
+        if (typeof this.addOptions.max !== "undefined") {
           $input.setAttribute("max", this.addOptions.max);
         }
 
-        if (this.addOptions.placeholder !== null) {
-          $input.placeholder = this.addOptions.placeholder;
+        if (typeof this.addOptions.step !== "undefined") {
+          $input.setAttribute("step", this.addOptions.step);
         }
+
+        $input.placeholder = this.addOptions.placeholder || "";
       }
 
       if (this.type !== "color") {
@@ -1642,14 +1676,15 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Progress = function () {
-  function Progress(section, value, callback) {
+  function Progress(section, value, addOptions) {
     (0, _classCallCheck3.default)(this, Progress);
 
     this.element = null;
     this.trackValue = null;
     this.section = section;
     this.value = Math.max(0, Math.min(value, 1));
-    this.callback = callback || null;
+    this.addOptions = addOptions;
+    this.indeterminate = false;
     this.create();
   }
 
@@ -1664,22 +1699,14 @@ var Progress = function () {
 
       this.trackValue = _DOMUtils2.default.createElement("div", $track, { className: "es-body__section__slider-track__progress-value" }); // Track value
 
+      if (typeof this.addOptions !== "undefined" && this.addOptions.indeterminate) {
+        this.toggleIndeterminate();
+      }
+
       this.trackValue.style.width = this.value * 100 + "%";
 
       this.element = $input;
       this.track = $track;
-
-      this.bindCallback();
-    }
-  }, {
-    key: "bindCallback",
-    value: function bindCallback() {
-      var _this = this;
-
-      this.element.addEventListener("input", function () {
-        _this.callback(_this.getValue());
-        _this.SliderMovementManager.setHandleValue();
-      });
     }
   }, {
     key: "getValue",
@@ -1692,6 +1719,17 @@ var Progress = function () {
       var value = Math.max(0, Math.min(val, 1));
       this.element.value = value;
       this.trackValue.style.width = value * 100 + "%";
+    }
+  }, {
+    key: "toggleIndeterminate",
+    value: function toggleIndeterminate() {
+      this.indeterminate = !this.indeterminate;
+
+      if (this.indeterminate) {
+        this.trackValue.className += " es-body__section__slider-track__progress-value--indeterminate";
+      } else {
+        this.trackValue.className = this.trackValue.className.replace(" es-body__section__slider-track__progress-value--indeterminate", "");
+      }
     }
   }]);
   return Progress;
@@ -1826,14 +1864,16 @@ var _SliderMovementManager2 = _interopRequireDefault(_SliderMovementManager);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Slider = function () {
-  function Slider(section, value, min, max, callback) {
+  function Slider(section, value, callback, addOptions) {
     (0, _classCallCheck3.default)(this, Slider);
 
     this.element = null;
     this.section = section;
-    this.value = value;
-    this.min = min;
-    this.max = max;
+    this.value = value * 1;
+    this.min = 0;
+    this.max = 100;
+    this.step = 0.1;
+    this.addOptions = addOptions;
     this.callback = callback || null;
     this.SliderMovementManager = null;
     this.create();
@@ -1846,15 +1886,25 @@ var Slider = function () {
 
       var $inputGroup = _DOMUtils2.default.createElement("span", this.section, { className: "es-body__section__slider-group" });
 
-      if (this.min === null) {
-        this.min = 0;
+      if (typeof this.addOptions !== "undefined") {
+        if (typeof this.addOptions.min !== "undefined") {
+          this.min = this.addOptions.min || 0;
+        }
+
+        if (typeof this.addOptions.max !== "undefined") {
+          this.max = this.addOptions.max || 100;
+        }
+
+        if (typeof this.addOptions.step !== "undefined") {
+          this.step = this.addOptions.step || 0.1;
+        }
       }
 
       if (this.max === null) {
         this.max = 100;
       }
 
-      var $input = _DOMUtils2.default.createElement("input", $inputGroup, { className: "es-body__section__slider" }, { type: "range", min: this.min, max: this.max, value: this.value });
+      var $input = _DOMUtils2.default.createElement("input", $inputGroup, { className: "es-body__section__slider" }, { type: "range", min: this.min, max: this.max, value: this.value, step: this.step });
 
       var $track = _DOMUtils2.default.createElement("div", $inputGroup, { className: "es-body__section__slider-track" }); // Track
       var $trackValue = _DOMUtils2.default.createElement("div", $track, { className: "es-body__section__slider-track__slider-value" }); // Track
@@ -1865,13 +1915,23 @@ var Slider = function () {
       this.SliderMovementManager.setHandleValue(this.value);
 
       $handle.addEventListener("keydown", function (e) {
+        var changeMultpilier = 1;
+
+        if (e.shiftKey) {
+          changeMultpilier = 10;
+        }
+
+        if (e.altKey) {
+          changeMultpilier = 0.1;
+        }
+
         if (e.keyCode === 39) {
-          _this.element.value++;
+          _this.element.value = parseFloat(_this.element.value) + changeMultpilier;
           _DOMUtils2.default.dispatchEvent(_this.element, "input");
         }
 
         if (e.keyCode === 37) {
-          _this.element.value--;
+          _this.element.value = parseFloat(_this.element.value) - changeMultpilier;
           _DOMUtils2.default.dispatchEvent(_this.element, "input");
         }
       });
@@ -1900,6 +1960,7 @@ var Slider = function () {
     value: function setValue(val) {
       this.element.value = val;
       this.SliderMovementManager.setHandleValue();
+      _DOMUtils2.default.dispatchEvent(this.element, "input");
     }
   }]);
   return Slider;

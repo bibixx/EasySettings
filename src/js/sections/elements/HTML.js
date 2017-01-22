@@ -1,7 +1,7 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class HTML {
-  constructor(section, value) {
+  constructor( section, value ) {
     this.element = null;
     this.section = section;
     this.value = value;
@@ -9,7 +9,7 @@ export default class HTML {
   }
 
   create() {
-    const $cont = DOMUtils.createElement("div", this.section, { className: "es-body__section__html", innerHTML: this.value });
+    const $cont = DOMUtils.createElement( "div", this.section, { className: "es-body__section__html", innerHTML: this.value } );
 
     this.element = $cont;
   }
@@ -18,7 +18,7 @@ export default class HTML {
     return this.element.innerHTML;
   }
 
-  setValue(val) {
+  setValue( val ) {
     this.element.innerHTML = val;
   }
 }
