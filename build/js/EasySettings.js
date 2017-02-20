@@ -2413,6 +2413,11 @@ var Slider = function () {
 
       this.SliderMovementManager.setHandleValue(this.value);
 
+      $track.addEventListener("click", function (e) {
+        var $rect = $track.getBoundingClientRect();
+        _this.setValue((e.pageX - $rect.left) / $rect.width * _this.max);
+      });
+
       $handle.addEventListener("keydown", function (e) {
         var changeMultpilier = 1;
 

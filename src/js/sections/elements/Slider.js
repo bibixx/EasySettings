@@ -46,6 +46,11 @@ export default class Slider {
 
     this.SliderMovementManager.setHandleValue( this.value );
 
+    $track.addEventListener( "click", ( e ) => {
+      const $rect = $track.getBoundingClientRect();
+      this.setValue( ( ( e.pageX - $rect.left ) / $rect.width ) * this.max );
+    } );
+
     $handle.addEventListener( "keydown", ( e ) => {
       let changeMultpilier = 1;
 
