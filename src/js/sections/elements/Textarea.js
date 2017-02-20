@@ -1,12 +1,12 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Textarea {
-  constructor( section, value, callback, addOptions ) {
+  constructor( section, options, callback ) {
     this.element = null;
     this.section = section;
-    this.value = value;
+    this.value = options.value;
     this.callback = callback || null;
-    this.addOptions = addOptions;
+    this.addOptions = options;
     this.create();
   }
 

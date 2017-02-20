@@ -1,21 +1,21 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Radio {
-  constructor( section, index, options, checkedIndex, callback ) {
+  constructor( section, index, options = {}, callback = () => {} ) {
     this.element = null;
     this.radios = [];
     this.section = section;
     this.index = index;
-    this.options = options || [];
-    this.checkedIndex = checkedIndex;
-    this.callback = callback || null;
+    this.values = options.values || [];
+    this.checkedIndex = options.checkedIndex;
+    this.callback = callback;
     this.create();
   }
 
   create() {
     const $group = DOMUtils.createElement( "div", this.section, { className: "es-body__section__radio-group" } );
 
-    this.options.forEach( ( v, i ) => {
+    this.values.forEach( ( v, i ) => {
       const $label = DOMUtils.createElement( "label", $group, { className: "es-body__section__label" } );
 
       const $radio = DOMUtils.createElement( "input", $label, { className: "es-body__section__checkbox", checked: ( i === this.checkedIndex ) }, { type: "radio", name: `EasySettingsPanel-${this.index}` } );

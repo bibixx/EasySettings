@@ -1,10 +1,10 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class HTML {
-  constructor( section, value ) {
+  constructor( section, options ) {
     this.element = null;
     this.section = section;
-    this.value = value;
+    this.value = options.value;
     this.create();
   }
 

@@ -1,13 +1,13 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Input {
-  constructor( section, type, value, callback, addOptions ) {
+  constructor( section, type, options = {}, callback = () => {} ) {
     this.element = null;
     this.section = section;
-    this.value = value;
+    this.value = options.value;
     this.type = type;
-    this.callback = callback || null;
-    this.addOptions = addOptions;
+    this.callback = callback;
+    this.addOptions = options;
     this.additionalElement = null;
     this.create();
   }

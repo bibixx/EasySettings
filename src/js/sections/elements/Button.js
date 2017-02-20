@@ -1,11 +1,11 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Button {
-  constructor( section, text, callback ) {
+  constructor( section, options = {}, callback = () => {} ) {
     this.element = null;
     this.section = section;
-    this.text = text;
-    this.callback = callback || null;
+    this.text = options.value || "Button";
+    this.callback = callback;
     this.create();
   }
 

@@ -1,12 +1,12 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Checkbox {
-  constructor( section, label, checked, callback ) {
+  constructor( section, options = {}, callback = () => {} ) {
     this.element = null;
     this.section = section;
-    this.label = label;
-    this.callback = callback || null;
-    this.checked = checked;
+    this.label = options.label || "";
+    this.checked = options.checked || false;
+    this.callback = callback;
     this.create();
   }
 

@@ -1,11 +1,12 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Dropdown {
-  constructor( section, options, callback ) {
+  constructor( section, options = {}, callback = () => {} ) {
     this.element = null;
     this.section = section;
-    this.options = options || [];
-    this.callback = callback || null;
+    this.options = options.options || [];
+    this.value = this.options[options.value] || false;
+    this.callback = callback;
     this.create();
   }
 
@@ -17,6 +18,11 @@ export default class Dropdown {
       $option.innerHTML = v;
       $dropdown.appendChild( $option );
     } );
+
+    if ( this.value !== false ) {
+      $dropdown.value = this.value;
+    }
+
     this.element = $dropdown;
 
     this.bindCallback();
@@ -33,6 +39,8 @@ export default class Dropdown {
   }
 
   setValue( val ) {
-    this.element.value = val;
+    if ( this.options[val] ) {
+      this.element.value = this.options[val];
+    }
   }
 }

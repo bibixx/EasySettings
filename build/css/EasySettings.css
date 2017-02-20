@@ -275,7 +275,7 @@ input[type="radio"] + .es-body__section__label__icon {
     left: 107%; } }
 
 .es-body__section__slider-group {
-  margin: 8px 0; }
+  margin: 16px 0 8px; }
   .es-body__section__slider-group .es-body__section__slider {
     display: none; }
   .es-body__section__slider-group .es-body__section__slider-track {

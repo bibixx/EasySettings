@@ -810,6 +810,24 @@ var _Section2 = _interopRequireDefault(_Section);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+ * @module Panel
+*/
+
+var dif = false;
+
+var isSetupDone = false;
+
+/**
+ * Creates a panel.
+ * @class
+ * @param {number} [x] - specifies initial x position of panel
+ * @param {number} [y] - specifies initial y position of panel
+ * @param {string} [title] - specifies title of panel
+ * @example
+ * const panel = new EasySettings();
+ */
+
 var EasySettings = function () {
   function EasySettings(x, y, title) {
     (0, _classCallCheck3.default)(this, EasySettings);
@@ -824,6 +842,10 @@ var EasySettings = function () {
       x: x || 8,
       y: y || 8
     };
+
+    if (!isSetupDone && !dif) {
+      EasySettings.createHeaderTags();
+    }
 
     this.createSettingsContainer();
 
@@ -857,7 +879,13 @@ var EasySettings = function () {
       $container.style.top = this.pos.y + "px";
     }
 
-    /* Section Creation */
+    /**
+     * Creates section
+     * @returns {module:Panel} Panel that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.createSection();
+    */
 
   }, {
     key: "createSection",
@@ -866,11 +894,55 @@ var EasySettings = function () {
       this.sections.push(newSection);
       return newSection;
     }
+
+    /**
+     * Gets value of component
+     * @param {string} id - id of the component which value is going to be returned
+     * @returns {string|number|boolean} Value of component wiht specified id
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addTextInput( "input-text", { value: "EasySettings" } );
+     * console.log( panel.getValue( "input-text" ) ); // logs EasySettings
+      * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addNumberInput( "input-number", { value: Math.round( Math.PI * 100 ) } );
+     * console.log( panel.getValue( "input-number" ) ); // logs 314
+      * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addCheckbox( "checkbox", { label: "Value 1", checked: true });
+     * console.log( panel.getValue( "checkbox" ) ); // logs true
+    */
+
   }, {
     key: "getValue",
     value: function getValue(id) {
       return this.elements[id].getValue();
     }
+
+    /**
+     * Sets value of component
+     * @param {string} id - id of the component which value is going to be changed
+     * @param {string|number|boolean} value - value that component is supposed to have
+      * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addTextInput( "input-text", { value: "EasySettings" } );
+     * panel.setValue( "input-text", "EasySettings2" ); // input now says ”EasySettings2”
+      * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addNumberInput( "input-number", { value: Math.round( Math.PI * 100 ) } );
+     * panel.setValue( "input-number", 13 ); // input now says 13
+      * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addCheckbox( "checkbox", { label: "Value 1", checked: true });
+     * panel.setValue( "checkbox", false ); // checkbox is off
+    */
+
   }, {
     key: "setValue",
     value: function setValue(id, value) {
@@ -880,6 +952,24 @@ var EasySettings = function () {
     key: "toggleIndeterminate",
     value: function toggleIndeterminate(id) {
       this.elements[id].toggleIndeterminate();
+    }
+  }], [{
+    key: "createHeaderTags",
+    value: function createHeaderTags() {
+      isSetupDone = true;
+
+      _DOMUtils2.default.createElement("link", document.head, null, { href: "https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500|Material+Icons", rel: "stylesheet" });
+    }
+
+    /**
+     * Disables inserting 3 fonts (”Roboto Mono”, ”Roboto”, ”Material Icons”) on library startup.
+     @static
+    */
+
+  }, {
+    key: "disableInsertingFonts",
+    value: function disableInsertingFonts() {
+      dif = true;
     }
   }]);
   return EasySettings;
@@ -1046,6 +1136,10 @@ var _Textarea2 = _interopRequireDefault(_Textarea);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+ * @module Section
+*/
+
 var Section = function () {
   function Section(esBody, elements, index) {
     (0, _classCallCheck3.default)(this, Section);
@@ -1073,27 +1167,172 @@ var Section = function () {
 
     /* Adding certain elements */
 
-  }, {
-    key: "addHeader",
-    value: function addHeader(id, text) {
-      var element = new _Header2.default(this.body, text, "h");
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addParagraph",
-    value: function addParagraph(id, text) {
-      var element = new _Header2.default(this.body, text, "p");
-      this.addToContent(id, element);
-      return this;
-    }
+    /**
+     * Adds button
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value=Button] - text displayed in button
+     * @param {callback} [callback] - callback triggered on click
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addButton( "button", { value: "Button" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "button" ); // returns text of button (”Button”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "header", "Button 2" ); // sets text of button to ”Button 2”
+    */
+
   }, {
     key: "addButton",
-    value: function addButton(id, text, callback) {
-      var element = new _Button2.default(this.body, text, callback);
+    value: function addButton(id, options, callback) {
+      var element = new _Button2.default(this.body, options, callback);
       this.addToContent(id, element);
       return this;
     }
+
+    /**
+     * Adds checkbox
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.label] - label of the checkbox
+     * @param {boolean} [options.checked=false] - label of the checkbox
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addCheckbox( "checkbox", { label: "Value 1", checked: true });
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "checkbox" ); // returns value of checkbox (true)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "checkbox", false ); // sets value of checkbox to false
+    */
+
+  }, {
+    key: "addCheckbox",
+    value: function addCheckbox(id, options, callback) {
+      var element = new _Checkbox2.default(this.body, options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds color input
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value=#000000] - default value
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+      * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addColorInput( "color", { value: "#000000" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "color" ); // returns value of input (”#000000”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "color", "#FF0000" ); // sets value of input to ”#FF0000”
+    */
+
+  }, {
+    key: "addColorInput",
+    value: function addColorInput(id) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var callback = arguments[2];
+
+      options.value = options.value || "#000000";
+      var element = new _Input2.default(this.body, "color", options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds date input
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value] - default value of format (yyyy-mm-dd)
+     * @param {number} [options.min] - minimal value
+     * @param {number} [options.max] - maximal value
+     * @param {string} [options.placeholder] - placeholder of input
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addDateInput( "date", { value: "1999-01-10" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "date" ); // returns value of input (”1999-01-10”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "date", "2017-02-20" ); // sets value of input to ”2017-02-20”
+    */
+
+  }, {
+    key: "addDateInput",
+    value: function addDateInput(id, options, callback) {
+      var element = new _Input2.default(this.body, "date", options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds datetime input
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value] - default value of format (yyyy-mm-ddThh:mm:ss)
+     * @param {number} [options.min] - minimal value
+     * @param {number} [options.max] - maximal value
+     * @param {string} [options.placeholder] - placeholder of input
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addDateTimeInput( "datetime", { value: "1999-01-10T12:31:00" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "datetime" ); // returns value of input (”1999-01-10T12:31:00”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "datetime", "2017-02-20T13:02:02" ); // sets value of input to ”2017-02-20T13:02:02”
+    */
+
+  }, {
+    key: "addDateTimeInput",
+    value: function addDateTimeInput(id, options, callback) {
+      var element = new _Input2.default(this.body, "datetime-local", options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds dropdown
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {array} [options.options] - options to be displayed
+     * @param {number} [options.value] - index of option to be selected on startup
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addDropdown( "dropdown", { options: ["Dropdown option #1", "Dropdown option #2"] } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "dropdown" ); // returns selected value (”Dropdown option #1”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "dropdown", 1 ); // sets index of dropdown to 1, so select says ”Dropdown option #2”
+    */
+
   }, {
     key: "addDropdown",
     value: function addDropdown(id, options, callback) {
@@ -1101,100 +1340,340 @@ var Section = function () {
       this.addToContent(id, element);
       return this;
     }
+
+    /**
+     * Adds header
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value] - text displayed as header
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addHeader( "header", { value: "Header" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "header" ); // returns text of header (”Header”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "header", "header 2" ); // sets text of header to ”header 2”
+    */
+
   }, {
-    key: "addCheckbox",
-    value: function addCheckbox(id, label, checked, callback) {
-      var element = new _Checkbox2.default(this.body, label, checked, callback);
+    key: "addHeader",
+    value: function addHeader(id, options) {
+      var element = new _Header2.default(this.body, options, "h");
       this.addToContent(id, element);
       return this;
     }
-  }, {
-    key: "addRadio",
-    value: function addRadio(id, label, checkedIndex, callback) {
-      var element = new _Radio2.default(this.body, this.index, label, checkedIndex, callback);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addColorInput",
-    value: function addColorInput(id, value, callback, addOptions) {
-      var element = new _Input2.default(this.body, "color", value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addTextInput",
-    value: function addTextInput(id, value, callback, addOptions) {
-      var element = new _Input2.default(this.body, "text", value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addPasswordInput",
-    value: function addPasswordInput(id, value, callback, addOptions) {
-      var element = new _Input2.default(this.body, "password", value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addNumberInput",
-    value: function addNumberInput(id, value, callback, addOptions) {
-      var element = new _Input2.default(this.body, "number", value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addDateInput",
-    value: function addDateInput(id, value, callback, addOptions) {
-      var element = new _Input2.default(this.body, "date", value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addTimeInput",
-    value: function addTimeInput(id, value, callback, addOptions) {
-      var element = new _Input2.default(this.body, "time", value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addDateTimeInput",
-    value: function addDateTimeInput(id, value, callback, addOptions) {
-      var element = new _Input2.default(this.body, "datetime-local", value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addTextarea",
-    value: function addTextarea(id, value, callback, addOptions) {
-      var element = new _Textarea2.default(this.body, value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addSlider",
-    value: function addSlider(id, value, callback, addOptions) {
-      var element = new _Slider2.default(this.body, value, callback, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
-  }, {
-    key: "addProgress",
-    value: function addProgress(id, value, addOptions) {
-      var element = new _Progress2.default(this.body, value, addOptions);
-      this.addToContent(id, element);
-      return this;
-    }
+
+    /**
+     * Adds HTML container
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value] - HTML to be inserted into container
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addHTML( "html", { value: "<strong>HTML</strong>" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "html" ); // returns HTML of component (”<strong>HTML</strong>”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "html", "<em>HTML 2</em>" ); // sets HTML of component to ”<em>HTML 2</em>”
+    */
+
   }, {
     key: "addHTML",
-    value: function addHTML(id, value) {
-      var element = new _HTML2.default(this.body, value);
+    value: function addHTML(id, options) {
+      var element = new _HTML2.default(this.body, options);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds number input
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {number} [options.value] - default value
+     * @param {number} [options.min] - minimal value
+     * @param {number} [options.max] - maximal value
+     * @param {number} [options.step] - step of values
+     * @param {string} [options.placeholder] - placeholder of input
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addNumberInput( "input-number", { value: Math.round( Math.PI * 100 ) } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "input-number" ); // returns value of component (314)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "input-number", 13 ); // sets value of component to 13
+    */
+
+  }, {
+    key: "addNumberInput",
+    value: function addNumberInput(id, options, callback) {
+      var element = new _Input2.default(this.body, "number", options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds paragrpah
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value] - text displayed as paragrpah
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addParagraph( "paragraph", { value: "Paragraph" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "paragraph" ); // returns text of paragraph (”Paragraph”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "paragraph", "Paragraph 2" ); // sets text of paragraph to ”Paragraph 2”
+    */
+
+  }, {
+    key: "addParagraph",
+    value: function addParagraph(id, options) {
+      var element = new _Header2.default(this.body, options, "p");
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds password input
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value] - default value
+     * @param {string} [options.placeholder] - placeholder of input
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addPasswordInput( "input-password", { value: "admin1", placeholder: "Insert password" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "input-password" ); // returns value of component (”admin1”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "input-password", "Password123" ); // sets value of component to ”Password123”
+    */
+
+  }, {
+    key: "addPasswordInput",
+    value: function addPasswordInput(id) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var callback = arguments[2];
+
+      options.value = options.value || "";
+      var element = new _Input2.default(this.body, "password", options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds progress bar
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value=0] - default value
+     * @param {number} [options.min=0] - minimal value
+     * @param {number} [options.max=1] - maximal value
+     * @param {boolean} [options.indeterminate=false] - determines wheter progress bar should be indeterminate on startup
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addProgress( "progress", { value: 0.33, indeterminate: true } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "progress" ); // returns value of component (0.33)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "progress", 1 ); // sets value of component to 1
+    */
+
+  }, {
+    key: "addProgress",
+    value: function addProgress(id, options) {
+      var element = new _Progress2.default(this.body, options);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds multiple radio inputs
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string[]} [options.values] - array of labels for inputs
+     * @param {number} [options.checkedIndex] - index of radio checked by default
+     * @param {callback} [callback] - callback triggered on change of any radio
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addRadio( "radio", { values: ["Value 1", "Value 2"], checkedIndex: 0 } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "radio" ); // returns index of checked radio
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "radio", 1 ); // sets index of checked radio to 1
+    */
+
+  }, {
+    key: "addRadio",
+    value: function addRadio(id, options, callback) {
+      var element = new _Radio2.default(this.body, this.index, options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds slider
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {number} [options.value] - default value
+     * @param {number} [options.min] - minimal value
+     * @param {number} [options.max] - maximal value
+     * @param {number} [options.step] - step of values
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addSlider( "slider", { value: 25, min: 0, max: 1000 } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "slider" ); // returns value of slider (25)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "slider", 98 ); // sets value of slider to 98
+    */
+
+  }, {
+    key: "addSlider",
+    value: function addSlider(id, options, callback) {
+      var element = new _Slider2.default(this.body, options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds textarea
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {number} [options.value] - default value
+     * @param {string} [options.placeholder] - placeholder of input
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addTextarea( "textarea", { value: "my text" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "textarea" ); // returns value of textarea (”my text”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "textarea", "my text 2" ); // sets value of textarea to ”2017-02-20”
+    */
+
+  }, {
+    key: "addTextarea",
+    value: function addTextarea(id, options, callback) {
+      var element = new _Textarea2.default(this.body, options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds text input
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value] - default value
+     * @param {string} [options.placeholder] - placeholder of input
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addTextInput( "text-input", { value: "my input" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "text-input" ); // returns value of textarea (”my input”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "text-input", "my input 2" ); // sets value of textarea to ”my input 2”
+    */
+
+  }, {
+    key: "addTextInput",
+    value: function addTextInput(id) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var callback = arguments[2];
+
+      options.value = options.value || "";
+      var element = new _Input2.default(this.body, "text", options, callback);
+      this.addToContent(id, element);
+      return this;
+    }
+
+    /**
+     * Adds time input
+     * @param {string} [id] - id of the component
+     * @param {object} [options] - options for component
+     * @param {string} [options.value] - default value of format (hh:mm:ss)
+     * @param {number} [options.min] - minimal value
+     * @param {number} [options.max] - maximal value
+     * @param {string} [options.placeholder] - placeholder of input
+     * @param {callback} [callback] - callback triggered on change
+     * @returns {module:Section} Section that component is added to
+     * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addDateTimeInput( "time", { value: "12:31:00" } );
+      * @example
+     * // See => [Panel.getValue()]{@link module:Panel#getValue}
+     * panel.getValue( "time" ); // returns value of input (”12:31:00”)
+      * @example
+     * // See => [Panel.setValue()]{@link module:Panel#setValue}
+     * panel.setValue( "time", "13:02:02" ); // sets value of input to ”13:02:02”
+    */
+
+  }, {
+    key: "addTimeInput",
+    value: function addTimeInput(id, options, callback) {
+      var element = new _Input2.default(this.body, "time", options, callback);
       this.addToContent(id, element);
       return this;
     }
   }]);
   return Section;
 }();
+
+/**
+ * @callback callback
+ * @param {string|number} value - value of component
+ * @example
+ * const panel = new EasySettings();
+ * panel.addSection()
+ *   .addNumberInput( "input-number", { value: Math.round( Math.random() * 100 ) }, ( v ) => {
+ *     console.log( v ); // logs value of input every time it changes
+ *   } );
+*/
+/* eslint-disable no-multiple-empty-lines */
 
 exports.default = Section;
 
@@ -1220,13 +1699,15 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Button = function () {
-  function Button(section, text, callback) {
+  function Button(section) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
     (0, _classCallCheck3.default)(this, Button);
 
     this.element = null;
     this.section = section;
-    this.text = text;
-    this.callback = callback || null;
+    this.text = options.value || "Button";
+    this.callback = callback;
     this.create();
   }
 
@@ -1286,14 +1767,16 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Checkbox = function () {
-  function Checkbox(section, label, checked, callback) {
+  function Checkbox(section) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
     (0, _classCallCheck3.default)(this, Checkbox);
 
     this.element = null;
     this.section = section;
-    this.label = label;
-    this.callback = callback || null;
-    this.checked = checked;
+    this.label = options.label || "";
+    this.checked = options.checked || false;
+    this.callback = callback;
     this.create();
   }
 
@@ -1368,13 +1851,16 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Dropdown = function () {
-  function Dropdown(section, options, callback) {
+  function Dropdown(section) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
     (0, _classCallCheck3.default)(this, Dropdown);
 
     this.element = null;
     this.section = section;
-    this.options = options || [];
-    this.callback = callback || null;
+    this.options = options.options || [];
+    this.value = this.options[options.value] || false;
+    this.callback = callback;
     this.create();
   }
 
@@ -1388,6 +1874,11 @@ var Dropdown = function () {
         $option.innerHTML = v;
         $dropdown.appendChild($option);
       });
+
+      if (this.value !== false) {
+        $dropdown.value = this.value;
+      }
+
       this.element = $dropdown;
 
       this.bindCallback();
@@ -1409,7 +1900,9 @@ var Dropdown = function () {
   }, {
     key: "setValue",
     value: function setValue(val) {
-      this.element.value = val;
+      if (this.options[val]) {
+        this.element.value = this.options[val];
+      }
     }
   }]);
   return Dropdown;
@@ -1439,12 +1932,12 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var HTML = function () {
-  function HTML(section, value) {
+  function HTML(section, options) {
     (0, _classCallCheck3.default)(this, HTML);
 
     this.element = null;
     this.section = section;
-    this.value = value;
+    this.value = options.value;
     this.create();
   }
 
@@ -1493,12 +1986,14 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = function () {
-  function Header(section, text, type) {
+  function Header(section) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var type = arguments[2];
     (0, _classCallCheck3.default)(this, Header);
 
     this.element = null;
     this.section = section;
-    this.text = text;
+    this.text = options.value || "";
     this.type = type;
     this.create();
   }
@@ -1555,15 +2050,17 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Input = function () {
-  function Input(section, type, value, callback, addOptions) {
+  function Input(section, type) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var callback = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : function () {};
     (0, _classCallCheck3.default)(this, Input);
 
     this.element = null;
     this.section = section;
-    this.value = value;
+    this.value = options.value;
     this.type = type;
-    this.callback = callback || null;
-    this.addOptions = addOptions;
+    this.callback = callback;
+    this.addOptions = options;
     this.additionalElement = null;
     this.create();
   }
@@ -1676,14 +2173,14 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Progress = function () {
-  function Progress(section, value, addOptions) {
+  function Progress(section, options) {
     (0, _classCallCheck3.default)(this, Progress);
 
     this.element = null;
     this.trackValue = null;
     this.section = section;
-    this.value = Math.max(0, Math.min(value, 1));
-    this.addOptions = addOptions;
+    this.value = Math.max(0, Math.min(options.value, 1));
+    this.addOptions = options;
     this.indeterminate = false;
     this.create();
   }
@@ -1759,16 +2256,18 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Radio = function () {
-  function Radio(section, index, options, checkedIndex, callback) {
+  function Radio(section, index) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var callback = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : function () {};
     (0, _classCallCheck3.default)(this, Radio);
 
     this.element = null;
     this.radios = [];
     this.section = section;
     this.index = index;
-    this.options = options || [];
-    this.checkedIndex = checkedIndex;
-    this.callback = callback || null;
+    this.values = options.values || [];
+    this.checkedIndex = options.checkedIndex;
+    this.callback = callback;
     this.create();
   }
 
@@ -1779,7 +2278,7 @@ var Radio = function () {
 
       var $group = _DOMUtils2.default.createElement("div", this.section, { className: "es-body__section__radio-group" });
 
-      this.options.forEach(function (v, i) {
+      this.values.forEach(function (v, i) {
         var $label = _DOMUtils2.default.createElement("label", $group, { className: "es-body__section__label" });
 
         var $radio = _DOMUtils2.default.createElement("input", $label, { className: "es-body__section__checkbox", checked: i === _this.checkedIndex }, { type: "radio", name: "EasySettingsPanel-" + _this.index });
@@ -1864,16 +2363,16 @@ var _SliderMovementManager2 = _interopRequireDefault(_SliderMovementManager);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Slider = function () {
-  function Slider(section, value, callback, addOptions) {
+  function Slider(section, options, callback) {
     (0, _classCallCheck3.default)(this, Slider);
 
     this.element = null;
     this.section = section;
-    this.value = value * 1;
+    this.value = options.value * 1;
     this.min = 0;
     this.max = 100;
     this.step = 0.1;
-    this.addOptions = addOptions;
+    this.addOptions = options;
     this.callback = callback || null;
     this.SliderMovementManager = null;
     this.create();
@@ -2126,14 +2625,14 @@ var _DOMUtils2 = _interopRequireDefault(_DOMUtils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Textarea = function () {
-  function Textarea(section, value, callback, addOptions) {
+  function Textarea(section, options, callback) {
     (0, _classCallCheck3.default)(this, Textarea);
 
     this.element = null;
     this.section = section;
-    this.value = value;
+    this.value = options.value;
     this.callback = callback || null;
-    this.addOptions = addOptions;
+    this.addOptions = options;
     this.create();
   }
 

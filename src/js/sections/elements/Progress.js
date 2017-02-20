@@ -1,12 +1,12 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Progress {
-  constructor( section, value, addOptions ) {
+  constructor( section, options ) {
     this.element = null;
     this.trackValue = null;
     this.section = section;
-    this.value = Math.max( 0, Math.min( value, 1 ) );
-    this.addOptions = addOptions;
+    this.value = Math.max( 0, Math.min( options.value, 1 ) );
+    this.addOptions = options;
     this.indeterminate = false;
     this.create();
   }

@@ -1,10 +1,10 @@
 import DOMUtils from "../../utils/DOMUtils";
 
 export default class Header {
-  constructor( section, text, type ) {
+  constructor( section, options = {}, type ) {
     this.element = null;
     this.section = section;
-    this.text = text;
+    this.text = options.value || "";
     this.type = type;
     this.create();
   }
