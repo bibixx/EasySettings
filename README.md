@@ -5,8 +5,8 @@ EasySettings is a library whose purpose is to help creating creative project wit
 
 ### Setup
 To use this library you have to simply include two files from this repo:
- * `EasySettings.js` found in `/build/js/`
- * `EasySettings.css` found in `/build/css/`
+ * `EasySettings.js` found in [`/build/js/`](https://github.com/bibixx/EasySettings/tree/master/build/js)
+ * `EasySettings.css` found in [`/build/css/`](https://github.com/bibixx/EasySettings/tree/master/build/css)
 
 ### Usage
 Firstly start with creating panel and assigning it to variable. (See more here: [module-Panel.html#module:Panel](https://bibixx.github.io/EasySettings/docs/module-Panel.html#module:Panel))
