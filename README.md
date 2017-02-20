@@ -1,5 +1,8 @@
 <h1 class="page-title">EasySettings</h1>
 ## Introduction
+### What is it?
+EasySettings is a library whose purpose is to help creating creative project with removing the part of creating ui to change some settings on the go.
+
 ### Setup
 To use this library you have to simply include two files from this repo:
  * `EasySettings.js` found in `/build/js/`
