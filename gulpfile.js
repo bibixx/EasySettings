@@ -50,7 +50,7 @@ const STATIC_FILES_TO_WATCH = [];
  * Simple way to check for development/production mode.
  */
 function isProduction() {
-  return argv.production;
+  return argv.production || argv.p;
 }
 
 /**

@@ -9,7 +9,7 @@ To use this library you have to simply include two files from this repo:
  * `EasySettings.css` found in [`/build/css/`](https://github.com/bibixx/EasySettings/tree/master/build/css)
 
 ### Usage
-Firstly start with creating panel and assigning it to variable. (See more here: [module-Panel.html#module:Panel](https://bibixx.github.io/EasySettings/docs/module-Panel.html#module:Panel))
+Firstly start with creating panel and assigning it to variable. (See more here: [module:Panel](https://bibixx.github.io/EasySettings/docs/module-Panel.html#module:Panel))
 
 ```
 const panel = new EasySettings();
@@ -82,7 +82,7 @@ List of all components:
 
 [`Section.addTimeInput( id, options, callback );`](https://bibixx.github.io/EasySettings/docs/module-Section#TimeInput.html)
 
-For more info about components see [/docs/module-Section.html](https://bibixx.github.io/EasySettings/docs/module-Section.html)
+For more info about components see [module:Section](https://bibixx.github.io/EasySettings/docs/module-Section.html)
 
 ### Getting and setting values
 To get value of component you can use [module:Panel#getValue](https://bibixx.github.io/EasySettings/docs/module-Panel#getValue)
