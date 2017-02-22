@@ -86,20 +86,24 @@ For more info about components see [/docs/module-Section.html](https://bibixx.gi
 
 ### Getting and setting values
 To get value of component you can use [module:Panel#getValue](https://bibixx.github.io/EasySettings/docs/module-Panel#getValue)
-
-`Section.getValue( id );`
+```
+Section.getValue( id );
+```
 
 To set value of component you can use [module:Panel#setValue](https://bibixx.github.io/EasySettings/docs/module-Panel#setValue)
-
-`Section.setValue( id, value );`
+```
+Section.setValue( id, value );
+```
 
 You can also get values as JSON using [module:Panel#getValuesAsJSON](https://bibixx.github.io/EasySettings/docs/module-Panel#getValuesAsJSON)
-
-`Section.getValuesAsJSON( id );`
+```
+Section.getValuesAsJSON( id );
+```
 
 And set them using JSON with [module:Panel#setValuesFromJSON](https://bibixx.github.io/EasySettings/docs/module-Panel#setValuesFromJSON)
-
-`Section.setValuesFromJSON( id, value );`
+```
+Section.setValuesFromJSON( id, value );
+```
 
 Where `id` is id of component specified at creation of component and `value` is value to be set.
 
