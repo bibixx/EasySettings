@@ -62,5 +62,6 @@ export default class Radio {
     this.radios.forEach( ( v, i ) => {
       v.checked = ( i === val ); // eslint-disable-line no-param-reassign
     } );
+    DOMUtils.dispatchEvent( this.element, "change" );
   }
 }

@@ -2,11 +2,15 @@
 module.exports = { "default": require("core-js/library/fn/get-iterator"), __esModule: true };
 },{"core-js/library/fn/get-iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/get-iterator.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/is-iterable.js":[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/is-iterable"), __esModule: true };
-},{"core-js/library/fn/is-iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/is-iterable.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/define-property.js":[function(require,module,exports){
+},{"core-js/library/fn/is-iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/is-iterable.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/json/stringify.js":[function(require,module,exports){
+module.exports = { "default": require("core-js/library/fn/json/stringify"), __esModule: true };
+},{"core-js/library/fn/json/stringify":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/json/stringify.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/define-property.js":[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/define-property"), __esModule: true };
 },{"core-js/library/fn/object/define-property":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/define-property.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/entries.js":[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/entries"), __esModule: true };
-},{"core-js/library/fn/object/entries":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/entries.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js":[function(require,module,exports){
+},{"core-js/library/fn/object/entries":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/entries.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/keys.js":[function(require,module,exports){
+module.exports = { "default": require("core-js/library/fn/object/keys"), __esModule: true };
+},{"core-js/library/fn/object/keys":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/keys.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -104,7 +108,13 @@ module.exports = require('../modules/core.get-iterator');
 require('../modules/web.dom.iterable');
 require('../modules/es6.string.iterator');
 module.exports = require('../modules/core.is-iterable');
-},{"../modules/core.is-iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/core.is-iterable.js","../modules/es6.string.iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.string.iterator.js","../modules/web.dom.iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/web.dom.iterable.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/define-property.js":[function(require,module,exports){
+},{"../modules/core.is-iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/core.is-iterable.js","../modules/es6.string.iterator":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.string.iterator.js","../modules/web.dom.iterable":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/web.dom.iterable.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/json/stringify.js":[function(require,module,exports){
+var core  = require('../../modules/_core')
+  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
+module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+  return $JSON.stringify.apply($JSON, arguments);
+};
+},{"../../modules/_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/define-property.js":[function(require,module,exports){
 require('../../modules/es6.object.define-property');
 var $Object = require('../../modules/_core').Object;
 module.exports = function defineProperty(it, key, desc){
@@ -113,7 +123,10 @@ module.exports = function defineProperty(it, key, desc){
 },{"../../modules/_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","../../modules/es6.object.define-property":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.object.define-property.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/entries.js":[function(require,module,exports){
 require('../../modules/es7.object.entries');
 module.exports = require('../../modules/_core').Object.entries;
-},{"../../modules/_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","../../modules/es7.object.entries":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es7.object.entries.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_a-function.js":[function(require,module,exports){
+},{"../../modules/_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","../../modules/es7.object.entries":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es7.object.entries.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/fn/object/keys.js":[function(require,module,exports){
+require('../../modules/es6.object.keys');
+module.exports = require('../../modules/_core').Object.keys;
+},{"../../modules/_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","../../modules/es6.object.keys":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.object.keys.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_a-function.js":[function(require,module,exports){
 module.exports = function(it){
   if(typeof it != 'function')throw TypeError(it + ' is not a function!');
   return it;
@@ -540,7 +553,18 @@ module.exports = Object.keys || function keys(O){
 };
 },{"./_enum-bug-keys":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_enum-bug-keys.js","./_object-keys-internal":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-keys-internal.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-pie.js":[function(require,module,exports){
 exports.f = {}.propertyIsEnumerable;
-},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-to-array.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-sap.js":[function(require,module,exports){
+// most Object methods by ES6 should accept primitives
+var $export = require('./_export')
+  , core    = require('./_core')
+  , fails   = require('./_fails');
+module.exports = function(KEY, exec){
+  var fn  = (core.Object || {})[KEY] || Object[KEY]
+    , exp = {};
+  exp[KEY] = exec(fn);
+  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
+};
+},{"./_core":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_core.js","./_export":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_export.js","./_fails":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_fails.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-to-array.js":[function(require,module,exports){
 var getKeys   = require('./_object-keys')
   , toIObject = require('./_to-iobject')
   , isEnum    = require('./_object-pie').f;
@@ -739,7 +763,17 @@ addToUnscopables('entries');
 var $export = require('./_export');
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
 $export($export.S + $export.F * !require('./_descriptors'), 'Object', {defineProperty: require('./_object-dp').f});
-},{"./_descriptors":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_descriptors.js","./_export":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_export.js","./_object-dp":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dp.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.string.iterator.js":[function(require,module,exports){
+},{"./_descriptors":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_descriptors.js","./_export":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_export.js","./_object-dp":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-dp.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.object.keys.js":[function(require,module,exports){
+// 19.1.2.14 Object.keys(O)
+var toObject = require('./_to-object')
+  , $keys    = require('./_object-keys');
+
+require('./_object-sap')('keys', function(){
+  return function keys(it){
+    return $keys(toObject(it));
+  };
+});
+},{"./_object-keys":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-keys.js","./_object-sap":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_object-sap.js","./_to-object":"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/_to-object.js"}],"/Users/bartekosx/Projects/EasySettings/node_modules/core-js/library/modules/es6.string.iterator.js":[function(require,module,exports){
 'use strict';
 var $at  = require('./_string-at')(true);
 
@@ -787,6 +821,14 @@ for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList'
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _stringify = require("babel-runtime/core-js/json/stringify");
+
+var _stringify2 = _interopRequireDefault(_stringify);
+
+var _keys = require("babel-runtime/core-js/object/keys");
+
+var _keys2 = _interopRequireDefault(_keys);
 
 var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
 
@@ -837,6 +879,7 @@ var EasySettings = function () {
     this.body = null;
     this.sections = [];
     this.elements = {};
+    this.elementsInOrder = [];
     this.title = title;
     this.pos = {
       x: x || 8,
@@ -890,7 +933,7 @@ var EasySettings = function () {
   }, {
     key: "createSection",
     value: function createSection() {
-      var newSection = new _Section2.default(this.body, this.elements, this.sections.length);
+      var newSection = new _Section2.default(this.body, this.elements, this.sections.length, this.elementsInOrder);
       this.sections.push(newSection);
       return newSection;
     }
@@ -948,10 +991,237 @@ var EasySettings = function () {
     value: function setValue(id, value) {
       this.elements[id].setValue(value);
     }
+
+    /**
+     * Toggles determination of progress bar
+     * @param {string} id - id of the progress bar which is going to be changed
+      * @example
+     * const panel = new EasySettings();
+     * panel.addSection()
+     *   .addProgress( "progress", { value: 0.33, indeterminate: true } );
+     * panel.toggleIndeterminate( "progress" ); // progress bar now is not indeterminate
+    */
+
   }, {
     key: "toggleIndeterminate",
     value: function toggleIndeterminate(id) {
       this.elements[id].toggleIndeterminate();
+    }
+
+    /**
+     * Returns values of all components that have specified id
+     * @returns {string}
+     * @example
+     * const panel = new EasySettings();
+     * panel.createSection()
+     *  .addDropdown( "dropdown", { options: ["Dropdown option #1", "Dropdown option #2"] } );
+     * panel.createSection()
+     *  .addSlider( "slider", { value: 25, min: 0, max: 1000 } );
+     * panel.createSection()
+     *  .addNumberInput( "input-number-slider", { value: 0, step: 0.5, min: 0, max: 1 } );
+     * console.log( panel.getValuesAsJSON() );
+     * // logs
+     * // {
+     * //   dropdown: "Dropdown option #1",
+     * //   input-number-slider: 0,
+     * //   slider: 25
+     * // }
+    */
+
+  }, {
+    key: "getValuesAsJSON",
+    value: function getValuesAsJSON() {
+      var _this = this;
+
+      var values = {};
+      (0, _keys2.default)(this.elements).forEach(function (key) {
+        values[key] = _this.getValue(key);
+      });
+      return (0, _stringify2.default)(values);
+    }
+
+    /**
+     * Sets values of all components from JSON object
+     * @param {object.<string, string|number>} value - object that specifies what values should components have (key => id, value => value to be set)
+     * @example
+     * const panel = new EasySettings();
+     * panel.createSection()
+     *  .addDropdown( "dropdown", { options: ["Dropdown option #1", "Dropdown option #2"] } );
+     * panel.createSection()
+     *  .addSlider( "slider", { value: 25, min: 0, max: 1000 } );
+     * panel.createSection()
+     *  .addNumberInput( "input-number-slider", { value: 0, step: 0.5, min: 0, max: 1 } );
+     * panel.setValuesFromJSON(
+     *   {
+     *     dropdown: "Dropdown option #2",
+     *     input-number-slider: 4,
+     *     slider: 75
+     *   }
+     * );
+    */
+
+  }, {
+    key: "setValuesFromJSON",
+    value: function setValuesFromJSON(values) {
+      var _this2 = this;
+
+      (0, _keys2.default)(values).forEach(function (key) {
+        if (typeof _this2.elements[key] !== "undefined") {
+          _this2.setValue(key, values[key]);
+        }
+      });
+      return values;
+    }
+
+    /**
+     * Exports panel to JSON
+     * @returns {string}
+     * @example
+     * const panel = new EasySettings( 8, 8, "My panel" );
+     * panel.createSection()
+     *  .addDropdown( "dropdown", { options: ["Dropdown option #1", "Dropdown option #2"] } );
+     * panel.createSection()
+     *  .addSlider( "slider", { value: 25, min: 0, max: 1000 } );
+     * panel.createSection()
+     *  .addNumberInput( "input-number-slider", { value: 0, step: 0.5, min: 0, max: 1 } );
+     * console.log( panel.exportPanelToJSON() );
+     *
+     * // logs:
+     * // '{
+     * //   "title": "My panel",
+     * //   "pos": {
+     * //     "x" :8,
+     * //     "y": 8
+     * //   },
+     * //   "components": [
+     * //     [
+     * //       {
+     * //         "id": "dropdown",
+     * //         "options": {
+     * //           "options": [ "Dropdown option #1", "Dropdown option #2" ]
+     * //         },
+     * //         "callback": "( v ) => { console.log( v ); }",
+     * //         "type": "addDropdown"
+     * //       },
+     * //       {
+     * //         "id": "slider",
+     * //         "options": {
+     * //           "value": 25,
+     * //           "min": 0,
+     * //           "max": 1000
+     * //         },
+     * //         "callback": null,
+     * //         "type": "addSlider"
+     * //       }
+     * //     ],
+     * //     [
+     * //       {
+     * //         "id": "input-number-slider",
+     * //         "options": {
+     * //           "value": 0,
+     * //           "step": 0.5,
+     * //           "min": 0,
+     * //           "max": 1
+     * //         },
+     * //         "callback": null,
+     * //         "type": "addNumberInput"
+     * //       }
+     * //     ]
+     * //   ]
+     * // }'
+    */
+
+  }, {
+    key: "exportPanelToJSON",
+    value: function exportPanelToJSON() {
+      return (0, _stringify2.default)({
+        title: this.title,
+        pos: this.pos,
+        components: this.elementsInOrder
+      });
+    }
+
+    /**
+     * Create panel using JSON
+     * @param {JSON} json - object from which panel will be created
+     * @see For scheme of json: {@link module:Panel#exportPanelToJSON}
+     * @example
+     * var panel1 = EasySettings.createPanelFromJSON({"title": "My panel","pos":{"x":8,"y":8},"components":[[{"id":"dropdown","options":{"options":["Dropdownoption#1","Dropdownoption#2"]},"callback":"(v)=>{console.log(v);}","type":"addDropdown"},{"id":"slider","options":{"value":25,"min":0,"max":1000},"callback":null,"type":"addSlider"}],[{"id":"input-number-slider","options":{"value":0,"step":0.5,"min":0,"max":1},"callback":null,"type":"addNumberInput"}]]});
+    */
+
+  }, {
+    key: "animateValue",
+
+
+    /**
+     * Animates value of component to specified value. Note: This method works only with [NumberInput]{@link module:Section#addNumberInput} and [Slider]{@link module:Section#addSlider}
+     * @param {string} id - id of the progress bar which is going to be changed
+     * @param {number} to - final value of component
+     * @param {number} duration - duration of animation
+      * @example
+     * const panel = new EasySettings();
+     * panel.createSection()
+     *   .addSlider( "slider", { value: 25, min: 0, max: 1000 }, ( v ) => {
+     *     panel.setValue( "input-number-slider", v );
+     *   } )
+     *   .addButton( null, null, () => {
+     *     panel.animateValue( "slider", 500, 500 );
+     *   } );
+     * // after clicking the button slider will animate till it gets to the value of 500
+    */
+
+    value: function animateValue(id, to, duration) {
+      var _this3 = this;
+
+      var isValidName = false;
+      var element = this.elements[id];
+      switch (element.constructor.name) {
+        case "Slider":
+          isValidName = true;
+          break;
+        case "Input":
+          if (element.type === "number") {
+            isValidName = true;
+          } else {
+            isValidName = false;
+          }
+          break;
+        default:
+          isValidName = false;
+      }
+
+      if (isValidName) {
+        (function () {
+          clearInterval(_this3.elements[id].animationInterval);
+          var value = element.element.value * 1;
+          var incBy = (to - value) / duration;
+          var step = element.element.step;
+
+          var round = function round(a) {
+            var roundingFactor = Math.abs(step - Math.floor(step));
+            if (roundingFactor === 0) {
+              roundingFactor = 1;
+            }
+
+            return Math.round(a / step) * step;
+          };
+
+          if (incBy !== 0) {
+            _this3.elements[id].animationInterval = setInterval(function () {
+              if (incBy > 0 && element.element.value * 1 >= to || incBy < 0 && element.element.value * 1 <= to) {
+                clearInterval(_this3.elements[id].animationInterval);
+                _this3.elements[id].animationInterval = null;
+                element.setValue(round(to));
+              } else {
+                value += incBy;
+                element.setValue(round(value));
+              }
+            }, 1);
+          }
+        })();
+      } else {
+        throw new Error("You used animation on not supported type of component.");
+      }
     }
   }], [{
     key: "createHeaderTags",
@@ -962,25 +1232,54 @@ var EasySettings = function () {
     }
 
     /**
-     * Disables inserting 3 fonts (”Roboto Mono”, ”Roboto”, ”Material Icons”) on library startup.
+     * Disables injecting 3 fonts (”Roboto Mono”, ”Roboto”, ”Material Icons”) on library startup.
      @static
     */
 
   }, {
-    key: "disableInsertingFonts",
-    value: function disableInsertingFonts() {
+    key: "disableInjectingFonts",
+    value: function disableInjectingFonts() {
       dif = true;
+    }
+  }, {
+    key: "createPanelFromJSON",
+    value: function createPanelFromJSON(json) {
+      var options = json;
+      var es = new EasySettings(options.pos.x, options.pos.y, options.title);
+
+      options.components.forEach(function (v) {
+        var section = es.createSection();
+        v.forEach(function (c) {
+          console.log(c);
+          section[c.type](c.id, c.options, c.callback !== null ? eval(c.callback) : null); // eslint-disable-line no-eval
+        });
+      });
+
+      return es;
     }
   }]);
   return EasySettings;
 }();
 
+/**
+  @typedef JSON
+  @type {object}
+  @property {?string} title
+  @property {?pos} pos
+  @property {?array} components
+*/
+
+/**
+  @typedef pos
+  @type {object}
+  @property {?string} x
+  @property {?string} y
+*/
+
 exports.default = EasySettings;
-
-
 window.EasySettings = EasySettings;
 
-},{"./actions/EasySettingsMovementManager":"/Users/bartekosx/Projects/EasySettings/src/js/actions/EasySettingsMovementManager.js","./sections/Section":"/Users/bartekosx/Projects/EasySettings/src/js/sections/Section.js","./utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/actions/EasySettingsMovementManager.js":[function(require,module,exports){
+},{"./actions/EasySettingsMovementManager":"/Users/bartekosx/Projects/EasySettings/src/js/actions/EasySettingsMovementManager.js","./sections/Section":"/Users/bartekosx/Projects/EasySettings/src/js/sections/Section.js","./utils/DOMUtils":"/Users/bartekosx/Projects/EasySettings/src/js/utils/DOMUtils.js","babel-runtime/core-js/json/stringify":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/json/stringify.js","babel-runtime/core-js/object/keys":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/core-js/object/keys.js","babel-runtime/helpers/classCallCheck":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"/Users/bartekosx/Projects/EasySettings/node_modules/babel-runtime/helpers/createClass.js"}],"/Users/bartekosx/Projects/EasySettings/src/js/actions/EasySettingsMovementManager.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1141,13 +1440,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 */
 
 var Section = function () {
-  function Section(esBody, elements, index) {
+  function Section(esBody, elements, index, elementsInOrder) {
     (0, _classCallCheck3.default)(this, Section);
 
     this.esBody = esBody;
     this.body = null;
     this.elements = elements;
     this.index = index;
+    this.elementsInOrder = elementsInOrder;
     this.create();
     return this;
   }
@@ -1159,7 +1459,18 @@ var Section = function () {
     }
   }, {
     key: "addToContent",
-    value: function addToContent(id, el) {
+    value: function addToContent(id, options, callback, type, el) {
+      if (typeof this.elementsInOrder[this.index] === "undefined") {
+        this.elementsInOrder[this.index] = [];
+      }
+
+      this.elementsInOrder[this.index].push({
+        id: id,
+        options: options,
+        callback: typeof callback !== "undefined" ? String(callback) : null,
+        type: type
+      });
+
       if (id !== null) {
         this.elements[id] = el;
       }
@@ -1190,7 +1501,7 @@ var Section = function () {
     key: "addButton",
     value: function addButton(id, options, callback) {
       var element = new _Button2.default(this.body, options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addButton", element);
       return this;
     }
 
@@ -1218,7 +1529,7 @@ var Section = function () {
     key: "addCheckbox",
     value: function addCheckbox(id, options, callback) {
       var element = new _Checkbox2.default(this.body, options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addCheckbox", element);
       return this;
     }
 
@@ -1249,7 +1560,7 @@ var Section = function () {
 
       options.value = options.value || "#000000";
       var element = new _Input2.default(this.body, "color", options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addColorInput", element);
       return this;
     }
 
@@ -1279,7 +1590,7 @@ var Section = function () {
     key: "addDateInput",
     value: function addDateInput(id, options, callback) {
       var element = new _Input2.default(this.body, "date", options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addDateInput", element);
       return this;
     }
 
@@ -1309,7 +1620,7 @@ var Section = function () {
     key: "addDateTimeInput",
     value: function addDateTimeInput(id, options, callback) {
       var element = new _Input2.default(this.body, "datetime-local", options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addDateTimeInput", element);
       return this;
     }
 
@@ -1337,7 +1648,7 @@ var Section = function () {
     key: "addDropdown",
     value: function addDropdown(id, options, callback) {
       var element = new _Dropdown2.default(this.body, options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addDropdown", element);
       return this;
     }
 
@@ -1363,7 +1674,7 @@ var Section = function () {
     key: "addHeader",
     value: function addHeader(id, options) {
       var element = new _Header2.default(this.body, options, "h");
-      this.addToContent(id, element);
+      this.addToContent(id, options, null, "addHeader", element);
       return this;
     }
 
@@ -1389,7 +1700,7 @@ var Section = function () {
     key: "addHTML",
     value: function addHTML(id, options) {
       var element = new _HTML2.default(this.body, options);
-      this.addToContent(id, element);
+      this.addToContent(id, options, null, "addHTML", element);
       return this;
     }
 
@@ -1420,7 +1731,7 @@ var Section = function () {
     key: "addNumberInput",
     value: function addNumberInput(id, options, callback) {
       var element = new _Input2.default(this.body, "number", options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addNumberInput", element);
       return this;
     }
 
@@ -1446,7 +1757,7 @@ var Section = function () {
     key: "addParagraph",
     value: function addParagraph(id, options) {
       var element = new _Header2.default(this.body, options, "p");
-      this.addToContent(id, element);
+      this.addToContent(id, options, null, "addParagraph", element);
       return this;
     }
 
@@ -1478,7 +1789,7 @@ var Section = function () {
 
       options.value = options.value || "";
       var element = new _Input2.default(this.body, "password", options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addPasswordInput", element);
       return this;
     }
 
@@ -1489,8 +1800,9 @@ var Section = function () {
      * @param {string} [options.value=0] - default value
      * @param {number} [options.min=0] - minimal value
      * @param {number} [options.max=1] - maximal value
-     * @param {boolean} [options.indeterminate=false] - determines wheter progress bar should be indeterminate on startup
+     * @param {boolean} [options.indeterminate=false] - determines wheter progress bar should be indeterminate on startup. To toggle it after startup use {@link module:Panel#toggleIndeterminate}
      * @param {callback} [callback] - callback triggered on change
+     * @see module:Panel#toggleIndeterminate
      * @returns {module:Section} Section that component is added to
      * @example
      * const panel = new EasySettings();
@@ -1508,7 +1820,7 @@ var Section = function () {
     key: "addProgress",
     value: function addProgress(id, options) {
       var element = new _Progress2.default(this.body, options);
-      this.addToContent(id, element);
+      this.addToContent(id, options, null, "addProgress", element);
       return this;
     }
 
@@ -1536,7 +1848,7 @@ var Section = function () {
     key: "addRadio",
     value: function addRadio(id, options, callback) {
       var element = new _Radio2.default(this.body, this.index, options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addRadio", element);
       return this;
     }
 
@@ -1544,10 +1856,10 @@ var Section = function () {
      * Adds slider
      * @param {string} [id] - id of the component
      * @param {object} [options] - options for component
-     * @param {number} [options.value] - default value
-     * @param {number} [options.min] - minimal value
-     * @param {number} [options.max] - maximal value
-     * @param {number} [options.step] - step of values
+     * @param {number} [options.value=50] - default value
+     * @param {number} [options.min=0] - minimal value
+     * @param {number} [options.max=100] - maximal value
+     * @param {number} [options.step=1] - step of values
      * @param {callback} [callback] - callback triggered on change
      * @returns {module:Section} Section that component is added to
      * @example
@@ -1566,7 +1878,7 @@ var Section = function () {
     key: "addSlider",
     value: function addSlider(id, options, callback) {
       var element = new _Slider2.default(this.body, options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addSlider", element);
       return this;
     }
 
@@ -1594,7 +1906,7 @@ var Section = function () {
     key: "addTextarea",
     value: function addTextarea(id, options, callback) {
       var element = new _Textarea2.default(this.body, options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addTextarea", element);
       return this;
     }
 
@@ -1626,7 +1938,7 @@ var Section = function () {
 
       options.value = options.value || "";
       var element = new _Input2.default(this.body, "text", options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addTextInput", element);
       return this;
     }
 
@@ -1656,7 +1968,7 @@ var Section = function () {
     key: "addTimeInput",
     value: function addTimeInput(id, options, callback) {
       var element = new _Input2.default(this.body, "time", options, callback);
-      this.addToContent(id, element);
+      this.addToContent(id, options, callback, "addTimeInput", element);
       return this;
     }
   }]);
@@ -1704,6 +2016,10 @@ var Button = function () {
     var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
     (0, _classCallCheck3.default)(this, Button);
 
+    if (options === null) {
+      options = {};
+    }
+
     this.element = null;
     this.section = section;
     this.text = options.value || "Button";
@@ -1714,7 +2030,7 @@ var Button = function () {
   (0, _createClass3.default)(Button, [{
     key: "create",
     value: function create() {
-      var $button = _DOMUtils2.default.createElement("button", this.section, { className: "es-body__section__button", innerHTML: this.text });
+      var $button = _DOMUtils2.default.createElement("button", this.section, { className: "es-body__section__button", innerHTML: this.text }, { type: "button" });
 
       this.element = $button;
 
@@ -1738,6 +2054,7 @@ var Button = function () {
     key: "setValue",
     value: function setValue(val) {
       this.element.innerHTML = val;
+      _DOMUtils2.default.dispatchEvent(this.element, "click");
     }
   }]);
   return Button;
@@ -1822,6 +2139,7 @@ var Checkbox = function () {
     key: "setValue",
     value: function setValue(val) {
       this.element.checked = val;
+      _DOMUtils2.default.dispatchEvent(this.element, "change");
     }
   }]);
   return Checkbox;
@@ -1902,6 +2220,7 @@ var Dropdown = function () {
     value: function setValue(val) {
       if (this.options[val]) {
         this.element.value = this.options[val];
+        _DOMUtils2.default.dispatchEvent(this.element, "change");
       }
     }
   }]);
@@ -2095,6 +2414,8 @@ var Input = function () {
 
         if (typeof this.addOptions.step !== "undefined") {
           $input.setAttribute("step", this.addOptions.step);
+        } else if (this.type === "number") {
+          $input.setAttribute("step", 1);
         }
 
         $input.placeholder = this.addOptions.placeholder || "";
@@ -2124,26 +2445,34 @@ var Input = function () {
   }, {
     key: "getValue",
     value: function getValue() {
+      var valueToReturn = void 0;
       if (this.addOptions) {
         if (this.addOptions.min !== null) {
           if (this.addOptions.min > this.element.value) {
-            return this.addOptions.min;
+            valueToReturn = this.addOptions.min;
           }
         }
 
         if (this.addOptions.max !== null) {
           if (this.addOptions.max < this.element.value) {
-            return this.addOptions.max;
+            valueToReturn = this.addOptions.max;
           }
         }
       }
 
-      return this.element.value;
+      valueToReturn = this.element.value;
+
+      if (this.type === "number") {
+        valueToReturn *= 1;
+      }
+
+      return valueToReturn;
     }
   }, {
     key: "setValue",
     value: function setValue(val) {
       this.element.value = val;
+      _DOMUtils2.default.dispatchEvent(this.element, "input");
     }
   }]);
   return Input;
@@ -2330,6 +2659,7 @@ var Radio = function () {
       this.radios.forEach(function (v, i) {
         v.checked = i === val; // eslint-disable-line no-param-reassign
       });
+      _DOMUtils2.default.dispatchEvent(this.element, "change");
     }
   }]);
   return Radio;
@@ -2368,12 +2698,12 @@ var Slider = function () {
 
     this.element = null;
     this.section = section;
-    this.value = options.value * 1;
+    this.value = options.value * 1 || 0;
     this.min = 0;
     this.max = 100;
-    this.step = 0.1;
+    this.step = 1;
     this.addOptions = options;
-    this.callback = callback || null;
+    this.callback = callback || function () {};
     this.SliderMovementManager = null;
     this.create();
   }
@@ -2405,18 +2735,15 @@ var Slider = function () {
 
       var $input = _DOMUtils2.default.createElement("input", $inputGroup, { className: "es-body__section__slider" }, { type: "range", min: this.min, max: this.max, value: this.value, step: this.step });
 
+      $input.value = this.value;
+
       var $track = _DOMUtils2.default.createElement("div", $inputGroup, { className: "es-body__section__slider-track" }); // Track
       var $trackValue = _DOMUtils2.default.createElement("div", $track, { className: "es-body__section__slider-track__slider-value" }); // Track
-      var $handle = _DOMUtils2.default.createElement("button", $track, { className: "es-body__section__slider-track__slider-handle" }); // Track
+      var $handle = _DOMUtils2.default.createElement("button", $track, { className: "es-body__section__slider-track__slider-handle" }, { type: "button" }); // Track
 
       this.SliderMovementManager = new _SliderMovementManager2.default($handle, $track, $input, $trackValue);
 
-      this.SliderMovementManager.setHandleValue(this.value);
-
-      $track.addEventListener("click", function (e) {
-        var $rect = $track.getBoundingClientRect();
-        _this.setValue((e.pageX - $rect.left) / $rect.width * _this.max);
-      });
+      this.SliderMovementManager.setHandleValue();
 
       $handle.addEventListener("keydown", function (e) {
         var changeMultpilier = 1;
@@ -2457,7 +2784,7 @@ var Slider = function () {
   }, {
     key: "getValue",
     value: function getValue() {
-      return this.element.value;
+      return this.element.value * 1;
     }
   }, {
     key: "setValue",
@@ -2524,6 +2851,7 @@ var trackMovementManager = function () {
       var _this = this;
 
       this.handle.addEventListener("mousedown", function (e) {
+        _this.scrubbing = true;
         _this.startPos = {
           x: e.pageX,
           y: e.pageY
@@ -2538,8 +2866,24 @@ var trackMovementManager = function () {
 
         document.addEventListener("mousemove", _this.handleMovement);
         document.addEventListener("mouseup", function () {
+          _this.scrubbing = false;
           document.removeEventListener("mousemove", _this.handleMovement);
         });
+      });
+
+      this.track.addEventListener("mouseup", function (e) {
+        if (!_this.scrubbing) {
+          var trackOffset = _this.track.getBoundingClientRect();
+
+          var $inputMin = _this.input.getAttribute("min") * 1;
+          var $inputMax = _this.input.getAttribute("max") - $inputMin;
+
+          var val = (e.pageX - trackOffset.left) / _this.track.offsetWidth;
+
+          _this.input.value = val * $inputMax + $inputMin;
+
+          _DOMUtils2.default.dispatchEvent(_this.input, "input");
+        }
       });
     }
   }, {
@@ -2676,6 +3020,7 @@ var Textarea = function () {
     key: "setValue",
     value: function setValue(val) {
       this.element.innerHTML = val;
+      _DOMUtils2.default.dispatchEvent(this.element, "input");
     }
   }]);
   return Textarea;

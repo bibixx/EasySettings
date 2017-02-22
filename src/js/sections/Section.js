@@ -18,11 +18,12 @@ import Textarea from "./elements/Textarea";
 */
 
 export default class Section {
-  constructor( esBody, elements, index ) {
+  constructor( esBody, elements, index, elementsInOrder ) {
     this.esBody = esBody;
     this.body = null;
     this.elements = elements;
     this.index = index;
+    this.elementsInOrder = elementsInOrder;
     this.create();
     return this;
   }
@@ -31,7 +32,18 @@ export default class Section {
     this.body = DOMUtils.createElement( "div", this.esBody, { className: "es-body__section" } );
   }
 
-  addToContent( id, el ) {
+  addToContent( id, options, callback, type, el ) {
+    if ( typeof this.elementsInOrder[this.index] === "undefined" ) {
+      this.elementsInOrder[this.index] = [];
+    }
+
+    this.elementsInOrder[this.index].push( {
+      id,
+      options,
+      callback: ( typeof callback !== "undefined" ) ? String( callback ) : null,
+      type,
+    } );
+
     if ( id !== null ) {
       this.elements[id] = el;
     }
@@ -62,7 +74,7 @@ export default class Section {
 
   addButton( id, options, callback ) {
     const element = new Button( this.body, options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addButton", element );
     return this;
   }
 
@@ -90,7 +102,7 @@ export default class Section {
 
   addCheckbox( id, options, callback ) {
     const element = new Checkbox( this.body, options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addCheckbox", element );
     return this;
   }
 
@@ -119,7 +131,7 @@ export default class Section {
   addColorInput( id, options = {}, callback ) {
     options.value = options.value || "#000000";
     const element = new Input( this.body, "color", options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addColorInput", element );
     return this;
   }
 
@@ -149,7 +161,7 @@ export default class Section {
 
   addDateInput( id, options, callback ) {
     const element = new Input( this.body, "date", options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addDateInput", element );
     return this;
   }
 
@@ -180,7 +192,7 @@ export default class Section {
 
   addDateTimeInput( id, options, callback ) {
     const element = new Input( this.body, "datetime-local", options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addDateTimeInput", element );
     return this;
   }
 
@@ -208,7 +220,7 @@ export default class Section {
 
   addDropdown( id, options, callback ) {
     const element = new Dropdown( this.body, options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addDropdown", element );
     return this;
   }
 
@@ -234,7 +246,7 @@ export default class Section {
 
   addHeader( id, options ) {
     const element = new Header( this.body, options, "h" );
-    this.addToContent( id, element );
+    this.addToContent( id, options, null, "addHeader", element );
     return this;
   }
 
@@ -260,7 +272,7 @@ export default class Section {
 
   addHTML( id, options ) {
     const element = new HTML( this.body, options );
-    this.addToContent( id, element );
+    this.addToContent( id, options, null, "addHTML", element );
     return this;
   }
 
@@ -291,7 +303,7 @@ export default class Section {
 
   addNumberInput( id, options, callback ) {
     const element = new Input( this.body, "number", options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addNumberInput", element );
     return this;
   }
 
@@ -317,7 +329,7 @@ export default class Section {
 
   addParagraph( id, options ) {
     const element = new Header( this.body, options, "p" );
-    this.addToContent( id, element );
+    this.addToContent( id, options, null, "addParagraph", element );
     return this;
   }
 
@@ -346,7 +358,7 @@ export default class Section {
   addPasswordInput( id, options = {}, callback ) {
     options.value = options.value || "";
     const element = new Input( this.body, "password", options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addPasswordInput", element );
     return this;
   }
 
@@ -357,8 +369,9 @@ export default class Section {
    * @param {string} [options.value=0] - default value
    * @param {number} [options.min=0] - minimal value
    * @param {number} [options.max=1] - maximal value
-   * @param {boolean} [options.indeterminate=false] - determines wheter progress bar should be indeterminate on startup
+   * @param {boolean} [options.indeterminate=false] - determines wheter progress bar should be indeterminate on startup. To toggle it after startup use {@link module:Panel#toggleIndeterminate}
    * @param {callback} [callback] - callback triggered on change
+   * @see module:Panel#toggleIndeterminate
    * @returns {module:Section} Section that component is added to
    * @example
    * const panel = new EasySettings();
@@ -376,7 +389,7 @@ export default class Section {
 
   addProgress( id, options ) {
     const element = new Progress( this.body, options );
-    this.addToContent( id, element );
+    this.addToContent( id, options, null, "addProgress", element );
     return this;
   }
 
@@ -404,7 +417,7 @@ export default class Section {
 
   addRadio( id, options, callback ) {
     const element = new Radio( this.body, this.index, options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addRadio", element );
     return this;
   }
 
@@ -412,10 +425,10 @@ export default class Section {
    * Adds slider
    * @param {string} [id] - id of the component
    * @param {object} [options] - options for component
-   * @param {number} [options.value] - default value
-   * @param {number} [options.min] - minimal value
-   * @param {number} [options.max] - maximal value
-   * @param {number} [options.step] - step of values
+   * @param {number} [options.value=50] - default value
+   * @param {number} [options.min=0] - minimal value
+   * @param {number} [options.max=100] - maximal value
+   * @param {number} [options.step=1] - step of values
    * @param {callback} [callback] - callback triggered on change
    * @returns {module:Section} Section that component is added to
    * @example
@@ -434,7 +447,7 @@ export default class Section {
 
   addSlider( id, options, callback ) {
     const element = new Slider( this.body, options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addSlider", element );
     return this;
   }
 
@@ -462,7 +475,7 @@ export default class Section {
 
   addTextarea( id, options, callback ) {
     const element = new Textarea( this.body, options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addTextarea", element );
     return this;
   }
 
@@ -491,7 +504,7 @@ export default class Section {
   addTextInput( id, options = {}, callback ) {
     options.value = options.value || "";
     const element = new Input( this.body, "text", options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addTextInput", element );
     return this;
   }
 
@@ -521,7 +534,7 @@ export default class Section {
 
   addTimeInput( id, options, callback ) {
     const element = new Input( this.body, "time", options, callback );
-    this.addToContent( id, element );
+    this.addToContent( id, options, callback, "addTimeInput", element );
     return this;
   }
 }

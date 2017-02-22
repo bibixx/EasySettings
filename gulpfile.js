@@ -141,7 +141,7 @@ function buildScript( toWatch, path ) {
       .pipe( source( filename ) )
       .pipe( buffer() )
       .pipe( sourcemaps.init( { loadMaps: true } ) )
-      .pipe( gulpif( isProduction(), stripDebug() ) )
+      // .pipe( gulpif( isProduction(), stripDebug() ) )
       .pipe( sourcemaps.write( "./" ) )
       .pipe( gulp.dest( `${BUILD_PATH}/js` ) )
       .on( "end", () => {
@@ -160,7 +160,7 @@ function buildScript( toWatch, path ) {
         } ) )
         .pipe( buffer() )
         .pipe( sourcemaps.init( { loadMaps: true } ) )
-        .pipe( stripDebug() )
+        // .pipe( stripDebug() )
         .pipe( uglify() )
         .pipe( sourcemaps.write( "./" ) )
         .pipe( gulp.dest( `${BUILD_PATH}/js` ) )

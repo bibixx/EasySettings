@@ -95,20 +95,57 @@
 </ul>
 <h3>Usage</h3><p>Firstly start with creating panel and assigning it to variable. (See more here: <a href="https://bibixx.github.io/EasySettings/docs/module-Panel.html#module:Panel">module-Panel.html#module:Panel</a>)</p>
 <pre class="prettyprint source"><code>const panel = new EasySettings();</code></pre><p>Then you can create section...</p>
-<pre class="prettyprint source"><code>panel.createSection();</code></pre><p>...and start adding components (See more here: <a href="https://bibixx.github.io/EasySettings/docs/module-Section.html">module-Section.html</a>)</p>
+<pre class="prettyprint source"><code>panel.createSection();</code></pre><p>...and start Section.adding components (See more here: <a href="https://bibixx.github.io/EasySettings/docs/module-Section.html">module:Section</a>)</p>
 <pre class="prettyprint source"><code>const section = panel.createSection()
-section.addHeader( null, { value: &quot;Dropdown&quot; } );</code></pre><p>Thanks to the fact that <code>createSection</code> as well as all of components return section object you can chain calls.</p>
+section.Section.addHeader( null, { value: &quot;Dropdown&quot; } );</code></pre><p>Thanks to the fact that <code>createSection</code> as well as all of components return section object you can chain calls.</p>
 <pre class="prettyprint source"><code>panel.createSection()
-  .addHeader( null, { value: &quot;Dropdown&quot; } )
-  .addDropdown( &quot;dropdown&quot;, { options: [&quot;Dropdown option #1&quot;, &quot;Dropdown option #2&quot;] });</code></pre><h2><a href="https://bibixx.github.io/EasySettings/docs/module-Section.html">Components</a></h2><h3>Basics</h3><p>Every component is based on the same structure meaning:</p>
-<pre class="prettyprint source"><code>Section.addComponentName( id, options, callback );</code></pre><p><code>id</code> – identifier of component used for getting an setting value of component. If you don't need use it simply set it to <code>null</code>.</p>
+  .Section.addHeader( null, { value: &quot;Dropdown&quot; } )
+  .Section.addDropdown( &quot;dropdown&quot;, { options: [&quot;Dropdown option #1&quot;, &quot;Dropdown option #2&quot;] });</code></pre><h2><a href="https://bibixx.github.io/EasySettings/docs/module-Section.html">Components</a></h2><h3>Basics</h3><p>Every component is based on the same structure meaning:</p>
+<pre class="prettyprint source"><code>Section.Section.addComponentName( id, options, callback );</code></pre><p><code>id</code> – identifier of component used for getting an setting value of component. If you don't need use it simply set it to <code>null</code>.</p>
 <p><code>options</code> – JS object that specifies multiple options specific to the component.</p>
 <p><code>callback</code> – function that is triggered on every change. Current value of component will be passed as first attribute.</p>
-<p>List of all components is here: <a href="https://bibixx.github.io/EasySettings/docs/module-Section.html">/docs/module-Section.html</a></p>
-<h3>Getting and setting values</h3><p>To get value of component you can use:</p>
-<pre class="prettyprint source"><code>Section.getValue( id );</code></pre><p>To set value of component you can use:</p>
-<pre class="prettyprint source"><code>Section.getValue( id, value );</code></pre><p>Where <code>id</code> is id of component specified at creation of component and <code>value</code> is value to be set.</p>
-<h2>Demo</h2><p>You can see demo of all components here:
+<p>List of all components:</p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Button.html"><code>Section.addButton( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Checkbox.html"><code>Section.addCheckbox( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#ColorInput.html"><code>Section.addColorInput( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#DateInput.html"><code>Section.addDateInput( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#DateTimeInput.html"><code>Section.addDateTimeInput( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Dropdown.html"><code>Section.addDropdown( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Header.html"><code>Section.addHeader( id, options );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#HTML.html"><code>Section.addHTML( id, options );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#NumberInput.html"><code>Section.addNumberInput( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Paragraph.html"><code>Section.addParagraph( id, options );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#PasswordInput.html"><code>Section.addPasswordInput( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Progress.html"><code>Section.addProgress( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Radio.html"><code>Section.addRadio( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Slider.html"><code>Section.addSlider( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#Textarea.html"><code>Section.addTextarea( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#TextInput.html"><code>Section.addTextInput( id, options, callback );</code></a></p>
+<p><a href="https://bibixx.github.io/EasySettings/docs/module-Section#TimeInput.html"><code>Section.addTimeInput( id, options, callback );</code></a></p>
+<p>For more info about components see <a href="https://bibixx.github.io/EasySettings/docs/module-Section.html">/docs/module-Section.html</a></p>
+<h3>Getting and setting values</h3><p>To get value of component you can use <a href="https://bibixx.github.io/EasySettings/docs/module-Panel#getValue">module:Panel#getValue</a></p>
+<p><code>Section.getValue( id );</code></p>
+<p>To set value of component you can use <a href="https://bibixx.github.io/EasySettings/docs/module-Panel#setValue">module:Panel#setValue</a></p>
+<p><code>Section.setValue( id, value );</code></p>
+<p>You can also get values as JSON using <a href="https://bibixx.github.io/EasySettings/docs/module-Panel#getValuesAsJSON">module:Panel#getValuesAsJSON</a></p>
+<p><code>Section.getValuesAsJSON( id );</code></p>
+<p>And set them using JSON with <a href="https://bibixx.github.io/EasySettings/docs/module-Panel#setValuesFromJSON">module:Panel#setValuesFromJSON</a></p>
+<p><code>Section.setValuesFromJSON( id, value );</code></p>
+<p>Where <code>id</code> is id of component specified at creation of component and <code>value</code> is value to be set.</p>
+<h3>Miscellaneous</h3><p>To toggle determination on progress bar use <a href="https://bibixx.github.io/EasySettings/docs/module-Panel#toggleIndeterminate">module:Panel#toggleIndeterminate</a></p>
+<pre class="prettyprint source"><code>const panel = new EasySettings();
+panel.Section.addSection()
+  .Section.addProgress( &quot;progress&quot;, { value: 0.33, indeterminate: true } );
+panel.toggleIndeterminate( &quot;progress&quot; ); // progress bar now is not indeterminate</code></pre><p>If you want to smoothly animate through values you can use <a href="https://bibixx.github.io/EasySettings/docs/module-Panel#animateValue">module:Panel#animateValue</a></p>
+<pre class="prettyprint source"><code>const panel = new EasySettings();
+panel.createSection()
+  .Section.addSlider( &quot;slider&quot;, { value: 25, min: 0, max: 1000 }, ( v ) => {
+    panel.setValue( &quot;input-number-slider&quot;, v );
+  } )
+  .Section.addButton( null, null, () => {
+    panel.animateValue( &quot;slider&quot;, 500, 500 );
+  } );
+// after clicking the button slider will animate till it gets to the value of 500</code></pre><h2>Demo</h2><p>You can see demo of all components here:
 <a href="https://bibixx.github.io/EasySettings/demo/">https://bibixx.github.io/EasySettings/demo/</a></p></article>
     </section>
 
@@ -155,7 +192,7 @@ section.addHeader( null, { value: &quot;Dropdown&quot; } );</code></pre><p>Thank
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
 	
-		on 2017-02-20T22:53:51+01:00
+		on 2017-02-22T18:23:14+01:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

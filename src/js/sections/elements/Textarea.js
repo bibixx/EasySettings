@@ -38,5 +38,6 @@ export default class Textarea {
 
   setValue( val ) {
     this.element.innerHTML = val;
+    DOMUtils.dispatchEvent( this.element, "input" );
   }
 }

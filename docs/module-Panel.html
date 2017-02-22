@@ -317,7 +317,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".disableInsertingFonts"><span class="type-signature">&lt;static> </span>disableInsertingFonts()</h4>
+    <h4 class="name" id=".createPanelFromJSON"><span class="type-signature">&lt;static> </span>createPanelFromJSON(json)</h4>
     
     
 </dt>
@@ -325,7 +325,148 @@
 
     
     <div class="description">
-        Disables inserting 3 fonts (”Roboto Mono”, ”Roboto”, ”Material Icons”) on library startup.
+        Create panel using JSON
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>json</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">object from which panel will be created</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li>For scheme of json: <a href="module-Panel.html#exportPanelToJSON">module:Panel#exportPanelToJSON</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var panel1 = EasySettings.createPanelFromJSON({&quot;title&quot;: &quot;My panel&quot;,&quot;pos&quot;:{&quot;x&quot;:8,&quot;y&quot;:8},&quot;components&quot;:[[{&quot;id&quot;:&quot;dropdown&quot;,&quot;options&quot;:{&quot;options&quot;:[&quot;Dropdownoption#1&quot;,&quot;Dropdownoption#2&quot;]},&quot;callback&quot;:&quot;(v)=&gt;{console.log(v);}&quot;,&quot;type&quot;:&quot;addDropdown&quot;},{&quot;id&quot;:&quot;slider&quot;,&quot;options&quot;:{&quot;value&quot;:25,&quot;min&quot;:0,&quot;max&quot;:1000},&quot;callback&quot;:null,&quot;type&quot;:&quot;addSlider&quot;}],[{&quot;id&quot;:&quot;input-number-slider&quot;,&quot;options&quot;:{&quot;value&quot;:0,&quot;step&quot;:0.5,&quot;min&quot;:0,&quot;max&quot;:1},&quot;callback&quot;:null,&quot;type&quot;:&quot;addNumberInput&quot;}]]});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".disableInjectingFonts"><span class="type-signature">&lt;static> </span>disableInjectingFonts()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Disables injecting 3 fonts (”Roboto Mono”, ”Roboto”, ”Material Icons”) on library startup.
     </div>
     
 
@@ -387,6 +528,196 @@
     
 
     
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="animateValue"><span class="type-signature"></span>animateValue(id, to, duration)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Animates value of component to specified value. Note: This method works only with <a href="module-Section.html#addNumberInput">NumberInput</a> and <a href="module-Section.html#addSlider">Slider</a>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">id of the progress bar which is going to be changed</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>to</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">final value of component</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>duration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">duration of animation</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">const panel = new EasySettings();
+panel.createSection()
+  .addSlider( &quot;slider&quot;, { value: 25, min: 0, max: 1000 }, ( v ) =&gt; {
+    panel.setValue( &quot;input-number-slider&quot;, v );
+  } )
+  .addButton( null, null, () =&gt; {
+    panel.animateValue( &quot;slider&quot;, 500, 500 );
+  } );
+// after clicking the button slider will animate till it gets to the value of 500</pre>
+
 
     
 </dd>
@@ -495,6 +826,161 @@
         
     <pre class="sunlight-highlight-javascript">const panel = new EasySettings();
 panel.createSection();</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="exportPanelToJSON"><span class="type-signature"></span>exportPanelToJSON()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Exports panel to JSON
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">const panel = new EasySettings( 8, 8, &quot;My panel&quot; );
+panel.createSection()
+ .addDropdown( &quot;dropdown&quot;, { options: [&quot;Dropdown option #1&quot;, &quot;Dropdown option #2&quot;] } );
+panel.createSection()
+ .addSlider( &quot;slider&quot;, { value: 25, min: 0, max: 1000 } );
+panel.createSection()
+ .addNumberInput( &quot;input-number-slider&quot;, { value: 0, step: 0.5, min: 0, max: 1 } );
+console.log( panel.exportPanelToJSON() );
+
+// logs:
+// &#x27;{
+//   &quot;title&quot;: &quot;My panel&quot;,
+//   &quot;pos&quot;: {
+//     &quot;x&quot; :8,
+//     &quot;y&quot;: 8
+//   },
+//   &quot;components&quot;: [
+//     [
+//       {
+//         &quot;id&quot;: &quot;dropdown&quot;,
+//         &quot;options&quot;: {
+//           &quot;options&quot;: [ &quot;Dropdown option #1&quot;, &quot;Dropdown option #2&quot; ]
+//         },
+//         &quot;callback&quot;: &quot;( v ) =&gt; { console.log( v ); }&quot;,
+//         &quot;type&quot;: &quot;addDropdown&quot;
+//       },
+//       {
+//         &quot;id&quot;: &quot;slider&quot;,
+//         &quot;options&quot;: {
+//           &quot;value&quot;: 25,
+//           &quot;min&quot;: 0,
+//           &quot;max&quot;: 1000
+//         },
+//         &quot;callback&quot;: null,
+//         &quot;type&quot;: &quot;addSlider&quot;
+//       }
+//     ],
+//     [
+//       {
+//         &quot;id&quot;: &quot;input-number-slider&quot;,
+//         &quot;options&quot;: {
+//           &quot;value&quot;: 0,
+//           &quot;step&quot;: 0.5,
+//           &quot;min&quot;: 0,
+//           &quot;max&quot;: 1
+//         },
+//         &quot;callback&quot;: null,
+//         &quot;type&quot;: &quot;addNumberInput&quot;
+//       }
+//     ]
+//   ]
+// }&#x27;</pre>
 
 
     
@@ -681,6 +1167,123 @@ console.log( panel.getValue( &quot;checkbox&quot; ) ); // logs true</pre>
             
 <hr>
 <dt>
+    <h4 class="name" id="getValuesAsJSON"><span class="type-signature"></span>getValuesAsJSON()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns values of all components that have specified id
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">const panel = new EasySettings();
+panel.createSection()
+ .addDropdown( &quot;dropdown&quot;, { options: [&quot;Dropdown option #1&quot;, &quot;Dropdown option #2&quot;] } );
+panel.createSection()
+ .addSlider( &quot;slider&quot;, { value: 25, min: 0, max: 1000 } );
+panel.createSection()
+ .addNumberInput( &quot;input-number-slider&quot;, { value: 0, step: 0.5, min: 0, max: 1 } );
+console.log( panel.getValuesAsJSON() );
+// logs
+// {
+//   dropdown: &quot;Dropdown option #1&quot;,
+//   input-number-slider: 0,
+//   slider: 25
+// }</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="setValue"><span class="type-signature"></span>setValue(id, value)</h4>
     
     
@@ -854,9 +1457,653 @@ panel.setValue( &quot;checkbox&quot;, false ); // checkbox is off</pre>
     
 </dd>
 
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setValuesFromJSON"><span class="type-signature"></span>setValuesFromJSON(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sets values of all components from JSON object
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object.&lt;string, (string|number)></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">object that specifies what values should components have (key => id, value => value to be set)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">const panel = new EasySettings();
+panel.createSection()
+ .addDropdown( &quot;dropdown&quot;, { options: [&quot;Dropdown option #1&quot;, &quot;Dropdown option #2&quot;] } );
+panel.createSection()
+ .addSlider( &quot;slider&quot;, { value: 25, min: 0, max: 1000 } );
+panel.createSection()
+ .addNumberInput( &quot;input-number-slider&quot;, { value: 0, step: 0.5, min: 0, max: 1 } );
+panel.setValuesFromJSON(
+  {
+    dropdown: &quot;Dropdown option #2&quot;,
+    input-number-slider: 4,
+    slider: 75
+  }
+);</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toggleIndeterminate"><span class="type-signature"></span>toggleIndeterminate(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Toggles determination of progress bar
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">id of the progress bar which is going to be changed</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">const panel = new EasySettings();
+panel.addSection()
+  .addProgress( &quot;progress&quot;, { value: 0.33, indeterminate: true } );
+panel.toggleIndeterminate( &quot;progress&quot; ); // progress bar now is not indeterminate</pre>
+
+
+    
+</dd>
+
         </dl>
     
 
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        <dl>
+                
+<hr>
+<dt class="name" id="~JSON">
+    <h4 id="~JSON">JSON</h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pos</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">pos</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>components</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id="~pos">
+    <h4 id="~pos">pos</h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                    &lt;nullable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            </dl>
     
 
     
@@ -904,7 +2151,7 @@ panel.setValue( &quot;checkbox&quot;, false ); // checkbox is off</pre>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
 	
-		on 2017-02-20T22:53:51+01:00
+		on 2017-02-22T18:23:14+01:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

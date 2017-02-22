@@ -41,6 +41,8 @@ export default class Input {
 
       if ( typeof this.addOptions.step !== "undefined" ) {
         $input.setAttribute( "step", this.addOptions.step );
+      } else if ( this.type === "number" ) {
+        $input.setAttribute( "step", 1 );
       }
 
       $input.placeholder = this.addOptions.placeholder || "";
@@ -66,24 +68,32 @@ export default class Input {
   }
 
   getValue() {
+    let valueToReturn;
     if ( this.addOptions ) {
       if ( this.addOptions.min !== null ) {
         if ( this.addOptions.min > this.element.value ) {
-          return this.addOptions.min;
+          valueToReturn = this.addOptions.min;
         }
       }
 
       if ( this.addOptions.max !== null ) {
         if ( this.addOptions.max < this.element.value ) {
-          return this.addOptions.max;
+          valueToReturn = this.addOptions.max;
         }
       }
     }
 
-    return this.element.value;
+    valueToReturn = this.element.value;
+
+    if ( this.type === "number" ) {
+      valueToReturn *= 1;
+    }
+
+    return valueToReturn;
   }
 
   setValue( val ) {
     this.element.value = val;
+    DOMUtils.dispatchEvent( this.element, "input" );
   }
 }

@@ -45,5 +45,6 @@ export default class Checkbox {
 
   setValue( val ) {
     this.element.checked = val;
+    DOMUtils.dispatchEvent( this.element, "change" );
   }
 }

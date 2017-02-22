@@ -19,31 +19,69 @@ var panel1 = new EasySettings();
 
 panel1.createSection()
   .addHeader( null, { value: "Dropdown" } )
-  .addDropdown( "dropdown", { options: ["Dropdown option #1", "Dropdown option #2"], value: "asd" }, ( v ) => {
+  .addDropdown( "dropdown", { options: ["Dropdown option #1", "Dropdown option #2"], value: 0 }, ( v ) => {
     showVal( "Dropdown", null, v );
   } );
 
+let from1 = 0;
 panel1.createSection()
   .addHeader( null, { value: "Slider" } )
   .addSlider(
     "slider",
-    { value: 25, min: 0, max: 1000 },
+    { value: 0.5, min: 0, max: 1, step: 0.01 },
     ( v ) => {
-      showVal( "Slider", null, v );
-    } );
-
-panel1.createSection()
+      if ( from1 < 2 ) {
+        from1++;
+        panel1.setValue( "input-slider", v );
+      } else {
+        from1 = 0;
+      }
+    } )
   .addNumberInput(
+    "input-slider",
+    // { value: 25, min: 0, max: 1000 },
+    { value: 0.5, min: 0, max: 1, step: 0.01 },
+    ( v ) => {
+      if ( from1 < 2 ) {
+        from1++;
+        panel1.setValue( "slider", v );
+      } else {
+        from1 = 0;
+      }
+    } )
+
+  .addButton( null, { value: "Go to 0" }, () => {
+    panel1.animateValue( "input-slider", 0, 500 );
+  } )
+
+  .addButton( null, { value: "Go to 1" }, () => {
+    panel1.animateValue( "input-slider", 1, 500 );
+  } );
+
+let from2 = 0;
+panel1.createSection()
+  .addHeader( null, { value: "Slider" } )
+  .addSlider(
     "input-number-slider",
     { value: 0, step: 0.5, min: 0, max: 1 },
     ( v ) => {
-      panel1.setValue( "slider-input", v );
+      if ( from2 < 2 ) {
+        from2++;
+        panel1.setValue( "slider-input", v );
+      } else {
+        from2 = 0;
+      }
     } )
-  .addSlider(
+  .addNumberInput(
     "slider-input",
     { value: 0, step: 0.5, min: 0, max: 1 },
     ( v ) => {
-      panel1.setValue( "input-number-slider", v );
+      if ( from2 < 2 ) {
+        from2++;
+        panel1.setValue( "input-number-slider", v );
+      } else {
+        from2 = 0;
+      }
     } );
 
 panel1.createSection()
@@ -145,19 +183,6 @@ panel2.createSection()
   } );
 
 console.groupCollapsed();
-showVal( "Dropdown", panel1, "dropdown" );
-showVal( "Slider", panel1, "slider" );
-showVal( "Button", panel1, "button" );
-showVal( "Checkbox #1", panel1, "checkbox1" );
-showVal( "Checkbox #2", panel1, "checkbox2" );
-showVal( "Radio", panel1, "radio" );
-showVal( "Textarea", panel1, "textarea" );
-showVal( "Progress", panel1, "progress" );
-
-showVal( "Input text", panel2, "input-text" );
-showVal( "Input password", panel2, "input-password" );
-showVal( "Input number", panel2, "input-number" );
-showVal( "Input date", panel2, "input-date" );
-showVal( "Input time", panel2, "input-time" );
-showVal( "Input datetime", panel2, "input-datetime" );
+console.log( panel1.getValuesAsJSON() );
+console.log( panel2.getValuesAsJSON() );
 console.groupEnd();

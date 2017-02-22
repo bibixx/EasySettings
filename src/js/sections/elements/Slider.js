@@ -5,12 +5,12 @@ export default class Slider {
   constructor( section, options, callback ) {
     this.element = null;
     this.section = section;
-    this.value = options.value * 1;
+    this.value = options.value * 1 || 0;
     this.min = 0;
     this.max = 100;
-    this.step = 0.1;
+    this.step = 1;
     this.addOptions = options;
-    this.callback = callback || null;
+    this.callback = callback || ( () => {} );
     this.SliderMovementManager = null;
     this.create();
   }
@@ -38,18 +38,15 @@ export default class Slider {
 
     const $input = DOMUtils.createElement( "input", $inputGroup, { className: "es-body__section__slider" }, { type: "range", min: this.min, max: this.max, value: this.value, step: this.step } );
 
+    $input.value = this.value;
+
     const $track = DOMUtils.createElement( "div", $inputGroup, { className: "es-body__section__slider-track" } ); // Track
     const $trackValue = DOMUtils.createElement( "div", $track, { className: "es-body__section__slider-track__slider-value" } ); // Track
-    const $handle = DOMUtils.createElement( "button", $track, { className: "es-body__section__slider-track__slider-handle" } ); // Track
+    const $handle = DOMUtils.createElement( "button", $track, { className: "es-body__section__slider-track__slider-handle" }, { type: "button" } ); // Track
 
     this.SliderMovementManager = new SliderMovementManager( $handle, $track, $input, $trackValue );
 
-    this.SliderMovementManager.setHandleValue( this.value );
-
-    $track.addEventListener( "click", ( e ) => {
-      const $rect = $track.getBoundingClientRect();
-      this.setValue( ( ( e.pageX - $rect.left ) / $rect.width ) * this.max );
-    } );
+    this.SliderMovementManager.setHandleValue();
 
     $handle.addEventListener( "keydown", ( e ) => {
       let changeMultpilier = 1;
@@ -87,7 +84,7 @@ export default class Slider {
   }
 
   getValue() {
-    return this.element.value;
+    return this.element.value * 1;
   }
 
   setValue( val ) {

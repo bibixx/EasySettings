@@ -25,6 +25,7 @@ export default class trackMovementManager {
 
   bindEvents() {
     this.handle.addEventListener( "mousedown", ( e ) => {
+      this.scrubbing = true;
       this.startPos = {
         x: e.pageX,
         y: e.pageY,
@@ -39,8 +40,24 @@ export default class trackMovementManager {
 
       document.addEventListener( "mousemove", this.handleMovement );
       document.addEventListener( "mouseup", () => {
+        this.scrubbing = false;
         document.removeEventListener( "mousemove", this.handleMovement );
       } );
+    } );
+
+    this.track.addEventListener( "mouseup", ( e ) => {
+      if ( !this.scrubbing ) {
+        const trackOffset = this.track.getBoundingClientRect();
+
+        const $inputMin = this.input.getAttribute( "min" ) * 1;
+        const $inputMax = this.input.getAttribute( "max" ) - $inputMin;
+
+        const val = ( e.pageX - trackOffset.left ) / this.track.offsetWidth;
+
+        this.input.value = ( val * $inputMax ) + $inputMin;
+
+        DOMUtils.dispatchEvent( this.input, "input" );
+      }
     } );
   }
 

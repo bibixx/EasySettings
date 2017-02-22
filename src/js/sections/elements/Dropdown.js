@@ -41,6 +41,7 @@ export default class Dropdown {
   setValue( val ) {
     if ( this.options[val] ) {
       this.element.value = this.options[val];
+      DOMUtils.dispatchEvent( this.element, "change" );
     }
   }
 }
