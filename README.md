@@ -1,5 +1,7 @@
 <h1 class="page-title">EasySettings</h1>
+
 ## Introduction
+
 ### What is it?
 EasySettings is a library whose purpose is to help creating creative project with removing the part of creating ui to change some settings on the go.
 
@@ -11,23 +13,23 @@ To use this library you have to simply include two files from this repo:
 ### Usage
 Firstly start with creating panel and assigning it to variable. (See more here: [module:Panel](https://bibixx.github.io/EasySettings/docs/module-Panel.html#module:Panel))
 
-```
+```javascript
 const panel = new EasySettings();
 ```
 
 Then you can create section...
-```
+```javascript
 panel.createSection();
 ```
 ...and start Section.adding components (See more here: [module:Section](https://bibixx.github.io/EasySettings/docs/module-Section.html))
-```
+```javascript
 const section = panel.createSection()
 section.Section.addHeader( null, { value: "Dropdown" } );
 ```
 
 Thanks to the fact that `createSection` as well as all of components return section object you can chain calls.
 
-```
+```javascript
 panel.createSection()
   .Section.addHeader( null, { value: "Dropdown" } )
   .Section.addDropdown( "dropdown", { options: ["Dropdown option #1", "Dropdown option #2"] });
@@ -36,7 +38,7 @@ panel.createSection()
 ## [Components](https://bibixx.github.io/EasySettings/docs/module-Section.html)
 ### Basics
 Every component is based on the same structure meaning:
-```
+```javascript
 Section.Section.addComponentName( id, options, callback );
 ```
 
@@ -86,22 +88,22 @@ For more info about components see [module:Section](https://bibixx.github.io/Eas
 
 ### Getting and setting values
 To get value of component you can use [module:Panel#getValue](https://bibixx.github.io/EasySettings/docs/module-Panel#getValue)
-```
+```javascript
 Section.getValue( id );
 ```
 
 To set value of component you can use [module:Panel#setValue](https://bibixx.github.io/EasySettings/docs/module-Panel#setValue)
-```
+```javascript
 Section.setValue( id, value );
 ```
 
 You can also get values as JSON using [module:Panel#getValuesAsJSON](https://bibixx.github.io/EasySettings/docs/module-Panel#getValuesAsJSON)
-```
+```javascript
 Section.getValuesAsJSON( id );
 ```
 
 And set them using JSON with [module:Panel#setValuesFromJSON](https://bibixx.github.io/EasySettings/docs/module-Panel#setValuesFromJSON)
-```
+```javascript
 Section.setValuesFromJSON( id, value );
 ```
 
@@ -109,7 +111,7 @@ Where `id` is id of component specified at creation of component and `value` is 
 
 ### Miscellaneous
 To toggle determination on progress bar use [module:Panel#toggleIndeterminate](https://bibixx.github.io/EasySettings/docs/module-Panel#toggleIndeterminate)
-```
+```javascript
 const panel = new EasySettings();
 panel.Section.addSection()
   .Section.addProgress( "progress", { value: 0.33, indeterminate: true } );
@@ -117,7 +119,7 @@ panel.toggleIndeterminate( "progress" ); // progress bar now is not indeterminat
 ```
 
 If you want to smoothly animate through values you can use [module:Panel#animateValue](https://bibixx.github.io/EasySettings/docs/module-Panel#animateValue)
-```
+```javascript
 const panel = new EasySettings();
 panel.createSection()
   .Section.addSlider( "slider", { value: 25, min: 0, max: 1000 }, ( v ) => {
